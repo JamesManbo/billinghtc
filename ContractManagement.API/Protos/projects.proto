@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service ProjectServiceGrpc {
+	rpc GetAll(google.protobuf.Empty) returns (ProjectListGrpcDTO) {}
+	rpc GetProjects(RequestFilterGrpc) returns (ProjectPageListGrpcDTO) {}
+	rpc GetProjectsForApp(RequestFilterGrpc) returns (ProjectPageListGrpcDTO) {}
+	rpc GetOutContactCount(google.protobuf.Int32Value) returns (GetOutContractNumberResponseGrpc) {}
+	rpc GetProjectCode(google.protobuf.Int32Value) returns (google.protobuf.StringValue) {}
+	rpc GetProjectOfSupporter(google.protobuf.StringValue) returns (ProjectListGrpcDTO) {}
+}
+
+message ProjectListGrpcDTO {
+	repeated ProjectGrpcDTO projectDtos = 1;
+}
+
+message GetOutContractNumberResponseGrpc{
+	google.protobuf.Int32Value result = 1;
+}
+
+message ProjectPageListGrpcDTO{
+	repeated ProjectGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message ProjectGrpcDTO{
+	google.protobuf.StringValue	 projectName = 1;
+	google.protobuf.StringValue  projectCode = 2;
+	int32  id = 3;
+	google.protobuf.Int32Value  marketAreaId = 4;
+	google.protobuf.Int32Value  agentContractCodeId = 5;
+	google.protobuf.StringValue  numberOfUnits = 6;
+	google.protobuf.StringValue  description = 7;
+	google.protobuf.Int32Value  numberOfRooms = 8;
+	google.protobuf.Int32Value  numberOfOutContracts = 9;
+}

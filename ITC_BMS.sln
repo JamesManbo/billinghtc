@@ -1,0 +1,693 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemUserIdentity.API", "SystemUserIdentity.API\SystemUserIdentity.API.csproj", "{CFFBEEB9-33D9-4D0C-8B51-FD4F870AED04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D4AC3A81-80B1-4E10-B118-24F04E4948E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{47E5235F-1731-4214-A489-4827583C3DBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Organization", "Organization", "{34F3DB7D-4D3D-43CC-8AC5-35D66B8FD710}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{32BC2482-8F31-4C79-98B6-62E2B7476A1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.API", "ContractManagement.API\ContractManagement.API.csproj", "{4B5215ED-AA61-4E20-A0E8-40DDD38E8381}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7A76B708-C3E9-4ACC-A0DF-E6E88DABFADF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{F6DDA25D-D0A6-4131-BB9D-D1981083DAE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{FAB05E9C-1DB9-4772-AA6D-34AA5BD83235}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{DCF2A1BA-5B97-489D-B868-7BE1E5020850}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InternalEventBus", "InternalEventBus", "{6C1F2507-188F-49C6-B0F5-22B9402F1A55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "EventBus\EventBus.csproj", "{5418BE79-2924-4583-922A-6934BB2DB1D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{49DDC5EE-12CF-4839-B53E-42EFEC5A5DFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationUser", "ApplicationUser", "{6DED7387-6CDC-4BC0-8676-FEC1DAA5F5E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.Domain", "ContractManagement.Domain\ContractManagement.Domain.csproj", "{4DB41289-6AB5-4258-AC38-F69A2C5D6124}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.Infrastructure", "ContractManagement.Infrastructure\ContractManagement.Infrastructure.csproj", "{7B77F6FF-8C29-43BE-BC2B-ADA8E91F5FA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.Caching", "ContractManagement.Caching\ContractManagement.Caching.csproj", "{FD626700-C8F3-4455-9736-1AF0AC911074}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GenericEfRepository", "GenericEfRepository", "{C3EB4198-B58A-454C-B808-784DB2FF8876}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository", "GenericService\GenericRepository.csproj", "{955B6503-D746-4AC9-B8F0-724EB36BF567}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationUserIdentity.API", "ApplicationUserIdentity.API\ApplicationUserIdentity.API.csproj", "{C0103E57-A3AC-43E2-A3AE-CF053B00D0C0}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8FE03560-D5AB-4D20-B2B2-9285629DA141}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solution.FunctionalTests", "FunctionalTest\Solution.FunctionalTests.csproj", "{BADE588A-9DD2-4E0C-93E7-9D150B1C5E2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationEventLogEF", "IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{EB8EF1DD-D916-45C5-B243-2E0796D5A718}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebHost", "WebHost", "{DD67F750-F6E6-409F-9C94-B42A034A144A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHost.Customization", "WebHost.Customization\WebHost.Customization.csproj", "{A95830F2-97DC-4987-A89B-AD2AE930D838}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMS", "CMS", "{141728F0-8D45-40DB-9EB8-10DC3D8A203F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMS.APIGateway", "CMS.APIGateway\CMS.APIGateway.csproj", "{14562CFA-95DA-41AB-A219-78FFB01BAF6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Location", "Location", "{6AABFDB5-8D99-46BD-AE62-A4ECEB5792BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Location.API", "Location.API\Location.API.csproj", "{B8C12971-6821-4094-B76A-E16C8FD82E5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{598FEF54-A5D8-4FF8-9EAE-C74DE97AE590}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Global", "Global", "{2D640CA7-2733-4053-9447-6311110481C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Global.Configs", "Global.Configs\Global.Configs.csproj", "{2ED7F5DA-C6E1-4DC3-8BFD-423E6B573B39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Global.Models", "Global.Models\Global.Models.csproj", "{7A1D8751-3904-4531-9745-E673671FCAC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTC_ITC.CMS", "HTC_ITC.CMS\HTC_ITC.CMS.csproj", "{5D79C024-FCF0-43D8-B2FD-91B09BAA0C67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrganizationUnit.API", "OrganizationUnit.API\OrganizationUnit.API.csproj", "{4D29E1F7-71F0-4C89-9DF5-3229370E364F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrganizationUnit.Domain", "OrganizationUnit.Domain\OrganizationUnit.Domain.csproj", "{DE9B0D27-745B-4653-B5E0-D9A61D28CD9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticResource.API", "StaticResource.API\StaticResource.API.csproj", "{161F00FB-5D06-4103-8BF6-1C6AFC809E06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticResource", "StaticResource", "{0D1B8BD3-75F7-4389-B182-77B25E317D6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrganizationUnit.Infrastructure", "OrganizationUnit.Infrastructure\OrganizationUnit.Infrastructure.csproj", "{0E74131F-BFC1-4E01-AA21-30359ECA1242}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feedback", "Feedback", "{A7D3B2AC-9883-4649-A695-18FB7E2C6D13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feedback.API", "FeedbackAndReports\Feedback.API\Feedback.API.csproj", "{B6BB413E-7F9F-4D29-A737-640E79FA7942}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.Utility", "ContractManagement.Utility\ContractManagement.Utility.csproj", "{92AA81E3-07D9-4E48-B427-AAC3C429C91E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debt", "Debt", "{FE12E391-F88E-492C-B5F6-580EBE15BA67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebtManagement.API", "DebtManagement.API\DebtManagement.API.csproj", "{2513988F-870D-42ED-A86A-CC147EEB0E49}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebtManagement.Domain", "DebtManagement.Domain\DebtManagement.Domain.csproj", "{CDEF76E7-D369-4530-8496-C425BC93B9BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebtManagement.Infrastructure", "DebtManagement.Infrastructure\DebtManagement.Infrastructure.csproj", "{2493C995-E9D6-4975-95D7-66E947A20151}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebtManagement.Cache", "DebtManagement.Cache\DebtManagement.Cache.csproj", "{39FB188B-84CD-47C4-9425-4E66213E6F05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{7FC6AC9E-9013-4E6E-B13A-249F09217004}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffApp.APIGateway", "StaffApp.APIGateway\StaffApp.APIGateway.csproj", "{3025EC1D-2FA9-4AC6-844C-B324242C4761}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notification", "{F6B68ECD-6718-4421-AF2C-61FA03E0B9D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.API", "Notification.API\Notification.API.csproj", "{892772F1-5841-4920-9E6C-A4BD49A1CDE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebtManagement.BackgroundTasks", "DebtManagement.BackgroundTasks\DebtManagement.BackgroundTasks.csproj", "{37BBDB2B-79AF-4E04-BF3D-1C680F5B397C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.BackgroundTasks", "ContractManagement.BackgroundTasks\ContractManagement.BackgroundTasks.csproj", "{8CCFBB9C-D562-4D48-A683-0654D1C071FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerApp.APIGateway", "CustomerApp.APIGateway\CustomerApp.APIGateway.csproj", "{F9AFB10E-5C4D-49E2-BB8B-AED13A24B8D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "News", "News", "{C2C5B77D-3F2F-4281-84E5-F3534A9FB5F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "News.API", "News.API\News.API.csproj", "{5EA071AC-68C9-4890-BACF-4A69FA9E2D49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MirotikForNet", "MirotikForNet", "{7F5A494B-0A35-43A4-B0D6-FA14F42BC325}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TikForNet", "TikForNet\TikForNet.csproj", "{6FCC387B-A290-48AE-9A1B-733EB24281B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TickForNet.Objects", "TickForNet.Objects\TickForNet.Objects.csproj", "{BFCD5A86-4D96-4254-A6B8-9CDD43E16886}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractManagement.RadiusDomain", "ContractManagement.RadiusDomain\ContractManagement.RadiusDomain.csproj", "{A9CD5C27-7E32-4869-BD57-029EDA070105}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TikForNet.FuntionalTests", "TikForNet.FuntionalTests\TikForNet.FuntionalTests.csproj", "{C616A98D-783D-43AB-9C32-3691D49AE49A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoClusterRepository", "MongoClusterRepository\MongoClusterRepository.csproj", "{27DFC00A-839F-4E2E-AB91-F7107E667BF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Caching", "Caching", "{16A50A49-3EFD-4737-A34D-1D9E6F664473}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CachingLayer", "CachingLayer\CachingLayer.csproj", "{74BF2E19-6CFF-46F7-91E1-DE7CC1AC567D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFFBEEB9-33D9-4D0C-8B51-FD4F870AED04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFBEEB9-33D9-4D0C-8B51-FD4F870AED04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFBEEB9-33D9-4D0C-8B51-FD4F870AED04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFBEEB9-33D9-4D0C-8B51-FD4F870AED04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5215ED-AA61-4E20-A0E8-40DDD38E8381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5215ED-AA61-4E20-A0E8-40DDD38E8381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5215ED-AA61-4E20-A0E8-40DDD38E8381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5215ED-AA61-4E20-A0E8-40DDD38E8381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5418BE79-2924-4583-922A-6934BB2DB1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5418BE79-2924-4583-922A-6934BB2DB1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5418BE79-2924-4583-922A-6934BB2DB1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5418BE79-2924-4583-922A-6934BB2DB1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49DDC5EE-12CF-4839-B53E-42EFEC5A5DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DDC5EE-12CF-4839-B53E-42EFEC5A5DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DDC5EE-12CF-4839-B53E-42EFEC5A5DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DDC5EE-12CF-4839-B53E-42EFEC5A5DFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB41289-6AB5-4258-AC38-F69A2C5D6124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB41289-6AB5-4258-AC38-F69A2C5D6124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB41289-6AB5-4258-AC38-F69A2C5D6124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB41289-6AB5-4258-AC38-F69A2C5D6124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B77F6FF-8C29-43BE-BC2B-ADA8E91F5FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B77F6FF-8C29-43BE-BC2B-ADA8E91F5FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B77F6FF-8C29-43BE-BC2B-ADA8E91F5FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B77F6FF-8C29-43BE-BC2B-ADA8E91F5FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD626700-C8F3-4455-9736-1AF0AC911074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD626700-C8F3-4455-9736-1AF0AC911074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD626700-C8F3-4455-9736-1AF0AC911074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD626700-C8F3-4455-9736-1AF0AC911074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955B6503-D746-4AC9-B8F0-724EB36BF567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955B6503-D746-4AC9-B8F0-724EB36BF567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955B6503-D746-4AC9-B8F0-724EB36BF567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955B6503-D746-4AC9-B8F0-724EB36BF567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0103E57-A3AC-43E2-A3AE-CF053B00D0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0103E57-A3AC-43E2-A3AE-CF053B00D0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0103E57-A3AC-43E2-A3AE-CF053B00D0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0103E57-A3AC-43E2-A3AE-CF053B00D0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE03560-D5AB-4D20-B2B2-9285629DA141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE03560-D5AB-4D20-B2B2-9285629DA141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE03560-D5AB-4D20-B2B2-9285629DA141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE03560-D5AB-4D20-B2B2-9285629DA141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADE588A-9DD2-4E0C-93E7-9D150B1C5E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADE588A-9DD2-4E0C-93E7-9D150B1C5E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADE588A-9DD2-4E0C-93E7-9D150B1C5E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADE588A-9DD2-4E0C-93E7-9D150B1C5E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8EF1DD-D916-45C5-B243-2E0796D5A718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8EF1DD-D916-45C5-B243-2E0796D5A718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8EF1DD-D916-45C5-B243-2E0796D5A718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8EF1DD-D916-45C5-B243-2E0796D5A718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95830F2-97DC-4987-A89B-AD2AE930D838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95830F2-97DC-4987-A89B-AD2AE930D838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95830F2-97DC-4987-A89B-AD2AE930D838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95830F2-97DC-4987-A89B-AD2AE930D838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14562CFA-95DA-41AB-A219-78FFB01BAF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14562CFA-95DA-41AB-A219-78FFB01BAF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14562CFA-95DA-41AB-A219-78FFB01BAF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14562CFA-95DA-41AB-A219-78FFB01BAF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C12971-6821-4094-B76A-E16C8FD82E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C12971-6821-4094-B76A-E16C8FD82E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C12971-6821-4094-B76A-E16C8FD82E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C12971-6821-4094-B76A-E16C8FD82E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED7F5DA-C6E1-4DC3-8BFD-423E6B573B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED7F5DA-C6E1-4DC3-8BFD-423E6B573B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED7F5DA-C6E1-4DC3-8BFD-423E6B573B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED7F5DA-C6E1-4DC3-8BFD-423E6B573B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1D8751-3904-4531-9745-E673671FCAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1D8751-3904-4531-9745-E673671FCAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1D8751-3904-4531-9745-E673671FCAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1D8751-3904-4531-9745-E673671FCAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D79C024-FCF0-43D8-B2FD-91B09BAA0C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D79C024-FCF0-43D8-B2FD-91B09BAA0C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D79C024-FCF0-43D8-B2FD-91B09BAA0C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D79C024-FCF0-43D8-B2FD-91B09BAA0C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D29E1F7-71F0-4C89-9DF5-3229370E364F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D29E1F7-71F0-4C89-9DF5-3229370E364F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D29E1F7-71F0-4C89-9DF5-3229370E364F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D29E1F7-71F0-4C89-9DF5-3229370E364F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9B0D27-745B-4653-B5E0-D9A61D28CD9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9B0D27-745B-4653-B5E0-D9A61D28CD9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9B0D27-745B-4653-B5E0-D9A61D28CD9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9B0D27-745B-4653-B5E0-D9A61D28CD9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161F00FB-5D06-4103-8BF6-1C6AFC809E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161F00FB-5D06-4103-8BF6-1C6AFC809E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161F00FB-5D06-4103-8BF6-1C6AFC809E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161F00FB-5D06-4103-8BF6-1C6AFC809E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E74131F-BFC1-4E01-AA21-30359ECA1242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E74131F-BFC1-4E01-AA21-30359ECA1242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E74131F-BFC1-4E01-AA21-30359ECA1242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E74131F-BFC1-4E01-AA21-30359ECA1242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BB413E-7F9F-4D29-A737-640E79FA7942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BB413E-7F9F-4D29-A737-640E79FA7942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BB413E-7F9F-4D29-A737-640E79FA7942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BB413E-7F9F-4D29-A737-640E79FA7942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92AA81E3-07D9-4E48-B427-AAC3C429C91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92AA81E3-07D9-4E48-B427-AAC3C429C91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92AA81E3-07D9-4E48-B427-AAC3C429C91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92AA81E3-07D9-4E48-B427-AAC3C429C91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2513988F-870D-42ED-A86A-CC147EEB0E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2513988F-870D-42ED-A86A-CC147EEB0E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2513988F-870D-42ED-A86A-CC147EEB0E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2513988F-870D-42ED-A86A-CC147EEB0E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEF76E7-D369-4530-8496-C425BC93B9BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEF76E7-D369-4530-8496-C425BC93B9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEF76E7-D369-4530-8496-C425BC93B9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEF76E7-D369-4530-8496-C425BC93B9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2493C995-E9D6-4975-95D7-66E947A20151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2493C995-E9D6-4975-95D7-66E947A20151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2493C995-E9D6-4975-95D7-66E947A20151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2493C995-E9D6-4975-95D7-66E947A20151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FB188B-84CD-47C4-9425-4E66213E6F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FB188B-84CD-47C4-9425-4E66213E6F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FB188B-84CD-47C4-9425-4E66213E6F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FB188B-84CD-47C4-9425-4E66213E6F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3025EC1D-2FA9-4AC6-844C-B324242C4761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3025EC1D-2FA9-4AC6-844C-B324242C4761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3025EC1D-2FA9-4AC6-844C-B324242C4761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3025EC1D-2FA9-4AC6-844C-B324242C4761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892772F1-5841-4920-9E6C-A4BD49A1CDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892772F1-5841-4920-9E6C-A4BD49A1CDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892772F1-5841-4920-9E6C-A4BD49A1CDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892772F1-5841-4920-9E6C-A4BD49A1CDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BBDB2B-79AF-4E04-BF3D-1C680F5B397C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BBDB2B-79AF-4E04-BF3D-1C680F5B397C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BBDB2B-79AF-4E04-BF3D-1C680F5B397C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BBDB2B-79AF-4E04-BF3D-1C680F5B397C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCFBB9C-D562-4D48-A683-0654D1C071FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCFBB9C-D562-4D48-A683-0654D1C071FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCFBB9C-D562-4D48-A683-0654D1C071FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCFBB9C-D562-4D48-A683-0654D1C071FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9AFB10E-5C4D-49E2-BB8B-AED13A24B8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9AFB10E-5C4D-49E2-BB8B-AED13A24B8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9AFB10E-5C4D-49E2-BB8B-AED13A24B8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9AFB10E-5C4D-49E2-BB8B-AED13A24B8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA071AC-68C9-4890-BACF-4A69FA9E2D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA071AC-68C9-4890-BACF-4A69FA9E2D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA071AC-68C9-4890-BACF-4A69FA9E2D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA071AC-68C9-4890-BACF-4A69FA9E2D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCC387B-A290-48AE-9A1B-733EB24281B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCC387B-A290-48AE-9A1B-733EB24281B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCC387B-A290-48AE-9A1B-733EB24281B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCC387B-A290-48AE-9A1B-733EB24281B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCD5A86-4D96-4254-A6B8-9CDD43E16886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCD5A86-4D96-4254-A6B8-9CDD43E16886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCD5A86-4D96-4254-A6B8-9CDD43E16886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCD5A86-4D96-4254-A6B8-9CDD43E16886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9CD5C27-7E32-4869-BD57-029EDA070105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CD5C27-7E32-4869-BD57-029EDA070105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CD5C27-7E32-4869-BD57-029EDA070105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CD5C27-7E32-4869-BD57-029EDA070105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C616A98D-783D-43AB-9C32-3691D49AE49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C616A98D-783D-43AB-9C32-3691D49AE49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C616A98D-783D-43AB-9C32-3691D49AE49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C616A98D-783D-43AB-9C32-3691D49AE49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DFC00A-839F-4E2E-AB91-F7107E667BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DFC00A-839F-4E2E-AB91-F7107E667BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DFC00A-839F-4E2E-AB91-F7107E667BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DFC00A-839F-4E2E-AB91-F7107E667BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BF2E19-6CFF-46F7-91E1-DE7CC1AC567D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BF2E19-6CFF-46F7-91E1-DE7CC1AC567D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BF2E19-6CFF-46F7-91E1-DE7CC1AC567D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BF2E19-6CFF-46F7-91E1-DE7CC1AC567D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFFBEEB9-33D9-4D0C-8B51-FD4F870AED04} = {34F3DB7D-4D3D-43CC-8AC5-35D66B8FD710}
+		{47E5235F-1731-4214-A489-4827583C3DBA} = {D4AC3A81-80B1-4E10-B118-24F04E4948E7}
+		{34F3DB7D-4D3D-43CC-8AC5-35D66B8FD710} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{32BC2482-8F31-4C79-98B6-62E2B7476A1C} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{4B5215ED-AA61-4E20-A0E8-40DDD38E8381} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{7A76B708-C3E9-4ACC-A0DF-E6E88DABFADF} = {D4AC3A81-80B1-4E10-B118-24F04E4948E7}
+		{F6DDA25D-D0A6-4131-BB9D-D1981083DAE9} = {D4AC3A81-80B1-4E10-B118-24F04E4948E7}
+		{FAB05E9C-1DB9-4772-AA6D-34AA5BD83235} = {D4AC3A81-80B1-4E10-B118-24F04E4948E7}
+		{DCF2A1BA-5B97-489D-B868-7BE1E5020850} = {D4AC3A81-80B1-4E10-B118-24F04E4948E7}
+		{6C1F2507-188F-49C6-B0F5-22B9402F1A55} = {FAB05E9C-1DB9-4772-AA6D-34AA5BD83235}
+		{5418BE79-2924-4583-922A-6934BB2DB1D8} = {6C1F2507-188F-49C6-B0F5-22B9402F1A55}
+		{49DDC5EE-12CF-4839-B53E-42EFEC5A5DFB} = {6C1F2507-188F-49C6-B0F5-22B9402F1A55}
+		{6DED7387-6CDC-4BC0-8676-FEC1DAA5F5E3} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{4DB41289-6AB5-4258-AC38-F69A2C5D6124} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{7B77F6FF-8C29-43BE-BC2B-ADA8E91F5FA6} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{FD626700-C8F3-4455-9736-1AF0AC911074} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{C3EB4198-B58A-454C-B808-784DB2FF8876} = {FAB05E9C-1DB9-4772-AA6D-34AA5BD83235}
+		{955B6503-D746-4AC9-B8F0-724EB36BF567} = {C3EB4198-B58A-454C-B808-784DB2FF8876}
+		{C0103E57-A3AC-43E2-A3AE-CF053B00D0C0} = {6DED7387-6CDC-4BC0-8676-FEC1DAA5F5E3}
+		{BADE588A-9DD2-4E0C-93E7-9D150B1C5E2A} = {7A76B708-C3E9-4ACC-A0DF-E6E88DABFADF}
+		{EB8EF1DD-D916-45C5-B243-2E0796D5A718} = {6C1F2507-188F-49C6-B0F5-22B9402F1A55}
+		{DD67F750-F6E6-409F-9C94-B42A034A144A} = {FAB05E9C-1DB9-4772-AA6D-34AA5BD83235}
+		{A95830F2-97DC-4987-A89B-AD2AE930D838} = {DD67F750-F6E6-409F-9C94-B42A034A144A}
+		{141728F0-8D45-40DB-9EB8-10DC3D8A203F} = {DCF2A1BA-5B97-489D-B868-7BE1E5020850}
+		{14562CFA-95DA-41AB-A219-78FFB01BAF6C} = {141728F0-8D45-40DB-9EB8-10DC3D8A203F}
+		{6AABFDB5-8D99-46BD-AE62-A4ECEB5792BD} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{B8C12971-6821-4094-B76A-E16C8FD82E5B} = {6AABFDB5-8D99-46BD-AE62-A4ECEB5792BD}
+		{2D640CA7-2733-4053-9447-6311110481C2} = {FAB05E9C-1DB9-4772-AA6D-34AA5BD83235}
+		{2ED7F5DA-C6E1-4DC3-8BFD-423E6B573B39} = {2D640CA7-2733-4053-9447-6311110481C2}
+		{7A1D8751-3904-4531-9745-E673671FCAC2} = {2D640CA7-2733-4053-9447-6311110481C2}
+		{5D79C024-FCF0-43D8-B2FD-91B09BAA0C67} = {F6DDA25D-D0A6-4131-BB9D-D1981083DAE9}
+		{4D29E1F7-71F0-4C89-9DF5-3229370E364F} = {34F3DB7D-4D3D-43CC-8AC5-35D66B8FD710}
+		{DE9B0D27-745B-4653-B5E0-D9A61D28CD9C} = {34F3DB7D-4D3D-43CC-8AC5-35D66B8FD710}
+		{161F00FB-5D06-4103-8BF6-1C6AFC809E06} = {0D1B8BD3-75F7-4389-B182-77B25E317D6C}
+		{0D1B8BD3-75F7-4389-B182-77B25E317D6C} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{0E74131F-BFC1-4E01-AA21-30359ECA1242} = {34F3DB7D-4D3D-43CC-8AC5-35D66B8FD710}
+		{A7D3B2AC-9883-4649-A695-18FB7E2C6D13} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{B6BB413E-7F9F-4D29-A737-640E79FA7942} = {A7D3B2AC-9883-4649-A695-18FB7E2C6D13}
+		{92AA81E3-07D9-4E48-B427-AAC3C429C91E} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{FE12E391-F88E-492C-B5F6-580EBE15BA67} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{2513988F-870D-42ED-A86A-CC147EEB0E49} = {FE12E391-F88E-492C-B5F6-580EBE15BA67}
+		{CDEF76E7-D369-4530-8496-C425BC93B9BC} = {FE12E391-F88E-492C-B5F6-580EBE15BA67}
+		{2493C995-E9D6-4975-95D7-66E947A20151} = {FE12E391-F88E-492C-B5F6-580EBE15BA67}
+		{39FB188B-84CD-47C4-9425-4E66213E6F05} = {FE12E391-F88E-492C-B5F6-580EBE15BA67}
+		{7FC6AC9E-9013-4E6E-B13A-249F09217004} = {DCF2A1BA-5B97-489D-B868-7BE1E5020850}
+		{3025EC1D-2FA9-4AC6-844C-B324242C4761} = {7FC6AC9E-9013-4E6E-B13A-249F09217004}
+		{F6B68ECD-6718-4421-AF2C-61FA03E0B9D7} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{892772F1-5841-4920-9E6C-A4BD49A1CDE4} = {F6B68ECD-6718-4421-AF2C-61FA03E0B9D7}
+		{37BBDB2B-79AF-4E04-BF3D-1C680F5B397C} = {FE12E391-F88E-492C-B5F6-580EBE15BA67}
+		{8CCFBB9C-D562-4D48-A683-0654D1C071FE} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{F9AFB10E-5C4D-49E2-BB8B-AED13A24B8D0} = {7FC6AC9E-9013-4E6E-B13A-249F09217004}
+		{C2C5B77D-3F2F-4281-84E5-F3534A9FB5F6} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{5EA071AC-68C9-4890-BACF-4A69FA9E2D49} = {C2C5B77D-3F2F-4281-84E5-F3534A9FB5F6}
+		{7F5A494B-0A35-43A4-B0D6-FA14F42BC325} = {47E5235F-1731-4214-A489-4827583C3DBA}
+		{6FCC387B-A290-48AE-9A1B-733EB24281B4} = {7F5A494B-0A35-43A4-B0D6-FA14F42BC325}
+		{BFCD5A86-4D96-4254-A6B8-9CDD43E16886} = {7F5A494B-0A35-43A4-B0D6-FA14F42BC325}
+		{A9CD5C27-7E32-4869-BD57-029EDA070105} = {32BC2482-8F31-4C79-98B6-62E2B7476A1C}
+		{C616A98D-783D-43AB-9C32-3691D49AE49A} = {7A76B708-C3E9-4ACC-A0DF-E6E88DABFADF}
+		{27DFC00A-839F-4E2E-AB91-F7107E667BF5} = {C3EB4198-B58A-454C-B808-784DB2FF8876}
+		{16A50A49-3EFD-4737-A34D-1D9E6F664473} = {FAB05E9C-1DB9-4772-AA6D-34AA5BD83235}
+		{74BF2E19-6CFF-46F7-91E1-DE7CC1AC567D} = {16A50A49-3EFD-4737-A34D-1D9E6F664473}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF77BD76-CAD2-4B9B-A194-E60F8C426721}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 40
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://171.244.9.248:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SystemUserIdentity.API\\SystemUserIdentity.API.csproj
+		SccProjectTopLevelParentUniqueName1 = ITC_BMS.sln
+		SccProjectName1 = SystemUserIdentity.API
+		SccLocalPath1 = SystemUserIdentity.API
+		SccProjectUniqueName2 = ContractManagement.API\\ContractManagement.API.csproj
+		SccProjectTopLevelParentUniqueName2 = ITC_BMS.sln
+		SccProjectName2 = ContractManagement.API
+		SccLocalPath2 = ContractManagement.API
+		SccProjectUniqueName3 = EventBus\\EventBus.csproj
+		SccProjectTopLevelParentUniqueName3 = ITC_BMS.sln
+		SccProjectName3 = EventBus
+		SccLocalPath3 = EventBus
+		SccProjectUniqueName4 = EventBusRabbitMQ\\EventBusRabbitMQ.csproj
+		SccProjectTopLevelParentUniqueName4 = ITC_BMS.sln
+		SccProjectName4 = EventBusRabbitMQ
+		SccLocalPath4 = EventBusRabbitMQ
+		SccProjectUniqueName5 = ContractManagement.Domain\\ContractManagement.Domain.csproj
+		SccProjectTopLevelParentUniqueName5 = ITC_BMS.sln
+		SccProjectName5 = ContractManagement.Domain
+		SccLocalPath5 = ContractManagement.Domain
+		SccProjectUniqueName6 = ContractManagement.Infrastructure\\ContractManagement.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName6 = ITC_BMS.sln
+		SccProjectName6 = ContractManagement.Infrastructure
+		SccLocalPath6 = ContractManagement.Infrastructure
+		SccProjectUniqueName7 = ContractManagement.Caching\\ContractManagement.Caching.csproj
+		SccProjectTopLevelParentUniqueName7 = ITC_BMS.sln
+		SccProjectName7 = ContractManagement.Caching
+		SccLocalPath7 = ContractManagement.Caching
+		SccProjectUniqueName8 = GenericService\\GenericRepository.csproj
+		SccProjectTopLevelParentUniqueName8 = ITC_BMS.sln
+		SccProjectName8 = GenericService
+		SccLocalPath8 = GenericService
+		SccProjectUniqueName9 = ApplicationUserIdentity.API\\ApplicationUserIdentity.API.csproj
+		SccProjectTopLevelParentUniqueName9 = ITC_BMS.sln
+		SccProjectName9 = ApplicationUserIdentity.API
+		SccLocalPath9 = ApplicationUserIdentity.API
+		SccProjectUniqueName10 = FunctionalTest\\Solution.FunctionalTests.csproj
+		SccProjectTopLevelParentUniqueName10 = ITC_BMS.sln
+		SccProjectName10 = FunctionalTest
+		SccLocalPath10 = FunctionalTest
+		SccProjectUniqueName11 = IntegrationEventLogEF\\IntegrationEventLogEF.csproj
+		SccProjectTopLevelParentUniqueName11 = ITC_BMS.sln
+		SccProjectName11 = IntegrationEventLogEF
+		SccLocalPath11 = IntegrationEventLogEF
+		SccProjectUniqueName12 = WebHost.Customization\\WebHost.Customization.csproj
+		SccProjectTopLevelParentUniqueName12 = ITC_BMS.sln
+		SccProjectName12 = WebHost.Customization
+		SccLocalPath12 = WebHost.Customization
+		SccProjectUniqueName13 = CMS.APIGateway\\CMS.APIGateway.csproj
+		SccProjectTopLevelParentUniqueName13 = ITC_BMS.sln
+		SccProjectName13 = CMS.APIGateway
+		SccLocalPath13 = CMS.APIGateway
+		SccProjectUniqueName14 = Location.API\\Location.API.csproj
+		SccProjectTopLevelParentUniqueName14 = ITC_BMS.sln
+		SccProjectName14 = Location.API
+		SccLocalPath14 = Location.API
+		SccProjectUniqueName15 = Global.Configs\\Global.Configs.csproj
+		SccProjectTopLevelParentUniqueName15 = ITC_BMS.sln
+		SccProjectName15 = Global.Configs
+		SccLocalPath15 = Global.Configs
+		SccProjectUniqueName16 = Global.Models\\Global.Models.csproj
+		SccProjectTopLevelParentUniqueName16 = ITC_BMS.sln
+		SccProjectName16 = Global.Models
+		SccLocalPath16 = Global.Models
+		SccProjectUniqueName17 = HTC_ITC.CMS\\HTC_ITC.CMS.csproj
+		SccProjectTopLevelParentUniqueName17 = ITC_BMS.sln
+		SccProjectName17 = HTC_ITC.CMS
+		SccLocalPath17 = HTC_ITC.CMS
+		SccProjectUniqueName18 = OrganizationUnit.API\\OrganizationUnit.API.csproj
+		SccProjectTopLevelParentUniqueName18 = ITC_BMS.sln
+		SccProjectName18 = OrganizationUnit.API
+		SccLocalPath18 = OrganizationUnit.API
+		SccProjectUniqueName19 = OrganizationUnit.Domain\\OrganizationUnit.Domain.csproj
+		SccProjectTopLevelParentUniqueName19 = ITC_BMS.sln
+		SccProjectName19 = OrganizationUnit.Domain
+		SccLocalPath19 = OrganizationUnit.Domain
+		SccProjectUniqueName20 = StaticResource.API\\StaticResource.API.csproj
+		SccProjectTopLevelParentUniqueName20 = ITC_BMS.sln
+		SccProjectName20 = StaticResource.API
+		SccLocalPath20 = StaticResource.API
+		SccProjectUniqueName21 = OrganizationUnit.Infrastructure\\OrganizationUnit.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName21 = ITC_BMS.sln
+		SccProjectName21 = OrganizationUnit.Infrastructure
+		SccLocalPath21 = OrganizationUnit.Infrastructure
+		SccProjectUniqueName22 = FeedbackAndReports\\Feedback.API\\Feedback.API.csproj
+		SccProjectTopLevelParentUniqueName22 = ITC_BMS.sln
+		SccProjectName22 = FeedbackAndReports/Feedback.API
+		SccLocalPath22 = FeedbackAndReports\\Feedback.API
+		SccProjectUniqueName23 = ContractManagement.Utility\\ContractManagement.Utility.csproj
+		SccProjectTopLevelParentUniqueName23 = ITC_BMS.sln
+		SccProjectName23 = ContractManagement.Utility
+		SccLocalPath23 = ContractManagement.Utility
+		SccProjectUniqueName24 = DebtManagement.API\\DebtManagement.API.csproj
+		SccProjectTopLevelParentUniqueName24 = ITC_BMS.sln
+		SccProjectName24 = DebtManagement.API
+		SccLocalPath24 = DebtManagement.API
+		SccProjectUniqueName25 = DebtManagement.Domain\\DebtManagement.Domain.csproj
+		SccProjectTopLevelParentUniqueName25 = ITC_BMS.sln
+		SccProjectName25 = DebtManagement.Domain
+		SccLocalPath25 = DebtManagement.Domain
+		SccProjectUniqueName26 = DebtManagement.Infrastructure\\DebtManagement.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName26 = ITC_BMS.sln
+		SccProjectName26 = DebtManagement.Infrastructure
+		SccLocalPath26 = DebtManagement.Infrastructure
+		SccProjectUniqueName27 = DebtManagement.Cache\\DebtManagement.Cache.csproj
+		SccProjectTopLevelParentUniqueName27 = ITC_BMS.sln
+		SccProjectName27 = DebtManagement.Cache
+		SccLocalPath27 = DebtManagement.Cache
+		SccProjectUniqueName28 = StaffApp.APIGateway\\StaffApp.APIGateway.csproj
+		SccProjectTopLevelParentUniqueName28 = ITC_BMS.sln
+		SccProjectName28 = StaffApp.APIGateway
+		SccLocalPath28 = StaffApp.APIGateway
+		SccProjectUniqueName29 = Notification.API\\Notification.API.csproj
+		SccProjectTopLevelParentUniqueName29 = ITC_BMS.sln
+		SccProjectName29 = Notification.API
+		SccLocalPath29 = Notification.API
+		SccProjectUniqueName30 = DebtManagement.BackgroundTasks\\DebtManagement.BackgroundTasks.csproj
+		SccProjectTopLevelParentUniqueName30 = ITC_BMS.sln
+		SccProjectName30 = DebtManagement.BackgroundTasks
+		SccLocalPath30 = DebtManagement.BackgroundTasks
+		SccProjectUniqueName31 = ContractManagement.BackgroundTasks\\ContractManagement.BackgroundTasks.csproj
+		SccProjectTopLevelParentUniqueName31 = ITC_BMS.sln
+		SccProjectName31 = ContractManagement.BackgroundTasks
+		SccLocalPath31 = ContractManagement.BackgroundTasks
+		SccProjectUniqueName32 = CustomerApp.APIGateway\\CustomerApp.APIGateway.csproj
+		SccProjectTopLevelParentUniqueName32 = ITC_BMS.sln
+		SccProjectName32 = CustomerApp.APIGateway
+		SccLocalPath32 = CustomerApp.APIGateway
+		SccProjectUniqueName33 = News.API\\News.API.csproj
+		SccProjectTopLevelParentUniqueName33 = ITC_BMS.sln
+		SccProjectName33 = News.API
+		SccLocalPath33 = News.API
+		SccProjectUniqueName34 = TikForNet\\TikForNet.csproj
+		SccProjectTopLevelParentUniqueName34 = ITC_BMS.sln
+		SccProjectName34 = TikForNet
+		SccLocalPath34 = TikForNet
+		SccProjectUniqueName35 = TickForNet.Objects\\TickForNet.Objects.csproj
+		SccProjectTopLevelParentUniqueName35 = ITC_BMS.sln
+		SccProjectName35 = TickForNet.Objects
+		SccLocalPath35 = TickForNet.Objects
+		SccProjectUniqueName36 = ContractManagement.RadiusDomain\\ContractManagement.RadiusDomain.csproj
+		SccProjectTopLevelParentUniqueName36 = ITC_BMS.sln
+		SccProjectName36 = ContractManagement.RadiusDomain
+		SccLocalPath36 = ContractManagement.RadiusDomain
+		SccProjectUniqueName37 = TikForNet.FuntionalTests\\TikForNet.FuntionalTests.csproj
+		SccProjectTopLevelParentUniqueName37 = ITC_BMS.sln
+		SccProjectName37 = TikForNet.FuntionalTests
+		SccLocalPath37 = TikForNet.FuntionalTests
+		SccProjectUniqueName38 = MongoClusterRepository\\MongoClusterRepository.csproj
+		SccProjectTopLevelParentUniqueName38 = ITC_BMS.sln
+		SccProjectName38 = MongoClusterRepository
+		SccLocalPath38 = MongoClusterRepository
+		SccProjectUniqueName39 = CachingLayer\\CachingLayer.csproj
+		SccProjectTopLevelParentUniqueName39 = ITC_BMS.sln
+		SccProjectName39 = CachingLayer
+		SccLocalPath39 = CachingLayer
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 40
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://171.244.9.248:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CMS.APIGateway\\CMS.APIGateway.csproj
+		SccProjectTopLevelParentUniqueName1 = ITC_BMS.sln
+		SccProjectName1 = CMS.APIGateway
+		SccLocalPath1 = CMS.APIGateway
+		SccProjectUniqueName2 = GenericService\\GenericRepository.csproj
+		SccProjectTopLevelParentUniqueName2 = ITC_BMS.sln
+		SccProjectName2 = GenericService
+		SccLocalPath2 = GenericService
+		SccProjectUniqueName3 = EventBus\\EventBus.csproj
+		SccProjectTopLevelParentUniqueName3 = ITC_BMS.sln
+		SccProjectName3 = EventBus
+		SccLocalPath3 = EventBus
+		SccProjectUniqueName4 = EventBusRabbitMQ\\EventBusRabbitMQ.csproj
+		SccProjectTopLevelParentUniqueName4 = ITC_BMS.sln
+		SccProjectName4 = EventBusRabbitMQ
+		SccLocalPath4 = EventBusRabbitMQ
+		SccProjectUniqueName5 = Global.Configs\\Global.Configs.csproj
+		SccProjectTopLevelParentUniqueName5 = ITC_BMS.sln
+		SccProjectName5 = Global.Configs
+		SccLocalPath5 = Global.Configs
+		SccProjectUniqueName6 = Global.Models\\Global.Models.csproj
+		SccProjectTopLevelParentUniqueName6 = ITC_BMS.sln
+		SccProjectName6 = Global.Models
+		SccLocalPath6 = Global.Models
+		SccProjectUniqueName7 = IntegrationEventLogEF\\IntegrationEventLogEF.csproj
+		SccProjectTopLevelParentUniqueName7 = ITC_BMS.sln
+		SccProjectName7 = IntegrationEventLogEF
+		SccLocalPath7 = IntegrationEventLogEF
+		SccProjectUniqueName8 = WebHost.Customization\\WebHost.Customization.csproj
+		SccProjectTopLevelParentUniqueName8 = ITC_BMS.sln
+		SccProjectName8 = WebHost.Customization
+		SccLocalPath8 = WebHost.Customization
+		SccProjectUniqueName9 = SystemUserIdentity.API\\SystemUserIdentity.API.csproj
+		SccProjectTopLevelParentUniqueName9 = ITC_BMS.sln
+		SccProjectName9 = SystemUserIdentity.API
+		SccLocalPath9 = SystemUserIdentity.API
+		SccProjectUniqueName10 = ApplicationUserIdentity.API\\ApplicationUserIdentity.API.csproj
+		SccProjectTopLevelParentUniqueName10 = ITC_BMS.sln
+		SccProjectName10 = ApplicationUserIdentity.API
+		SccLocalPath10 = ApplicationUserIdentity.API
+		SccProjectUniqueName11 = FunctionalTest\\Solution.FunctionalTests.csproj
+		SccProjectTopLevelParentUniqueName11 = ITC_BMS.sln
+		SccProjectName11 = FunctionalTest
+		SccLocalPath11 = FunctionalTest
+		SccProjectUniqueName12 = Location.API\\Location.API.csproj
+		SccProjectTopLevelParentUniqueName12 = ITC_BMS.sln
+		SccProjectName12 = Location.API
+		SccLocalPath12 = Location.API
+		SccProjectUniqueName13 = OrganizationUnit.API\\OrganizationUnit.API.csproj
+		SccProjectTopLevelParentUniqueName13 = ITC_BMS.sln
+		SccProjectName13 = OrganizationUnit.API
+		SccLocalPath13 = OrganizationUnit.API
+		SccProjectUniqueName14 = OrganizationUnit.Domain\\OrganizationUnit.Domain.csproj
+		SccProjectTopLevelParentUniqueName14 = ITC_BMS.sln
+		SccProjectName14 = OrganizationUnit.Domain
+		SccLocalPath14 = OrganizationUnit.Domain
+		SccProjectUniqueName15 = StaticResource.API\\StaticResource.API.csproj
+		SccProjectTopLevelParentUniqueName15 = ITC_BMS.sln
+		SccProjectName15 = StaticResource.API
+		SccLocalPath15 = StaticResource.API
+		SccProjectUniqueName16 = OrganizationUnit.Infrastructure\\OrganizationUnit.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName16 = ITC_BMS.sln
+		SccProjectName16 = OrganizationUnit.Infrastructure
+		SccLocalPath16 = OrganizationUnit.Infrastructure
+		SccProjectUniqueName17 = ContractManagement.API\\ContractManagement.API.csproj
+		SccProjectTopLevelParentUniqueName17 = ITC_BMS.sln
+		SccProjectName17 = ContractManagement.API
+		SccLocalPath17 = ContractManagement.API
+		SccProjectUniqueName18 = ContractManagement.Caching\\ContractManagement.Caching.csproj
+		SccProjectTopLevelParentUniqueName18 = ITC_BMS.sln
+		SccProjectName18 = ContractManagement.Caching
+		SccLocalPath18 = ContractManagement.Caching
+		SccProjectUniqueName19 = ContractManagement.Domain\\ContractManagement.Domain.csproj
+		SccProjectTopLevelParentUniqueName19 = ITC_BMS.sln
+		SccProjectName19 = ContractManagement.Domain
+		SccLocalPath19 = ContractManagement.Domain
+		SccProjectUniqueName20 = ContractManagement.Infrastructure\\ContractManagement.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName20 = ITC_BMS.sln
+		SccProjectName20 = ContractManagement.Infrastructure
+		SccLocalPath20 = ContractManagement.Infrastructure
+		SccProjectUniqueName21 = FeedbackAndReports\\Feedback.API\\Feedback.API.csproj
+		SccProjectTopLevelParentUniqueName21 = ITC_BMS.sln
+		SccProjectName21 = FeedbackAndReports/Feedback.API
+		SccLocalPath21 = FeedbackAndReports\\Feedback.API
+		SccProjectUniqueName22 = HTC_ITC.CMS\\HTC_ITC.CMS.csproj
+		SccProjectTopLevelParentUniqueName22 = ITC_BMS.sln
+		SccProjectName22 = HTC_ITC.CMS
+		SccLocalPath22 = HTC_ITC.CMS
+		SccProjectUniqueName23 = ContractManagement.Utility\\ContractManagement.Utility.csproj
+		SccProjectTopLevelParentUniqueName23 = ITC_BMS.sln
+		SccProjectName23 = ContractManagement.Utility
+		SccLocalPath23 = ContractManagement.Utility
+		SccProjectUniqueName24 = DebtManagement.API\\DebtManagement.API.csproj
+		SccProjectTopLevelParentUniqueName24 = ITC_BMS.sln
+		SccProjectName24 = DebtManagement.API
+		SccLocalPath24 = DebtManagement.API
+		SccProjectUniqueName25 = DebtManagement.Domain\\DebtManagement.Domain.csproj
+		SccProjectTopLevelParentUniqueName25 = ITC_BMS.sln
+		SccProjectName25 = DebtManagement.Domain
+		SccLocalPath25 = DebtManagement.Domain
+		SccProjectUniqueName26 = DebtManagement.Infrastructure\\DebtManagement.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName26 = ITC_BMS.sln
+		SccProjectName26 = DebtManagement.Infrastructure
+		SccLocalPath26 = DebtManagement.Infrastructure
+		SccProjectUniqueName27 = DebtManagement.Cache\\DebtManagement.Cache.csproj
+		SccProjectTopLevelParentUniqueName27 = ITC_BMS.sln
+		SccProjectName27 = DebtManagement.Cache
+		SccLocalPath27 = DebtManagement.Cache
+		SccProjectUniqueName28 = StaffApp.APIGateway\\StaffApp.APIGateway.csproj
+		SccProjectTopLevelParentUniqueName28 = ITC_BMS.sln
+		SccProjectName28 = StaffApp.APIGateway
+		SccLocalPath28 = StaffApp.APIGateway
+		SccProjectUniqueName29 = Notification.API\\Notification.API.csproj
+		SccProjectTopLevelParentUniqueName29 = ITC_BMS.sln
+		SccProjectName29 = Notification.API
+		SccLocalPath29 = Notification.API
+		SccProjectUniqueName30 = DebtManagement.BackgroundTasks\\DebtManagement.BackgroundTasks.csproj
+		SccProjectTopLevelParentUniqueName30 = ITC_BMS.sln
+		SccProjectName30 = DebtManagement.BackgroundTasks
+		SccLocalPath30 = DebtManagement.BackgroundTasks
+		SccProjectUniqueName31 = ContractManagement.BackgroundTasks\\ContractManagement.BackgroundTasks.csproj
+		SccProjectTopLevelParentUniqueName31 = ITC_BMS.sln
+		SccProjectName31 = ContractManagement.BackgroundTasks
+		SccLocalPath31 = ContractManagement.BackgroundTasks
+		SccProjectUniqueName32 = News.API\\News.API.csproj
+		SccProjectTopLevelParentUniqueName32 = ITC_BMS.sln
+		SccProjectName32 = News.API
+		SccLocalPath32 = News.API
+		SccProjectUniqueName33 = CustomerApp.APIGateway\\CustomerApp.APIGateway.csproj
+		SccProjectTopLevelParentUniqueName33 = ITC_BMS.sln
+		SccProjectName33 = CustomerApp.APIGateway
+		SccLocalPath33 = CustomerApp.APIGateway
+		SccProjectUniqueName34 = TikForNet\\TikForNet.csproj
+		SccProjectTopLevelParentUniqueName34 = ITC_BMS.sln
+		SccProjectName34 = TikForNet
+		SccLocalPath34 = TikForNet
+		SccProjectUniqueName35 = TickForNet.Objects\\TickForNet.Objects.csproj
+		SccProjectTopLevelParentUniqueName35 = ITC_BMS.sln
+		SccProjectName35 = TickForNet.Objects
+		SccLocalPath35 = TickForNet.Objects
+		SccProjectUniqueName36 = ContractManagement.RadiusDomain\\ContractManagement.RadiusDomain.csproj
+		SccProjectTopLevelParentUniqueName36 = ITC_BMS.sln
+		SccProjectName36 = ContractManagement.RadiusDomain
+		SccLocalPath36 = ContractManagement.RadiusDomain
+		SccProjectUniqueName37 = TikForNet.FuntionalTests\\TikForNet.FuntionalTests.csproj
+		SccProjectTopLevelParentUniqueName37 = ITC_BMS.sln
+		SccProjectName37 = TikForNet.FuntionalTests
+		SccLocalPath37 = TikForNet.FuntionalTests
+		SccProjectUniqueName38 = MongoClusterRepository\\MongoClusterRepository.csproj
+		SccProjectTopLevelParentUniqueName38 = ITC_BMS.sln
+		SccProjectName38 = MongoClusterRepository
+		SccLocalPath38 = MongoClusterRepository
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,147 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Application\Commands\TransactionCommandHandler\UpdateDeployNewOutContract\**" />
+    <Compile Remove="Application\Commands\TransactionCommandHandler\UpgradeBandwidths\**" />
+    <Compile Remove="Application\Commands\TransactionCommandHandler\UpgradeEquipments\**" />
+    <Compile Remove="bin\**" />
+    <Content Remove="Application\Commands\TransactionCommandHandler\UpdateDeployNewOutContract\**" />
+    <Content Remove="Application\Commands\TransactionCommandHandler\UpgradeBandwidths\**" />
+    <Content Remove="Application\Commands\TransactionCommandHandler\UpgradeEquipments\**" />
+    <Content Remove="bin\**" />
+    <EmbeddedResource Remove="Application\Commands\TransactionCommandHandler\UpdateDeployNewOutContract\**" />
+    <EmbeddedResource Remove="Application\Commands\TransactionCommandHandler\UpgradeBandwidths\**" />
+    <EmbeddedResource Remove="Application\Commands\TransactionCommandHandler\UpgradeEquipments\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="Application\Commands\TransactionCommandHandler\UpdateDeployNewOutContract\**" />
+    <None Remove="Application\Commands\TransactionCommandHandler\UpgradeBandwidths\**" />
+    <None Remove="Application\Commands\TransactionCommandHandler\UpgradeEquipments\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Application\DomainEventHandlers\ContractEventHandlers\UpgradeServicePackageDomainEventHandler.cs" />
+    <Compile Remove="Application\IntegrationEvents\Events\ContractEvents\UpgradeServicePackageIntegrationEvent.cs" />
+    <Compile Remove="Infrastructure\MapperConfigs\ContractSharingRevenueLineMapperConfigs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\taxcategory.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="CsvHelper" Version="27.1.0" />
+    <PackageReference Include="EPPlus" Version="5.3.1" />
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+    <PackageReference Include="Google.Protobuf" Version="3.12.3" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.12.3" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.29.0" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.29.0" />
+    <PackageReference Include="Grpc.Core" Version="2.29.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.29.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.29.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="3.1.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.ElasticSearch" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CachingLayer\CachingLayer.csproj" />
+    <ProjectReference Include="..\ContractManagement.Caching\ContractManagement.Caching.csproj" />
+    <ProjectReference Include="..\ContractManagement.Domain\ContractManagement.Domain.csproj" />
+    <ProjectReference Include="..\ContractManagement.Infrastructure\ContractManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\ContractManagement.RadiusDomain\ContractManagement.RadiusDomain.csproj" />
+    <ProjectReference Include="..\EventBusRabbitMQ\EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\GenericService\GenericRepository.csproj" />
+    <ProjectReference Include="..\IntegrationEventLogEF\IntegrationEventLogEF.csproj" />
+    <ProjectReference Include="..\TickForNet.Objects\TickForNet.Objects.csproj" />
+    <ProjectReference Include="..\TikForNet\TikForNet.csproj" />
+    <ProjectReference Include="..\WebHost.Customization\WebHost.Customization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\DomainEventHandlers\RadiusBrasEventHandlers\" />
+    <Folder Include="Infrastructure\Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Protobuf Include="Protos\common.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\incontracts.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\outcontracts.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\taxcategory.proto" GrpcServices="Server" />
+
+	  <Protobuf Include="Protos\services.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\packages.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\projects.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\marketareas.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\equipmenttypes.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\contractors.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\transactions.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\transactionsupporter.proto" GrpcServices="Server" />
+	  <Protobuf Include="Protos\acceptance.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\unitofmeasurements.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\promotions.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\contractforms.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\exchangerates.proto" GrpcServices="Server" />
+
+
+	  <Protobuf Include="..\StaticResource.API\Protos\attachmentfile.proto" GrpcServices="Client" />
+    <Protobuf Include="..\StaticResource.API\Protos\picture.proto" GrpcServices="Client" />
+    <Protobuf Include="..\ApplicationUserIdentity.API\Protos\applicationusers.proto" GrpcServices="Client" />
+    <Protobuf Include="..\Notification.API\Protos\notification.proto" GrpcServices="Client" />
+    <Protobuf Include="..\OrganizationUnit.API\Protos\users.proto" GrpcServices="Client" />
+    <Protobuf Include="..\OrganizationUnit.API\Protos\organizationunits.proto" GrpcServices="Client" />
+    <Protobuf Include="..\Location.API\Protos\locations.proto" GrpcServices="Client" />
+	
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controllers\ContractEquipmentsController.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="appsettings.Development" /></VisualStudio></ProjectExtensions>
+</Project>

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package ContractManagementApi;
+
+service PromotionsServiceGrpc {
+	rpc GetPromotions(RequestGetPromotionsGrpc) returns (ListPromotionDTOGrpc) {}
+}
+
+message RequestGetPromotionsGrpc{
+	google.protobuf.Int32Value	 serviceId = 1;
+	google.protobuf.Int32Value	 servicePackageId = 2;
+	google.protobuf.Int32Value	 outContractServicePackageId = 3;
+}
+message ListPromotionDTOGrpc{
+	repeated PromotionDTOGrpc promotions = 1;
+}
+
+message PromotionDTOGrpc{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.StringValue	 promotionCode = 2;
+	google.protobuf.StringValue	 promotionName = 3;
+	google.protobuf.StringValue	 promotionDetailId = 4;
+	google.protobuf.Int32Value	 promotionType = 5;	
+	google.protobuf.StringValue	 promotionTypeString = 6;
+	google.protobuf.Int32Value	 promotionValueType = 7;
+	google.protobuf.Int32Value	 quantity = 8;
+	google.protobuf.Int32Value	 numberOfMonthApplied = 9;
+	google.protobuf.StringValue	 description = 10;
+	google.protobuf.Timestamp	 startDate = 11;
+	google.protobuf.Timestamp	 endDate = 12;
+}

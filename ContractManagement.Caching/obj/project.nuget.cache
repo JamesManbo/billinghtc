@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IyooBnwH6NbHQoMseccIksVxH5mUMK470T9tRjp3kpcAjI4q6EcOdU9rLv59QdDw9fQwieuUXOg+txoDjT2UlA==",
+  "success": true,
+  "projectFilePath": "E:\\Project\\Billing\\ContractManagement.Caching\\ContractManagement.Caching.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

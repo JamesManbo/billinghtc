@@ -1,0 +1,26 @@
+[
+	{
+		"Id" : 1,
+		"Name" : "Đã gửi, chờ hệ thống xử lý"
+	},
+	{
+		"Id" : 2,
+		"Name" : "Đang chờ nhân viên bán hàng xử lý"
+	},
+	{
+		"Id" : 3,
+		"Name" : "Nhân viên bán hàng đã xác nhận"
+	},
+	{
+		"Id" : 4,
+		"Name" : "Đã thanh toán"
+	},
+	{
+		"Id" : 5,
+		"Name" : "Đã thành công"
+	},
+	{
+		"Id" : 6,
+		"Name" : "Đã hủy"
+	}
+]

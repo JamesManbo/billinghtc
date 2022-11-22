@@ -1,0 +1,179 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200617071052_Add_Table_ConfigurationPersonalAccounts.cs" />
+    <Compile Remove="Migrations\20200617071052_Add_Table_ConfigurationPersonalAccounts.Designer.cs" />
+    <Compile Remove="Migrations\20200617093430_Update_Table_ConfigurationPersonalAccounts.cs" />
+    <Compile Remove="Migrations\20200617093430_Update_Table_ConfigurationPersonalAccounts.Designer.cs" />
+    <Compile Remove="Migrations\20200618074930_Add-Table_ConfigurationPersonalAccountUser.cs" />
+    <Compile Remove="Migrations\20200618074930_Add-Table_ConfigurationPersonalAccountUser.Designer.cs" />
+    <Compile Remove="Migrations\20200618075307_Add-Table_ConfigurationPersonalAccountUser.cs" />
+    <Compile Remove="Migrations\20200618075307_Add-Table_ConfigurationPersonalAccountUser.Designer.cs" />
+    <Compile Remove="Migrations\20200618080026_Add-Table_ConfigurationPersonalAccountUser.cs" />
+    <Compile Remove="Migrations\20200618080026_Add-Table_ConfigurationPersonalAccountUser.Designer.cs" />
+    <Compile Remove="Migrations\20200622160756_Add_Table_ConfigSystemParameter.cs" />
+    <Compile Remove="Migrations\20200622160756_Add_Table_ConfigSystemParameter.Designer.cs" />
+    <Compile Remove="Migrations\20200623022550_Add_Table_ConfigSystemParameter.cs" />
+    <Compile Remove="Migrations\20200623022550_Add_Table_ConfigSystemParameter.Designer.cs" />
+    <Compile Remove="Migrations\20200911062822_Add_Permission_Feedback.cs" />
+    <Compile Remove="Migrations\20200911062822_Add_Permission_Feedback.Designer.cs" />
+    <Compile Remove="Migrations\20200918080418_Update_Table_Users_Add_Columns.cs" />
+    <Compile Remove="Migrations\20200918080418_Update_Table_Users_Add_Columns.Designer.cs" />
+    <Compile Remove="Migrations\20200918082716_Update_Table_Users_Add_Columns.cs" />
+    <Compile Remove="Migrations\20200918082716_Update_Table_Users_Add_Columns.Designer.cs" />
+    <Compile Remove="Migrations\20201001072031_Add_Data_To_Permissions.cs" />
+    <Compile Remove="Migrations\20201001072031_Add_Data_To_Permissions.Designer.cs" />
+    <Compile Remove="Migrations\20201023063756_Add_Table_UserBankAccounts_And_Update_Table_Users.cs" />
+    <Compile Remove="Migrations\20201023063756_Add_Table_UserBankAccounts_And_Update_Table_Users.Designer.cs" />
+    <Compile Remove="Migrations\20201023064717_Add_Table_UserBankAccounts_And_Update_Table_Users.cs" />
+    <Compile Remove="Migrations\20201023064717_Add_Table_UserBankAccounts_And_Update_Table_Users.Designer.cs" />
+    <Compile Remove="Migrations\20201116084830_Update_Table_Permissions_Data_PermissionName.cs" />
+    <Compile Remove="Migrations\20201116084830_Update_Table_Permissions_Data_PermissionName.Designer.cs" />
+    <Compile Remove="Migrations\20201229085659_Add_OrganizationPath_To_Entity.cs" />
+    <Compile Remove="Migrations\20201229085659_Add_OrganizationPath_To_Entity.Designer.cs" />
+    <Compile Remove="Migrations\20201231081843_Initialize_Database_Schemas.cs" />
+    <Compile Remove="Migrations\20201231081843_Initialize_Database_Schemas.Designer.cs" />
+    <Compile Remove="Migrations\20201231081931_Initialize_StoredProcedures.cs" />
+    <Compile Remove="Migrations\20201231081931_Initialize_StoredProcedures.Designer.cs" />
+    <Compile Remove="Migrations\20201231082144_Initialize_Seed_Data.cs" />
+    <Compile Remove="Migrations\20201231082144_Initialize_Seed_Data.Designer.cs" />
+    <Compile Remove="Migrations\20210125044106_Update_Data_Permissions.cs" />
+    <Compile Remove="Migrations\20210125044106_Update_Data_Permissions.Designer.cs" />
+    <Compile Remove="Migrations\20210129101519_Update_Data_Permissions_Contract_Form.cs" />
+    <Compile Remove="Migrations\20210129101519_Update_Data_Permissions_Contract_Form.Designer.cs" />
+    <Compile Remove="Migrations\20210401041251_Update_Table_User_And_SeedData_User.cs" />
+    <Compile Remove="Migrations\20210401041251_Update_Table_User_And_SeedData_User.Designer.cs" />
+    <Compile Remove="Migrations\20210415082945_Update_Column_Mobile_Table_User.cs" />
+    <Compile Remove="Migrations\20210415082945_Update_Column_Mobile_Table_User.Designer.cs" />
+    <Compile Remove="Migrations\20210421134045_Add_Column_ShortName_Users.cs" />
+    <Compile Remove="Migrations\20210421134045_Add_Column_ShortName_Users.Designer.cs" />
+    <Compile Remove="Migrations\20210422040554_Update_SeedData_Permissons_Demo_RolePermissions.cs" />
+    <Compile Remove="Migrations\20210422040554_Update_SeedData_Permissons_Demo_RolePermissions.Designer.cs" />
+    <Compile Remove="Migrations\20210628062323_Seed_ImportContractPermission.cs" />
+    <Compile Remove="Migrations\20210628062323_Seed_ImportContractPermission.Designer.cs" />
+    <Compile Remove="Migrations\20211020050534_Add_Column_ManagementUserId_OrganizationUnits.cs" />
+    <Compile Remove="Migrations\20211020050534_Add_Column_ManagementUserId_OrganizationUnits.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Seed\Data\bras_radius_and_debt_administrator_assignations.csv" />
+    <None Remove="Seed\Data\bras_radius_and_debt_permissions.csv" />
+    <None Remove="Seed\Data\configurationPersonalAccounts.csv" />
+    <None Remove="Seed\Data\configurationSystemParameters.csv" />
+    <None Remove="Seed\Data\demo-organizationunits.csv" />
+    <None Remove="Seed\Data\demo-rolepermissions.csv" />
+    <None Remove="Seed\Data\demo-roles.csv" />
+    <None Remove="Seed\Data\demo-userroles.csv" />
+    <None Remove="Seed\Data\demo-users.csv" />
+    <None Remove="Seed\Data\organization_units.csv" />
+    <None Remove="Seed\Data\permissions.csv" />
+    <None Remove="Seed\Data\rolepermissions.csv" />
+    <None Remove="Seed\Data\roles.csv" />
+    <None Remove="Seed\Data\user.csv" />
+    <None Remove="Seed\Data\userroles.csv" />
+    <None Remove="SQLScripts\StoredProcedures\GetPermissionOfUser.sql" />
+    <None Remove="SQLScripts\StoredProcedures\GetPermissionOfUser_v2.sql" />
+    <None Remove="SQLScripts\StoredProcedures\GetPermissionOfUser_v3.sql" />
+    <None Remove="SQLScripts\StoredProcedures\GetSystemMenusByPermission.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Seed\Data\bras_radius_and_debt_administrator_assignations.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\bras_radius_and_debt_permissions.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\configurationPersonalAccounts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\configurationSystemParameters.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\demo-organizationunits.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\demo-rolepermissions.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\demo-roles.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\demo-userroles.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\demo-users.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\organization_units.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\permissions.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\rolepermissions.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\roles.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\user.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\userroles.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLScripts\StoredProcedures\GetPermissionOfUser_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLScripts\StoredProcedures\GetPermissionOfUser_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Factories\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.1.0" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.10" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CachingLayer\CachingLayer.csproj" />
+    <ProjectReference Include="..\IntegrationEventLogEF\IntegrationEventLogEF.csproj" />
+    <ProjectReference Include="..\OrganizationUnit.Domain\OrganizationUnit.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\StoredProcedures\GetPermissionOfUser.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLScripts\StoredProcedures\GetSystemMenusByPermission.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

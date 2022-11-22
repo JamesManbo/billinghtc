@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service UnitOfMeasurementGrpc {
+	rpc GetUnitOfMeasurements(UnitOfMeasurementFilterGrpc) returns (UnitOfMeasurementListDTOGrpc) {}
+}
+
+message UnitOfMeasurementFilterGrpc {
+	google.protobuf.Int32Value UnitOfMeasurementType = 1;
+}
+
+message UnitOfMeasurementListDTOGrpc {
+	repeated SelectionItemDTOGrpc UnitOfMeasurementDTOGrpcs = 1;
+}

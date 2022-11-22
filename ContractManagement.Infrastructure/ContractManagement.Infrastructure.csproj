@@ -1,0 +1,743 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="EntityConfigurations\InContractServiceEntityConfiguration.cs" />
+    <Compile Remove="Migrations\20200407100218_Create_Table_Equipments.cs" />
+    <Compile Remove="Migrations\20200407100218_Create_Table_Equipments.Designer.cs" />
+    <Compile Remove="Migrations\20200414104508_InitialMigration.cs" />
+    <Compile Remove="Migrations\20200414104508_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200414104746_InitialMigration.cs" />
+    <Compile Remove="Migrations\20200414104746_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200514084203_add_sp_baucho.cs" />
+    <Compile Remove="Migrations\20200514084203_add_sp_baucho.Designer.cs" />
+    <Compile Remove="Migrations\20200515030730_Update_Map_ServiceChannel.cs" />
+    <Compile Remove="Migrations\20200515030730_Update_Map_ServiceChannel.Designer.cs" />
+    <Compile Remove="Migrations\20200515032736_Update_Map_ContractSharingRevenue.cs" />
+    <Compile Remove="Migrations\20200515032736_Update_Map_ContractSharingRevenue.Designer.cs" />
+    <Compile Remove="Migrations\20200515032929_Update_Map_ServiceChannel.cs" />
+    <Compile Remove="Migrations\20200515032929_Update_Map_ServiceChannel.Designer.cs" />
+    <Compile Remove="Migrations\20200515071844_Update_Column_InContractId_In_Table_AttachmentFiles.cs" />
+    <Compile Remove="Migrations\20200515071844_Update_Column_InContractId_In_Table_AttachmentFiles.Designer.cs" />
+    <Compile Remove="Migrations\20200519040933_Add_SP_DeleteContractSharingRevenuesByInContractId.cs" />
+    <Compile Remove="Migrations\20200519040933_Add_SP_DeleteContractSharingRevenuesByInContractId.Designer.cs" />
+    <Compile Remove="Migrations\20200520040253_Update_Table_ServiceChannels.cs" />
+    <Compile Remove="Migrations\20200520040253_Update_Table_ServiceChannels.Designer.cs" />
+    <Compile Remove="Migrations\20200525072125_Add_Column_SharedMaintenanceFee_In_Table_ContractSharingRevenues.cs" />
+    <Compile Remove="Migrations\20200525072125_Add_Column_SharedMaintenanceFee_In_Table_ContractSharingRevenues.Designer.cs" />
+    <Compile Remove="Migrations\20200602030742_Create_Table_ContractSharingRevenueLines.cs" />
+    <Compile Remove="Migrations\20200602030742_Create_Table_ContractSharingRevenueLines.Designer.cs" />
+    <Compile Remove="Migrations\20200602031325_Create_Table_ContractSharingRevenueLines.cs" />
+    <Compile Remove="Migrations\20200602031325_Create_Table_ContractSharingRevenueLines.Designer.cs" />
+    <Compile Remove="Migrations\20200602031810_Create_Table_ContractSharingRevenueLines.cs" />
+    <Compile Remove="Migrations\20200602031810_Create_Table_ContractSharingRevenueLines.Designer.cs" />
+    <Compile Remove="Migrations\20200616030602_Update_Table_OutContractServicePackages_And_TransactionServicePackages.cs" />
+    <Compile Remove="Migrations\20200616030602_Update_Table_OutContractServicePackages_And_TransactionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200616030627_Update_Table_OutContractServicePackages_And_TrấnctionServicePackages.cs" />
+    <Compile Remove="Migrations\20200616030627_Update_Table_OutContractServicePackages_And_TrấnctionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200616030957_Update_Table_OutContractServicePackages_And_TransactionServicePackages.cs" />
+    <Compile Remove="Migrations\20200616030957_Update_Table_OutContractServicePackages_And_TransactionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200616031420_Create_Table_TransactionStatus.cs" />
+    <Compile Remove="Migrations\20200616031420_Create_Table_TransactionStatus.Designer.cs" />
+    <Compile Remove="Migrations\20200616031553_Create_Table_TransactionStatus.cs" />
+    <Compile Remove="Migrations\20200616031553_Create_Table_TransactionStatus.Designer.cs" />
+    <Compile Remove="Migrations\20200616042030_Update_Table_TransactionServicePackages.cs" />
+    <Compile Remove="Migrations\20200616042030_Update_Table_TransactionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200617041652_Update_Table_OutContractServicePackageStatus_Change_Name_Column.cs" />
+    <Compile Remove="Migrations\20200617041652_Update_Table_OutContractServicePackageStatus_Change_Name_Column.Designer.cs" />
+    <Compile Remove="Migrations\20200623081102_Update_Table_Transaction_Change_Column_.cs" />
+    <Compile Remove="Migrations\20200623081102_Update_Table_Transaction_Change_Column_.Designer.cs" />
+    <Compile Remove="Migrations\20200703043722_Add_Start_End_Point_Revenue_Column_To_OutContractServicePackages.cs" />
+    <Compile Remove="Migrations\20200703043722_Add_Start_End_Point_Revenue_Column_To_OutContractServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200703082235_Add_ServiceName_ServicePackageName_Column_To_ContractSharingRevenueLines.cs" />
+    <Compile Remove="Migrations\20200703082235_Add_ServiceName_ServicePackageName_Column_To_ContractSharingRevenueLines.Designer.cs" />
+    <Compile Remove="Migrations\20200703082816_Add_ServiceName_ServicePackageName_Column_To_ContractSharingRevenueLines.cs" />
+    <Compile Remove="Migrations\20200703082816_Add_ServiceName_ServicePackageName_Column_To_ContractSharingRevenueLines.Designer.cs" />
+    <Compile Remove="Migrations\20200708035251_Update_Table_TransactionServicePackages.cs" />
+    <Compile Remove="Migrations\20200708035251_Update_Table_TransactionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200708035605_Update_Table_TransactionServicePackages.cs" />
+    <Compile Remove="Migrations\20200708035605_Update_Table_TransactionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200708042345_Update_Table_TransactionServicePackages.cs" />
+    <Compile Remove="Migrations\20200708042345_Update_Table_TransactionServicePackages.Designer.cs" />
+    <Compile Remove="Migrations\20200717063135_Update_SP_ChangeLocationServices_GetNeedToPaymentContractServices_GetOutContractSimpleAllByIds.cs" />
+    <Compile Remove="Migrations\20200717063135_Update_SP_ChangeLocationServices_GetNeedToPaymentContractServices_GetOutContractSimpleAllByIds.Designer.cs" />
+    <Compile Remove="Migrations\20200813030032_Update_Table_TransactionServicePackage_Add_Column_IsDeploy.cs" />
+    <Compile Remove="Migrations\20200813030032_Update_Table_TransactionServicePackage_Add_Column_IsDeploy.Designer.cs" />
+    <Compile Remove="Migrations\20200824031048_Update_Table_PromotionType_Add_Seeds_Data.cs" />
+    <Compile Remove="Migrations\20200824031048_Update_Table_PromotionType_Add_Seeds_Data.Designer.cs" />
+    <Compile Remove="Migrations\20200825064116_Add_Table_ServicePackageSuspensionTimes.cs" />
+    <Compile Remove="Migrations\20200825064116_Add_Table_ServicePackageSuspensionTimes.Designer.cs" />
+    <Compile Remove="Migrations\20200915035054_checkchanges.cs" />
+    <Compile Remove="Migrations\20200915035054_checkchanges.Designer.cs" />
+    <Compile Remove="Migrations\20200915035307_checkchanges.cs" />
+    <Compile Remove="Migrations\20200915035307_checkchanges.Designer.cs" />
+    <Compile Remove="Migrations\20200925081550_Add_Payment_Form_Uom_ServicePackages_FK.cs" />
+    <Compile Remove="Migrations\20200925081550_Add_Payment_Form_Uom_ServicePackages_FK.Designer.cs" />
+    <Compile Remove="Migrations\20200925082144_Add_Payment_Form_Uom_ServicePackages_FK.cs" />
+    <Compile Remove="Migrations\20200925082144_Add_Payment_Form_Uom_ServicePackages_FK.Designer.cs" />
+    <Compile Remove="Migrations\20200929080406_checkchanges.cs" />
+    <Compile Remove="Migrations\20200929080406_checkchanges.Designer.cs" />
+    <Compile Remove="Migrations\20201008092533_Add_Radius_BRAS_Aggregate_Tables.cs" />
+    <Compile Remove="Migrations\20201008092533_Add_Radius_BRAS_Aggregate_Tables.Designer.cs" />
+    <Compile Remove="Migrations\20201008095418_Add_Radius_BRAS_Aggregate_Tables.cs" />
+    <Compile Remove="Migrations\20201008095418_Add_Radius_BRAS_Aggregate_Tables.Designer.cs" />
+    <Compile Remove="Migrations\20201022033752_Add_sp_GetReportCustomer.cs" />
+    <Compile Remove="Migrations\20201022033752_Add_sp_GetReportCustomer.Designer.cs" />
+    <Compile Remove="Migrations\20201022034356_Add_sp_GetReportCustomer.cs" />
+    <Compile Remove="Migrations\20201022034356_Add_sp_GetReportCustomer.Designer.cs" />
+    <Compile Remove="Migrations\20201102024619_Add_CashierFullName_UserName_To_OutContracts.cs" />
+    <Compile Remove="Migrations\20201102024619_Add_CashierFullName_UserName_To_OutContracts.Designer.cs" />
+    <Compile Remove="Migrations\20201112090946_testdb.cs" />
+    <Compile Remove="Migrations\20201112090946_testdb.Designer.cs" />
+    <Compile Remove="Migrations\20201119063124_Update_Tables_Relation_To_Transaction.cs" />
+    <Compile Remove="Migrations\20201119063124_Update_Tables_Relation_To_Transaction.Designer.cs" />
+    <Compile Remove="Migrations\20201119064125_Update_Tables_Relation_To_Transaction.cs" />
+    <Compile Remove="Migrations\20201119064125_Update_Tables_Relation_To_Transaction.Designer.cs" />
+    <Compile Remove="Migrations\20201119064923_Update_Tables_Relation_To_Transaction.cs" />
+    <Compile Remove="Migrations\20201119064923_Update_Tables_Relation_To_Transaction.Designer.cs" />
+    <Compile Remove="Migrations\20201214075013_Insert_Seed_Data.cs" />
+    <Compile Remove="Migrations\20201214075013_Insert_Seed_Data.Designer.cs" />
+    <Compile Remove="Migrations\20201214075906_InitializeStoredProcedures.cs" />
+    <Compile Remove="Migrations\20201214075906_InitializeStoredProcedures.Designer.cs" />
+    <Compile Remove="Migrations\20201214080255_Initialize_Stored_Procedures.cs" />
+    <Compile Remove="Migrations\20201214080255_Initialize_Stored_Procedures.Designer.cs" />
+    <Compile Remove="Migrations\20210112024125_Alter_SP_GetNeedToPaymentContractServices_v3.cs" />
+    <Compile Remove="Migrations\20210112024125_Alter_SP_GetNeedToPaymentContractServices_v3.Designer.cs" />
+    <Compile Remove="Migrations\20210121084650_AddTableCurrencyUnit_v1.cs" />
+    <Compile Remove="Migrations\20210121084650_AddTableCurrencyUnit_v1.Designer.cs" />
+    <Compile Remove="Migrations\20210128023322_Add_Column_CurrencyUnitId_Table_ServicePackagePrice.cs" />
+    <Compile Remove="Migrations\20210128023322_Add_Column_CurrencyUnitId_Table_ServicePackagePrice.Designer.cs" />
+    <Compile Remove="Migrations\20210224015251_AddTableChannelGroups.cs" />
+    <Compile Remove="Migrations\20210224015251_AddTableChannelGroups.Designer.cs" />
+    <Compile Remove="Migrations\20210224063416_AddColumnChannelGroupId_OutContractServicePackage_v1.cs" />
+    <Compile Remove="Migrations\20210224063416_AddColumnChannelGroupId_OutContractServicePackage_v1.Designer.cs" />
+    <Compile Remove="Migrations\20210315101132_Add_PaymentTarget_table_outContractservicepackage.cs" />
+    <Compile Remove="Migrations\20210315101132_Add_PaymentTarget_table_outContractservicepackage.Designer.cs" />
+    <Compile Remove="Migrations\20210319092006_Update_Table_ContractSharingRevenue_And_Table_ContractSharingRevenueLines_V1.cs" />
+    <Compile Remove="Migrations\20210319092006_Update_Table_ContractSharingRevenue_And_Table_ContractSharingRevenueLines_V1.Designer.cs" />
+    <Compile Remove="Migrations\20210322022332_Update_Table_ContractSharingRevenueLines_v2.cs" />
+    <Compile Remove="Migrations\20210322022332_Update_Table_ContractSharingRevenueLines_v2.Designer.cs" />
+    <Compile Remove="Migrations\20210322040634_paymentaget.cs" />
+    <Compile Remove="Migrations\20210322040634_paymentaget.Designer.cs" />
+    <Compile Remove="Migrations\20210323090807_addColumn_CurrencyUnitCode_Table_ServicepackagePrice.cs" />
+    <Compile Remove="Migrations\20210323090807_addColumn_CurrencyUnitCode_Table_ServicepackagePrice.Designer.cs" />
+    <Compile Remove="Migrations\20210427094741_alter_stored_GetOutContractSharingRevenueByInContract_and_GetOutContractSimpleAllByInContractId.cs" />
+    <Compile Remove="Migrations\20210427094741_alter_stored_GetOutContractSharingRevenueByInContract_and_GetOutContractSimpleAllByInContractId.Designer.cs" />
+    <Compile Remove="Migrations\20210602035203_Initial_Schemas_And_Data.cs" />
+    <Compile Remove="Migrations\20210602035203_Initial_Schemas_And_Data.Designer.cs" />
+    <Compile Remove="Migrations\20210713032439_Alter_Table_PackagePriceBusTables.cs" />
+    <Compile Remove="Migrations\20210713032439_Alter_Table_PackagePriceBusTables.Designer.cs" />
+    <Compile Remove="Migrations\20210717075252_Update_Flexible_Pricing_Type_Seed_Data.cs" />
+    <Compile Remove="Migrations\20210717075252_Update_Flexible_Pricing_Type_Seed_Data.Designer.cs" />
+    <Compile Remove="Migrations\20210722070954_Seed_Memory_UnitOfMeasurements.cs" />
+    <Compile Remove="Migrations\20210722070954_Seed_Memory_UnitOfMeasurements.Designer.cs" />
+    <Compile Remove="Migrations\20210811061205_Unify_Input_Output_Channels.cs" />
+    <Compile Remove="Migrations\20210811061205_Unify_Input_Output_Channels.Designer.cs" />
+    <Compile Remove="Migrations\20210811083858_Alter_ContractSharing_Aggregate.cs" />
+    <Compile Remove="Migrations\20210811083858_Alter_ContractSharing_Aggregate.Designer.cs" />
+    <Compile Remove="Migrations\20210815152326_Remove_FK_InContracts_Transactions.cs" />
+    <Compile Remove="Migrations\20210815152326_Remove_FK_InContracts_Transactions.Designer.cs" />
+    <Compile Remove="Migrations\20210815152935_Remove_FK_InContracts_Transactions.cs" />
+    <Compile Remove="Migrations\20210815152935_Remove_FK_InContracts_Transactions.Designer.cs" />
+    <Compile Remove="Migrations\20210817101329_Remove_Redundant_In_Out_ContractStatus.cs" />
+    <Compile Remove="Migrations\20210817101329_Remove_Redundant_In_Out_ContractStatus.Designer.cs" />
+    <Compile Remove="Migrations\20210817111452_Alter_SP_AfterRemove_Redundant_ContractStatuses.cs" />
+    <Compile Remove="Migrations\20210817111452_Alter_SP_AfterRemove_Redundant_ContractStatuses.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Seed\Data\equipments.csv" />
+    <None Remove="Seed\Data\projects.csv" />
+    <None Remove="Seed\Data\services.csv" />
+    <None Remove="Seed\Data\service_groups.csv" />
+    <None Remove="Seed\Data\transaction_type.csv" />
+    <None Remove="SqlScripts\Functions\FIRST_DAY.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ActivateSuspensionTimes.sql" />
+    <None Remove="SqlScripts\StoredProcedures\AddServiceChannelToInContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\AddServiceChannelToInContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ChangeEquipments.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ChangeLocationServices.sql" />
+    <None Remove="SqlScripts\StoredProcedures\curexchangerates.sql" />
+    <None Remove="SqlScripts\StoredProcedures\curexchangerates_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\curexchangerates_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\DeleteContractSharingRevenuesByIds.sql" />
+    <None Remove="SqlScripts\StoredProcedures\Func_CalculateSubspendServiceTotal.sql" />
+    <None Remove="SqlScripts\StoredProcedures\func_ExchangeMoney.sql" />
+    <None Remove="SqlScripts\StoredProcedures\func_ExchangeMoney_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetCustomerInMarketArea.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetEquipmentInProjectOfOutContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetExpiredOutContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetExpiredOutContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetInContractTotalQuantityEveryMonth.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v10.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v11.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v12.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v13.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v14.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v15.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v7.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v8.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v9.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v7.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v8.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v9.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractEffectedQuantityEveryMonth.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSignedQuantityEveryMonth.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSimpleAllByIds.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOutContractTotalQuantityEveryMonth.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetSummaryFTTHProjectRevenue_v1.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetSummaryPersonalCustomerRevenue.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalDebtReport_v1.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalDebtReport_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v1.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v7.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTransactionOfOutContract_v1.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetTransactionOfOutContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead.sql" />
+    <None Remove="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ReclaimEquipments.sql" />
+    <None Remove="SqlScripts\StoredProcedures\RestoreOrSuspendServices.sql" />
+    <None Remove="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\SplitReturnTemp.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_DeleteServicePackage.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetDataTotalRevenue.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeReportData.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeReportData_v1.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeReportData_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeReportData_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeReportData_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v1.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v7.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v8.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_UpdatePromotionProduct.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateContracts.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateContracts_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateContracts_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateContracts_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateServices.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateServices_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateServices_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateServices_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\TerminateServices_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpgradeEquipments.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SqlScripts\Functions\FIRST_DAY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Seed\Data\service_groups.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\transaction_type.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Seed\Data\equipments.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\projects.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\services.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ActivateSuspensionTimes.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\AddServiceChannelToInContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\AddServiceChannelToInContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ChangeEquipments.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ChangeLocationServices.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\curexchangerates.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\curexchangerates_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\curexchangerates_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\DeleteContractSharingRevenuesByIds.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\Func_CalculateSubspendServiceTotal.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\func_ExchangeMoney.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\func_ExchangeMoney_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetCustomerInMarketArea.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetEquipmentInProjectOfOutContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetExpiredOutContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetExpiredOutContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetInContractTotalQuantityEveryMonth.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v10.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v11.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v12.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v13.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v14.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v15.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v7.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v8.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetListMasterCustomerReport_v9.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v7.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v8.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v9.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractEffectedQuantityEveryMonth.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSignedQuantityEveryMonth.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSimpleAllByIds.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOutContractTotalQuantityEveryMonth.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetSummaryFTTHProjectRevenue_v1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetSummaryPersonalCustomerRevenue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalDebtReport_v1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalDebtReport_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v7.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTransactionOfOutContract_v1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetTransactionOfOutContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ReclaimEquipments.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\RestoreOrSuspendServices.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\RestoreOrSuspendServices_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\SplitReturnTemp.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_DeleteServicePackage.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetDataTotalRevenue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeReportData_v1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeReportData_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeReportData_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeReportData_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v7.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v8.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_UpdatePromotionProduct.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateContracts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateContracts_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateContracts_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateContracts_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateServices.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateServices_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateServices_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateServices_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\TerminateServices_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpgradeEquipments.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.1.0" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CachingLayer\CachingLayer.csproj" />
+    <ProjectReference Include="..\ContractManagement.Domain\ContractManagement.Domain.csproj" />
+    <ProjectReference Include="..\ContractManagement.RadiusDomain\ContractManagement.RadiusDomain.csproj" />
+    <ProjectReference Include="..\ContractManagement.Utility\ContractManagement.Utility.csproj" />
+    <ProjectReference Include="..\GenericService\GenericRepository.csproj" />
+    <ProjectReference Include="..\IntegrationEventLogEF\IntegrationEventLogEF.csproj" />
+    <ProjectReference Include="..\MongoClusterRepository\MongoClusterRepository.csproj" />
+  </ItemGroup>
+
+</Project>

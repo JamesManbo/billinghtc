@@ -1,0 +1,342 @@
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\Functions\FIRST_DAY.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ActivateSuspensionTimes.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\AddServiceChannelToInContract.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\AddServiceChannelToInContract_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ChangeEquipments.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ChangeLocationServices.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\curexchangerates.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\curexchangerates_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\curexchangerates_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\DeleteContractSharingRevenuesByIds.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\Func_CalculateSubspendServiceTotal.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\func_ExchangeMoney.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\func_ExchangeMoney_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetCustomerInMarketArea.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetEquipmentInProjectOfOutContract.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetExpiredOutContract.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetExpiredOutContract_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetInContractTotalQuantityEveryMonth.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v10.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v11.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v12.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v13.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v14.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v15.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v6.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v7.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v8.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v9.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v6.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v7.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v8.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v9.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractEffectedQuantityEveryMonth.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSignedQuantityEveryMonth.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByIds.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractTotalQuantityEveryMonth.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetSummaryFTTHProjectRevenue_v1.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetSummaryPersonalCustomerRevenue.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalDebtReport_v1.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalDebtReport_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v1.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v6.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v7.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v6.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTransactionOfOutContract_v1.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTransactionOfOutContract_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ReclaimEquipments.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\SplitReturnTemp.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_DeleteServicePackage.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetDataTotalRevenue.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v1.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v1.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v6.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v6.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v7.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v8.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_UpdatePromotionProduct.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v2.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v3.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v4.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v5.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpgradeEquipments.sql
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\service_groups.csv
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\transaction_type.csv
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\equipments.csv
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\projects.csv
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\services.csv
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Infrastructure.deps.json
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Infrastructure.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Infrastructure.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\CachingLayer.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Domain.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Utility.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\EventBus.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\GenericRepository.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Configs.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Models.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\IntegrationEventLogEF.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\MongoClusterRepository.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TickForNet.Objects.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TikForNet.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\CachingLayer.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Domain.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Utility.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\GenericRepository.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\IntegrationEventLogEF.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\MongoClusterRepository.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\EventBus.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Models.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TickForNet.Objects.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TikForNet.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.csproj.CopyComplete
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\Functions\FIRST_DAY.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ActivateSuspensionTimes.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\AddServiceChannelToInContract.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\AddServiceChannelToInContract_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ChangeEquipments.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ChangeLocationServices.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\curexchangerates.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\curexchangerates_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\curexchangerates_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\DeleteContractSharingRevenuesByIds.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\Func_CalculateSubspendServiceTotal.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\func_ExchangeMoney.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\func_ExchangeMoney_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetAllChannelSuspensionTimes_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetContractorInProjectOfOutContract_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetCustomerInMarketArea.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetEquipmentInProjectOfOutContract.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetExpiredOutContract.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetExpiredOutContract_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetInContractTotalQuantityEveryMonth.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v10.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v11.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v12.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v13.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v14.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v15.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v6.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v7.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v8.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetListMasterCustomerReport_v9.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v6.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v7.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v8.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetNeedToPaymentContractServices_v9.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractEffectedQuantityEveryMonth.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSharingRevenueByInContract_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSignedQuantityEveryMonth.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByIds.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractSimpleAllByInContractId_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetOutContractTotalQuantityEveryMonth.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetSummaryFTTHProjectRevenue_v1.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetSummaryPersonalCustomerRevenue.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalDebtReport_v1.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalDebtReport_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v1.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v6.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalFTTHProjectRevenue_v7.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTotalRevenueEnterpiseReport_v6.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTransactionOfOutContract_v1.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\GetTransactionOfOutContract_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\MapContractSharingRevenueLineToHead_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\ReclaimEquipments.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\RestoreOrSuspendServices_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\SplitReturnTemp.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_DeleteServicePackage.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetDataTotalRevenue.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v1.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeReportData_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v1.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetFeeTotalReportData_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportEstimateRevenue_v6.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v6.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v7.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract_v8.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_GetTotalDataIncontractFeeSharingReport_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\sp_UpdatePromotionProduct.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateContracts_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\TerminateServices_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v2.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v3.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v4.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpdateNextBillingDateOfPayingContracts_v5.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\SqlScripts\StoredProcedures\UpgradeEquipments.sql
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\service_groups.csv
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\transaction_type.csv
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\equipments.csv
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\projects.csv
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Seed\Data\services.csv
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Infrastructure.deps.json
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Infrastructure.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Infrastructure.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\CachingLayer.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Domain.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Utility.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\EventBus.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\GenericRepository.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Configs.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Models.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\IntegrationEventLogEF.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\MongoClusterRepository.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TickForNet.Objects.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TikForNet.dll
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\CachingLayer.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Domain.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\ContractManagement.Utility.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\GenericRepository.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\IntegrationEventLogEF.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\MongoClusterRepository.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\EventBus.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\Global.Models.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TickForNet.Objects.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\bin\Debug\netcoreapp3.1\TikForNet.pdb
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.csproj.AssemblyReference.cache
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.AssemblyInfoInputs.cache
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.AssemblyInfo.cs
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.csproj.CopyComplete
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.dll
+E:\Project\Billing\ContractManagement.Infrastructure\obj\Debug\netcoreapp3.1\ContractManagement.Infrastructure.pdb

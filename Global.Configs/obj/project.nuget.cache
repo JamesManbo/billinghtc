@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "El8iCFrJTzJkwOpLBZCLWDqJESC1vsqBYMzasrIfYf1glDIzEqioiEMCNBPTMLCHaa06RND75ty3iAMJ49fqfQ==",
+  "success": true,
+  "projectFilePath": "E:\\Project\\Billing\\Global.Configs\\Global.Configs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

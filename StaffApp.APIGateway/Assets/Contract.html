@@ -1,0 +1,611 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=.31, maximum-scale=3.0, user-scalable=yes"/>
+    <title></title>
+	<style>
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
+		body{
+			width: 1300px;
+			padding: 30mm 20mm 30mm 20mm;
+		} 
+	
+		.contract-template-wrapper {
+			display: block;
+			overflow: hidden;
+		}
+
+		.text-center {
+			text-align: center!important;
+		}
+		#default	ul {
+			list-style: none; /* Remove list bullets */
+			padding: 0;
+			margin: 0;
+		}
+
+		#default	li:before {
+			content: "-"; /* Insert content that looks like bullets */
+			padding-right: 12px;
+			color: #000; /* Or a color you prefer */
+		}
+
+		#default	ol {
+			counter-reset: item;
+			padding: 0;
+			margin: 0;
+		}
+		#default	ol li {
+			display: block;
+		}
+	
+		table {
+			border: solid #000 !important;
+			border-width: 1px 0 0 1px !important;
+		}
+		th,
+		td {
+			border: solid #000 !important;
+			border-width: 0 1px 1px 0 !important;
+		}
+	
+	
+		#content {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 18px;
+			color: #000;
+		}
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin-right: -10px;
+			margin-left: -10px;
+		}
+		.col-6 {
+			flex: 0 0 50%;
+			max-width: 50%;
+			position: relative;
+			width: 100%;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.mat-price {
+			color: #fd397a;
+		}
+		.img-fluid {
+			max-width: 100%;
+			height: 120px;
+		}
+	</style>
+
+</head>
+<body>
+    		<div id="content" [ngClass]="{ 'p-3': !isPrintAction }">
+			<div class="text-center">
+				<b>HỢP ĐỒNG CUNG CẤP VÀ SỬ DỤNG DỊCH VỤ INTERNET</b>
+			</div>
+			<div id="default">
+				<div><i>Căn cứ:</i></div>
+				<div>
+					<ul>
+						<li>
+							<i
+								>Luật Viễn thông năm 2009 số 41/2009/QH12 của
+								Quốc Hội ngày 23 tháng 11 năm 2009 quy định về
+								hoạt động viễn thông.</i
+							>
+						</li>
+						<li>
+							<i
+								>Luật Bảo vệ quyền lợi người tiêu dùng số
+								59/2010/QH12 của Quốc Hội ngày 17 tháng 11 năm
+								2010.</i
+							>
+						</li>
+						<li>
+							<i
+								>Nghị định số 25/2011/NĐ-CP ngày 06 tháng 04 năm
+								2011 quy định chi tiết và hướng dẫn thi hành một
+								số điều của Luật Viễn thông.</i
+							>
+						</li>
+						<li>
+							<i
+								>Nghị định số 81/2016/NĐ-CP ngày 01 tháng 07 năm
+								2016 về sửa đổi, bổ sung một số điều của Nghị
+								định số 25/2011/NĐ-CP ngày 06 tháng 4 năm 2011
+								của Chính phủ quy định chi tiết và hướng dẫn thi
+								hành một số điều của Luật viễn thông.
+							</i>
+						</li>
+						<li>
+							<i
+								>Nghị định số 99/2011/NĐ-CP ngày 27/10/2011 quy
+								định chi tiết và hướng dẫn thi hành một số điều
+								của Luật Bảo vệ quyền lợi người tiêu dùng.</i
+							>
+						</li>
+					</ul>
+					<br />
+					<p class="mb-0">
+						Hợp đồng số:
+						{{#if contractModel.contractCode}}
+						{{
+							contractModel.contractCode
+						}}.
+						{{else}}
+						.....................
+						{{/if}}
+						 Mã Khách hàng:
+						{{#if applicationUser.customerCode}}
+						{{
+							applicationUser.customerCode
+						}}.
+						{{else}}
+						.....................
+						{{/if}}
+						 Mã CH/đại lý:
+						{{#if contractModel.agentCode}}
+						{{
+							contractModel.agentCode
+						}}.
+						{{else}}
+						.....................
+						{{/if}}
+					</p>
+					<p class="mb-0">
+						Hợp đồng cung cấp và sử dụng dịch vụ Internet (gọi tắt
+						là “Hợp đồng”) được ký kết ngày
+						{{#if contractModel.timeLine.signed.day}}
+						{{
+							contractModel.timeLine.signed.day
+						}}
+						{{else}}
+						.........
+						{{/if}}
+						tháng
+						{{#if contractModel.timeLine.signed.month}}
+						{{
+							contractModel.timeLine.signed.month 
+						}}
+						{{else}}
+						.........
+						{{/if}}
+						năm
+						{{#if contractModel.timeLine.signed.year}}
+						{{
+							contractModel.timeLine.signed.year
+						}}
+						{{else}}
+						.........
+						{{/if}}
+						tại
+						……………….........................................................................………giữa:
+					</p>
+				</div>
+				<br />
+				<div>
+					<div><b>BÊN SỬ DỤNG DỊCH VỤ:</b></div>
+					<p class="mb-0">
+						Tên Tổ chức/Cá nhân (viết hoa):&nbsp;
+						{{#if applicationUser.fullName}}
+						{{
+							applicationUser.fullName
+						}}
+						{{else}}
+							....................................................................................
+						{{/if}}
+					</p>
+					<p class="mb-0">
+						Ngày sinh:
+						{{#if applicationUser.dateOfBirth}}
+						{{
+						applicationUser.dateOfBirth
+						}}.
+						{{else}}
+						…../…../………..
+						{{/if}}
+						 Nam/Nữ:
+						{{#if applicationUser.gender}}
+						{{
+							applicationUser.genderName
+						}}
+						{{else}}
+						.........
+						{{/if}}
+						.
+					</p>
+					<p class="mb-0">
+						Số CMND/Hộ chiếu:
+						{{#if applicationUser.idNo}}
+						{{
+							applicationUser.idNo
+						}}.
+						{{else}}
+						.....................................
+						{{/if}}
+						 Nơi cấp:
+						{{#if applicationUser.idIssuedBy}}
+						{{
+							applicationUser.idIssuedBy
+						}}.
+						{{else}}
+						...................................
+						{{/if}}
+						 Ngày cấp
+						{{#if applicationUser.idDateOfIssue}}
+						{{
+							applicationUser.idDateOfIssue
+						}}
+						{{else}}
+						…../…../………..
+						{{/if}}
+						.
+					</p>
+					<p class="mb-0">
+						Số hộ khẩu/Giấy tờ khác:…………………….…Nơi cấp:…………………..Ngày
+						cấp…../…../………..
+					</p>
+					<p class="mb-0">
+						Mã số thuế:
+						{{#if applicationUser.taxIdNo}}
+						{{
+							applicationUser.taxIdNo
+						}}
+						{{else}}
+						.....................................
+						{{/if}}
+					</p>
+					
+					<p class="mb-0">
+						{{#if contractModel.servicePackages.Count}}
+						<span>
+							Địa chỉ lắp đặt:&nbsp;{{#if contractModel.servicePackages.0.hasStartAndEndPoint}}
+														<span>{{contractModel.servicePackages.0.startPoint.installationAddress.fullAddress}} -</span>
+													{{/if}}
+							{{contractModel.servicePackages.0.endPoint.installationAddress.fullAddress}}
+						</span>
+						{{else}}
+						<span>
+							Địa chỉ lắp đặt:&nbsp;..............................................................................................................................................................................
+						</span>
+						{{/if}}
+					</p>
+					
+					<p class="mb-0">
+						Điện thoại:
+						{{#if applicationUser.mobilePhoneNo}}
+						{{
+							applicationUser.mobilePhoneNo
+						}}.
+						{{else}}
+						.................................
+						{{/if}}
+						 Fax:
+						{{#if applicationUser.faxNo}}
+						{{
+							applicationUser.faxNo
+						}}. 
+						{{else}}
+						...................................
+						{{/if}}
+						 Email:
+						{{#if applicationUser.email}}
+						{{
+							applicationUser.email
+						}}.
+						{{else}}
+						................................................
+						{{/if}}
+					</p>
+					
+					<p class="mb-0">(Sau đây gọi là “Bên A”)</p>
+				</div>
+				
+				<br />
+				<div>
+					<div>
+						<b>BÊN CUNG CẤP DỊCH VỤ:&nbsp;
+							{{#if contractModel.contractorHTC.contractorFullName}}
+							{{
+								contractModel.contractorHTC.contractorFullName
+							}}
+							{{else}}
+							..................................................
+							{{/if}}
+						</b>
+					</div>
+					
+					<p class="mb-0">
+						Người đại diện :
+						................................................... Chức
+						vụ: ............................
+					</p>
+					<p class="mb-0">
+						Giấy ủy quyền số :
+						...............................................
+					</p>
+					<p class="mb-0">
+						Địa chỉ giao dịch :
+						......................................................................................
+					</p>
+					<p class="mb-0">
+						Điện thoại :
+						{{#if contractModel.contractorHTC.contractorPhone}}
+						{{ 
+							contractModel.contractorHTC.contractorPhone
+						}}
+						{{else}}
+						..............................
+						{{/if}}
+					</p>
+					<p class="mb-0">Website : www.htc-itc.com.vn</p>
+					<p class="mb-0">
+						Mã số thuế :
+						{{#if contractModel.contractorHTC.contractorTaxIdNo}}
+						{{
+							contractModel.contractorHTC.contractorTaxIdNo
+						}}
+						{{else}}
+						..............................
+						{{/if}}
+					</p>
+					<p class="mb-0">
+						Tài khoản số :
+						...................................................................................................................
+					</p>
+					<p class="mb-0">
+						Giấy chứng nhận đăng ký doanh nghiệp số 0103019416 do
+						Phòng đăng ký kinh doanh thành phố Hà Nội cấp ngày 06
+						tháng 09 năm 2007
+					</p>
+					<p class="mb-0">
+						Giấy phép cung cấp dịch vụ viễn thông số 839/GP-CVT do
+						Cục Viễn thông cấp ngày 30 tháng 12 năm 2016.
+					</p>
+					<p class="mb-0">( Sau đây gọi là “<b>Bên B</b>”)</p>
+					<p class="mb-0">
+						Bên A và Bên B sau đây được gọi chung là “Các bên”
+					</p>
+				</div>
+				<div>
+					<ol>
+						<li>
+							<b>ĐIỀU 1. CUNG CẤP DỊCH VỤ</b>
+							<ol>
+								<li>
+									Bên B cung cấp cho Bên A loại hình dịch vụ
+									truy nhập Internet băng thông rộng với các
+									nội dung:
+									<br />
+									<div>
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th scope="col">STT</th>
+													<th scope="col">
+														Loại dịch vụ
+													</th>
+													<th scope="col">
+														Gói cước/ băng thông
+													</th>
+													<th scope="col">
+														Giá cước/ Tháng
+													</th>
+													<th scope="col">
+														Phí hòa mạng/ lắp đặt
+													</th>
+													<th scope="col">
+														Thiết bị
+													</th>
+													<th scope="col">Ghi chú</th>
+												</tr>
+											</thead>
+											<tbody>
+												{{#each contractModel.servicePackages as |item|}}
+												<tr>
+													<th scope="row">
+														{{#inc @index}}{{/inc}}
+													</th>
+													
+													<td>
+														{{ item.serviceName }}
+													</td>
+													<td>
+														{{#if item.servicePackageId}}
+														<div>
+															{{ item.packageName }}
+															<br />
+														</div>
+														{{/if}}
+														
+														{{#if item.domesticBandwidth}}
+														<span>
+															{{#if item.hasDistinguishBandwidth}}
+															
+															<span>Băng thông trong nước:&nbsp;</span>
+															
+															{{/if}}
+															{{
+																item.domesticBandwidth
+																	
+															}} {{item.domesticBandwidthUom}}
+														</span>
+														{{/if}}
+														<br />
+														{{#if item.internationalBandwidth}}
+														<span>
+															<span>Băng thông quốc tế:&nbsp;</span>
+															{{
+																item.internationalBandwidth
+															}} {{item.internationalBandwidthUom}}
+														</span>
+														{{/if}}
+													</td>
+													<td>
+														<span
+															class="mat-price"
+															>{{#ifeq item.packagePrice.currencyCode "VND"}}<sup>₫</sup>{{/ifeq}}
+															{{
+																item.packagePrice.formatValue
+															}}</span
+														>
+													</td>
+													<td>
+														<span
+															class="mat-price"
+															>{{#ifeq item.installationFee.currencyCode "VND"}}<sup>₫</sup>{{/ifeq}}
+															{{
+																item.installationFee.formatValue
+															}}</span
+														>
+													</td>
+													<td>
+														
+														{{#if item.hasStartAndEndPoint}}
+														<ul>
+															{{#each item.startPoint.equipments as |equipment|}}
+															<li>
+																{{ equipment.equipmentName }}
+																{{#ifneq equipment.statusId  1}}
+																<span>({{ equipment.realUnit }}</span>
+																{{else}}
+																<span>({{ equipment.examinedUnit }}</span>
+																{{/ifneq}}
+																{{ equipment.equipmentUom }})
+															</li>
+															{{/each}}
+														</ul>
+														{{/if}}
+														<ul>
+															{{#each item.endPoint.equipments as |equipment|}}
+															<li>
+																{{equipment.equipmentName}}
+																{{#ifneq equipment.statusId 1}}
+																<span>({{ equipment.realUnit }}</span>
+																{{else}}
+																<span>({{ equipment.examinedUnit }}</span>
+																{{/ifneq}}
+																{{ equipment.equipmentUom }})
+															</li>
+															{{/each}}
+														</ul>
+														{{!--
+														--}}
+													</td>
+													<td>
+														{{item.note}}
+													</td>
+												</tr>
+												{{/each}}
+											</tbody>
+										</table>
+									</div>
+								</li>
+								</br>
+								{{#if contractModel.servicePackages.Count}}
+								<li>
+									Địa chỉ lắp đặt:&nbsp;{{#if contractModel.servicePackages.0.hasStartAndEndPoint}}<span>
+																{{contractModel.servicePackages[0].startPoint.installationAddress.fullAddress}} -
+															</span>
+															{{/if}}
+									{{contractModel.servicePackages.0.endPoint.installationAddress.fullAddress}}
+								</li>
+								{{else}}
+								<li>
+									Địa chỉ lắp đặt:&nbsp;..............................................................................................................................................................................
+								</li>
+								{{/if}}
+								<li>
+									Hình thức thanh toán cước lần đầu tiên:<br />
+									<p>
+										<input
+											type="checkbox"
+											id="paymentMethodFisrt1"
+											name="paymentMethodFisrt1"
+											value="0"
+											disabled=true
+										/>
+										&nbsp;
+										<label for="paymentMethodFisrt1">
+											Trả cước theo từng tháng</label
+										>
+									</p>
+									<p>
+										<input
+											type="checkbox"
+											id="paymentMethodFisrt2"
+											name="paymentMethodFisrt2"
+											value="1"
+											disabled=true
+										/>&nbsp;
+										<label for="paymentMethodFisrt2">
+											Trả trước …. tháng (Được miễn phí
+											……………………………………………………………)</label
+										>
+									</p>
+								</li>
+								<li>
+									Thời điểm cung cấp dịch vụ truy nhập
+									Internet: Trong vòng 05 ngày kể từ ngày Hợp
+									đồng được Các bên ký kết, Bên B sẽ tiến hành
+									lắp đặt tại địa chỉ của Bên A nêu tại Hợp
+									đồng này. Thời điểm bắt đầu tính cước là
+									thời điểm Các bên ký Biên bản bàn giao
+									nghiệm thu và bàn giao dịch
+								</li>
+								<li>
+									Chất lượng dịch vụ được Bên B công bố tại
+									website http://www.htc-itc.com.vn của Công
+									ty Cổ phần HTC Viễn thông quốc tế.
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+			{{!--
+			<div
+				*ngIf="contractModel.contractContent"
+				[innerHTML]="contractModel.contractContent.content"
+			></div>
+			--}}
+			<div class="row">
+				<div class="col-6 text-center"><b>ĐẠI DIỆN BÊN A</b></div>
+				<div class="col-6 text-center"><b>ĐẠI DIỆN BÊN B</b></div>
+			</div>
+			{{#if contractModel.contractContent}}
+			<div class="row">
+				
+				<div
+					class="col-6 text-center"
+				>
+				{{#if contractModel.contractContent.digitalSignature.optimizedUrl}}
+					<img
+						class="img-fluid"
+						src={{contractModel.contractContent.digitalSignature.optimizedUrl}}
+						
+					/>
+					{{/if}}
+				</div>
+				
+				
+				<div
+					class="col-6 text-center"
+				>
+				{{#if contractModel.contractContent.contractFormSignature.optimizedUrl}}
+					<img
+						class="img-fluid"
+						src={{contractModel.contractContent.contractFormSignature.optimizedUrl}}
+					/>
+					{{/if}}
+				</div>
+				
+			</div>
+			{{/if}}
+		</div>
+</body>
+</html>

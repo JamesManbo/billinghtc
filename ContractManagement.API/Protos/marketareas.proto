@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service MarketAreaServiceGrpc {
+	rpc GetAll(google.protobuf.Empty) returns (MarketAreaListGrpcDTO) {}
+	rpc GetMarketArea(RequestFilterGrpc) returns (MarketAreaPageListGrpcDTO) {}
+	rpc GetMarketAreaCode(google.protobuf.Int32Value) returns (google.protobuf.StringValue) {}
+}
+
+message MarketAreaListGrpcDTO
+{
+	repeated MarketAreaGrpcDTO marketAreaDtos = 1;
+}
+
+message MarketAreaGrpcDTO
+{
+	google.protobuf.StringValue	 marketName = 1;
+	google.protobuf.StringValue  marketCode = 2;
+	google.protobuf.Int32Value  id = 3;
+	google.protobuf.Int32Value  parentId = 4;
+	google.protobuf.Int32Value  treeLevel = 5;
+	google.protobuf.StringValue  treePath = 6;
+}
+
+message MarketAreaPageListGrpcDTO
+{
+	repeated MarketAreaGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}

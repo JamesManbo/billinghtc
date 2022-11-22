@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option csharp_namespace = "OrganizationUnit.API.Protos.Organizations";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package OrganizationUnitAPI.Organizations;
+
+message RequestFilterGrpc {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	RequestType Type = 8;
+}
+
+enum RequestType {
+    UNKNOWN = 0;
+    Grid = 1;
+    Selection = 2;
+    Hierarchical = 3;
+    SimpleAll = 4;
+    Autocomplete = 5;
+    AutocompleteSimple = 6;
+}
+
+message ResultGrpc {
+	google.protobuf.StringValue	 Result = 1;	
+}
+
+service OrganizationUnitsGrpc {
+	rpc GetList(RequestFilterGrpc) returns (ResultGrpc) {}
+	rpc GetAll(google.protobuf.Empty) returns (ListOrganizationUnitGrpc) {}
+	rpc GetById(google.protobuf.StringValue) returns (OrganizationUnitGrpcDTO) {}
+	rpc GetByCode(google.protobuf.StringValue) returns (OrganizationUnitGrpcDTO) {}
+	rpc GetChildrenByCode(google.protobuf.StringValue) returns (ListOrganizationUnitGrpc) {}
+}
+
+message OrganizationUnitGrpcDTO {
+	int32 id = 1;
+	google.protobuf.StringValue name = 2;
+	google.protobuf.Int32Value parentId = 3;
+	google.protobuf.StringValue parentName = 4;
+	google.protobuf.StringValue code = 5;
+	google.protobuf.StringValue shortName = 6;
+	google.protobuf.StringValue address = 7;
+	google.protobuf.StringValue numberPhone = 8;
+	google.protobuf.Int32Value typeId = 9;
+	google.protobuf.StringValue email = 10;
+	google.protobuf.StringValue provinceName = 11;
+	google.protobuf.StringValue provinceId = 12;
+	google.protobuf.StringValue treePath = 13;
+	google.protobuf.StringValue identityGuid = 14;
+	google.protobuf.Int32Value totalEmployees = 15;
+}
+
+message ListOrganizationUnitGrpc {
+	repeated OrganizationUnitGrpcDTO organizationUnits = 1;
+}

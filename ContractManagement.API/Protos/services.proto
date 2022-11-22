@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service ServiceGrpc {
+	rpc GetServices(RequestFilterGrpc) returns (ServicePageListGrpcDTO) {}
+	rpc GetAllService(google.protobuf.Empty) returns (ServiceListGrpcDTO) {}
+	rpc GetDetail(google.protobuf.Int32Value) returns (ServiceGrpcDTO) {}
+}
+
+message ServicePageListGrpcDTO
+{
+	repeated ServiceGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message ServiceListGrpcDTO
+{
+	repeated ServiceGrpcDTO serviceDtos = 1;
+}
+
+message ServiceGrpcDTO
+{
+	google.protobuf.StringValue	 serviceName = 1;
+	google.protobuf.StringValue  serviceCode = 2;
+	google.protobuf.Int32Value  id = 3;
+	google.protobuf.Int32Value  groupId = 4;
+	google.protobuf.StringValue  groupName = 5;
+	bool  hasStartAndEndPoint = 6;
+	bool  hasPackages = 7;
+	PictureDTOGrpc  avatar = 8;
+}

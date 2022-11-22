@@ -1,0 +1,8 @@
+obj\Debug\netcoreapp3.1/Outcontracts.cs \
+obj\Debug\netcoreapp3.1/OutcontractsGrpc.cs: C:/Users/Administrator/.nuget/packages/grpc.tools/2.30.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/Administrator/.nuget/packages/grpc.tools/2.30.0/build/native/include/google/protobuf/timestamp.proto\
+ C:/Users/Administrator/.nuget/packages/grpc.tools/2.30.0/build/native/include/google/protobuf/empty.proto\
+ ../../ContractManagement.API/Protos/contractors.proto\
+ ../../ContractManagement.API/Protos/common.proto\
+ ../../ContractManagement.API/Protos/taxcategory.proto\
+ ../../ContractManagement.API/Protos/outcontracts.proto

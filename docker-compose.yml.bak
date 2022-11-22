@@ -1,0 +1,252 @@
+version: '3.4'
+
+services:
+  contractmanagementapi.api:
+    image: ${DOCKER_REGISTRY}contractmanagementapi
+    build:
+      context: .
+      dockerfile: ContractManagement.API/Dockerfile
+    restart: on-failure
+    depends_on:
+      - elasticsearch
+      - rabbitmq
+      - mongodb.contractmodifiedhistory
+      - debtmanagement.api
+      - staticresource.api
+      - organizationunit.api
+      - applicationuseridentity.api
+      - location.api
+
+  systemuseridentity.api:
+    image: ${DOCKER_REGISTRY}systemuseridentityapi
+    build:
+      context: .
+      dockerfile: SystemUserIdentity.API/Dockerfile
+    depends_on:
+      - elasticsearch
+
+  debtmanagement.api:
+    image: ${DOCKER_REGISTRY}debtmanagementapi
+    build:
+      context: .
+      dockerfile: DebtManagement.API/Dockerfile
+    depends_on:
+      - elasticsearch
+      - rabbitmq
+
+  notification.api:
+    image: ${DOCKER_REGISTRY}notificationapi
+    build:
+      context: .
+      dockerfile: Notification.API/Dockerfile
+    depends_on:
+      - elasticsearch
+      - mongodb.notification
+
+  feedback.api:
+    image: ${DOCKER_REGISTRY}feedbackapi
+    build:
+      context: .
+      dockerfile: FeedbackAndReports/Feedback.API/Dockerfile
+    depends_on:
+      - mongodb.feedback
+
+  staticresource.api:
+    image: ${DOCKER_REGISTRY}staticresourceapi
+    build:
+      context: .
+      dockerfile: StaticResource.API/Dockerfile
+
+  applicationuseridentity.api:
+    image: ${DOCKER_REGISTRY}applicationuseridentityapi
+    build:
+      context: .
+      dockerfile: ApplicationUserIdentity.API/Dockerfile
+    restart: on-failure
+    depends_on:
+      - elasticsearch
+      - rabbitmq      
+
+  organizationunit.api:
+    image: ${DOCKER_REGISTRY}organizationunitapi
+    build:
+      context: .
+      dockerfile: OrganizationUnit.API/Dockerfile
+    depends_on:
+      - elasticsearch
+      - rabbitmq
+
+  location.api:
+    image: ${DOCKER_REGISTRY}locationapi
+    build:
+      context: .
+      dockerfile: Location.API/Dockerfile
+    depends_on:
+      - mongodb.location
+
+  cms.apigateway:
+    image: ${DOCKER_REGISTRY}cmsapigateway
+    build:
+      context: .
+      dockerfile: CMS.APIGateway/Dockerfile
+    depends_on:
+        - contractmanagementapi.api
+        - applicationuseridentity.api
+        - location.api
+        - organizationunit.api
+        - systemuseridentity.api
+        - debtmanagement.api
+
+  staffapp.apigateway:
+    image: ${DOCKER_REGISTRY}staffappapigateway
+    build:
+      context: .
+      dockerfile: StaffApp.APIGateway/Dockerfile
+    depends_on:
+        - contractmanagementapi.api
+        - applicationuseridentity.api
+        - location.api
+        - organizationunit.api
+        - systemuseridentity.api
+        - debtmanagement.api
+
+  customerapp.apigateway:
+    image: ${DOCKER_REGISTRY}customerappapigateway
+    build:
+      context: .
+      dockerfile: CustomerApp.APIGateway/Dockerfile
+    depends_on:
+        - contractmanagementapi.api
+        - applicationuseridentity.api
+        - location.api
+        - organizationunit.api
+        - systemuseridentity.api
+        - debtmanagement.api
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.2
+    container_name: elasticsearch
+    environment:
+      - node.name=es01
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=es01
+      - cluster.initial_master_nodes=es01
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+
+  #kibana:
+  #  image: docker.elastic.co/kibana/kibana:7.5.2
+  #  container_name: kibana
+  #  environment:
+  #    SERVER_NAME: kibana
+  #    ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+  #  depends_on:
+  #    - elasticsearch
+  #  ports:
+  #    - 5601:5601
+
+  rabbitmq:
+    image: rabbitmq:3.7-management  
+    container_name: rabbitmq    
+    environment:
+        - RABBITMQ_USERNAME=admin
+        - RABBITMQ_PASSWORD=123@123a
+    ports:
+        - 15672:15672
+
+  redis:
+    image: redis:6.2.6
+    container_name: cache
+    volumes:
+        - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+        - "6379:6379" 
+  
+  mongodb.notification:
+    image: mongo
+    container_name: mongodb.notification
+    restart: always
+    environment:
+    - MONGO_INITDB_DATABASE=notification_db
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=123@123a
+    volumes:
+    - "/var/lib/mongodb-notification:/data/db"
+    ports:
+    - "27018:27017"
+
+  mongodb.feedback:
+    image: mongo
+    container_name: mongodb.feedback
+    restart: always
+    environment:
+    - MONGO_INITDB_DATABASE=feedback_db
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=123@123a
+    volumes:
+    - "/var/lib/mongodb-feedback:/data/db"
+    ports:
+    - "27019:27017"
+
+  mongodb.contractmodifiedhistory:
+    image: mongo
+    container_name: mongodb.contractmodifiedhistory
+    restart: always
+    environment:
+    - MONGO_INITDB_DATABASE=contractmodifiedhistory_db
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=123@123a
+    volumes:
+    - "/var/lib/mongodb-contractmodifiedhistory:/data/db"
+    ports:
+    - "27020:27017"
+
+  mongodb.location:
+    image: mongo
+    container_name: mongodb.location
+    restart: always
+    environment: 
+    - MONGO_INITDB_DATABASE=location_db
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=123@123a
+    volumes:
+    - "/var/lib/mongodb-location:/data/db"
+    ports:
+    - "27021:27017"
+
+  news.api:
+    image: ${DOCKER_REGISTRY}newsapi
+    build:
+      context: .
+      dockerfile: News.API/Dockerfile
+
+  #customerwebportal:
+  #  image: ${DOCKER_REGISTRY}customerwebportal
+  #  build:
+  #    context: .
+  #    dockerfile: CustomerWebPortal/Dockerfile
+
+  #contractmanagement.backgroundtasks:
+  #  image: ${DOCKER_REGISTRY}contractmanagementbackgroundtasks
+  #  build:
+  #    context: .
+  #    dockerfile: ContractManagement.BackgroundTasks/Dockerfile
+  #  depends_on:
+  #    - notification.api
+  
+  debtmanagement.backgroundtasks:
+    image: ${DOCKER_REGISTRY-}debtmanagementbackgroundtasks
+    build:
+      context: .
+      dockerfile: DebtManagement.BackgroundTasks/Dockerfile
+    depends_on:
+      - contractmanagementapi.api
+      - organizationunit.api
+
+volumes:
+  elasticsearch-data:
+    driver: local

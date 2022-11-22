@@ -1,0 +1,104 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "OrganizationUnit.API.Protos.Users";
+
+import "google/protobuf/wrappers.proto";
+
+package OrganizationUnitAPI.Users;
+
+message RequestFilterGrpc {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	RequestType Type = 8;
+}
+
+enum RequestType {
+    UNKNOWN = 0;
+    Grid = 1;
+    Selection = 2;
+    Hierarchical = 3;
+    SimpleAll = 4;
+    Autocomplete = 5;
+    AutocompleteSimple = 6;
+}
+
+message ResultGrpc {
+	google.protobuf.StringValue	 Result = 1;	
+}
+
+service UsersGrpc {
+	rpc GetList(UserRequestFilterModelGrpc) returns (ResultGrpc) {}
+	rpc GetManagementUser(google.protobuf.StringValue) returns (RepeatedUserDtoGrpc) {}
+	rpc GetListByRoleCode(google.protobuf.StringValue) returns (ResultGrpc) {}
+	rpc GetListByDepartmentCode(google.protobuf.StringValue) returns (ResultGrpc) {}
+	rpc GetListTypeSelection(IsPartnerGrpc) returns (ResultGrpc) {}
+	rpc Autocomplete(IsPartnerGrpc) returns (ResultGrpc) {}
+	rpc GetByUid(google.protobuf.StringValue) returns (ResultGrpc) {}
+
+	rpc GetUserByIds(google.protobuf.StringValue) returns (ResultGrpc) {}
+	rpc ChangeSettingAccount(SettingAccountCommandGrpc) returns (SettingAccountResponseGrpc) {}
+	rpc GetEmailsOfServiceProvider(google.protobuf.StringValue) returns (ResultGrpc) {}
+
+	rpc GetFCMTokensByUids(google.protobuf.StringValue) returns (ListTokenResponseGrpc) {}
+	rpc GetFCMTokensByRoleUser(google.protobuf.StringValue) returns (ListTokenResponseGrpc) {}
+	rpc GetFCMTokensByDepartent(google.protobuf.StringValue) returns (ListTokenResponseGrpc) {}
+}
+
+message UserRequestFilterModelGrpc {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	RequestType Type = 8;
+	bool isPartner = 9;
+}
+
+message IsPartnerGrpc{
+	bool isPartner = 1;	
+}
+
+message ListTokenResponseGrpc{
+	repeated FcmTokenGrpc tokens = 1;	
+}
+
+message FcmTokenGrpc{
+	google.protobuf.StringValue token = 1;	
+	google.protobuf.StringValue receiverId = 2;	
+	google.protobuf.StringValue receiver = 3;	
+	google.protobuf.StringValue platform = 4;	
+}
+
+message RepeatedUserDtoGrpc{
+	repeated UserDtoGrpc users = 1;
+}
+
+message UserDtoGrpc{
+	google.protobuf.StringValue fullName = 1;	
+	google.protobuf.StringValue email = 2;	
+	google.protobuf.StringValue mobilePhoneNo = 3;	
+	google.protobuf.StringValue address = 4;	
+	google.protobuf.StringValue identityGuid = 5;	
+}
+
+message SettingAccountCommandGrpc{
+	google.protobuf.StringValue fullName = 1;	
+	google.protobuf.StringValue email = 2;	
+	google.protobuf.StringValue mobilePhoneNo = 3;	
+	google.protobuf.StringValue identityGuid = 4;	
+	bool allowSendSMS = 5;	
+	bool allowSendEmail = 6;
+	bool allowSendNotification = 7;
+	google.protobuf.Int32Value userId = 8;	
+}
+message SettingAccountResponseGrpc{
+	bool isSuccess = 1;	
+	google.protobuf.StringValue message = 2;		
+}

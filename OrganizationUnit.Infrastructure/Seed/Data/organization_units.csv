@@ -1,0 +1,8 @@
+Id,Culture,CreatedDate,UpdatedDate,CreatedBy,UpdatedBy,IsActive,IsDeleted,DisplayOrder,IdentityGuid,Name,ParentId,Code,ShortName,Address,NumberPhone,TypeId,Email,ProvinceId,TreePath,OrganizationPath
+1,,"2020-09-15 04:45:10",,,,1,0,0,f1920f6b-f576-4a4f-b8e8-45fdb2e2495a,"Phòng Kinh Doanh",,KD,PKD,,0989809911,,pkd@htc-itc.com.vn,,/KD/,
+2,,"2020-12-22 09:23:52",,,,1,0,0,068E2B7A-DA7A-488C-A964-E35274150A24,"Ban điều hành mạng",,BDHM,BĐHM,,19001123,,,,/BDHM/,
+3,,"2020-11-10 08:24:55","2020-12-22 09:24:04",,,1,0,0,81e6e2c8-eb8e-480f-af65-15fdbeb22024,"Phòng kỹ thuật",3,KT,PKT,,0249982822,,support@iet-vn.com,,/BDHM/PKT/,
+4,,"2020-12-22 09:54:40",,,,1,0,0,3DED11D0-1079-4869-9865-F2886DB83AE8,"Phòng tài chính  kế toán",,TCKT,PTCKT,,,,,,/TCKT/,
+5,,"2020-12-22 09:55:31",,,,1,0,0,8F065BA2-6CE0-46A4-87E4-25ECDA045B92,"Phòng CSKH miền Bắc",,MB_CSKH,MB_CSKH,,,,,,/MB_CSKH/,
+6,,"2020-12-22 09:56:26",,,,1,0,0,CB561A79-71AF-4A86-A9D3-E12EDCA2C91D,"Phòng CSKH miền Trung",,MT_CSKH,MT_CSKH,,,,,,/MT_CSKH/,
+7,,"2020-12-22 09:56:44",,,,1,0,0,77993501-F5C3-4BF2-B104-293058E16A6C,"Phòng CSKH miền Nam",,MN_CSKH,MN_CSKH,,,,,,/MN_CSKH/,

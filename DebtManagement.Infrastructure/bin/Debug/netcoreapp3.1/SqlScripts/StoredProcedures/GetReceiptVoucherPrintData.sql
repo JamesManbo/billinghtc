@@ -1,0 +1,133 @@
+﻿CREATE PROCEDURE `GetReceiptVoucherPrintData`(IN voucherIds MEDIUMTEXT)
+BEGIN
+
+	DROP TEMPORARY TABLE IF EXISTS T1;
+	CREATE TEMPORARY TABLE T1( TXT TEXT );
+	INSERT INTO T1 VALUES(voucherIds);
+
+	DROP TEMPORARY TABLE IF EXISTS VCHR_IDS_TEMP;
+	CREATE TEMPORARY TABLE VCHR_IDS_TEMP( VAL INT );
+	SET @insertToTempSql = CONCAT("INSERT INTO VCHR_IDS_TEMP (VAL) VALUES ('", REPLACE(( SELECT GROUP_CONCAT(DISTINCT TXT) AS DATA FROM T1), ",", "'),('"),"');");
+	PREPARE STMT1 FROM @insertToTempSql;
+	EXECUTE STMT1;
+
+	DROP TEMPORARY TABLE IF EXISTS T1;
+	
+	SELECT
+		t1.Id AS Id,
+		t1.IdentityGuid AS IdentityGuid,
+		t1.ContractCode AS ContractCode,
+		t1.VoucherCode AS VoucherCode,
+		t1.IssuedDate AS IssuedDate,
+		t1.Content AS Content,
+		t1.Description AS Description,
+		t1.ReductionReason AS ReductionReason,
+		t1.CreatedUserName AS CreatedUserName,
+		t1.OrganizationUnitName AS OrganizationUnitName,
+		t1.CurrencyUnitId AS CurrencyUnitId,
+		t1.CurrencyUnitCode AS CurrencyUnitCode,
+		t1.ExchangeRate AS ExchangeRate,
+		t1.ExchangeRateApplyDate AS ExchangeRateApplyDate,
+		t1.ReductionFreeTotal AS ReductionFreeTotal,
+		t1.InstallationFee AS InstallationFee,
+		t1.EquipmentTotalAmount AS EquipmentTotalAmount,
+		t1.PromotionTotalAmount AS PromotionTotalAmount,
+		t1.SubTotalBeforeTax AS SubTotalBeforeTax,
+		t1.SubTotal AS SubTotal,
+		t1.ClearingTotal AS ClearingTotal,
+		t1.CashTotal AS CashTotal,
+		t1.OtherFee AS OtherFee,
+		t1.IsHasCollectionFee AS IsHasCollectionFee,
+		t1.CODCollectionFee AS CODCollectionFee,
+		t1.GrandTotalBeforeTax AS GrandTotalBeforeTax,
+		t1.GrandTotal AS GrandTotal,
+		t1.OpeningDebtAmount AS OpeningDebtAmount,
+		t1.OpeningDebtPaidAmount AS OpeningDebtPaidAmount,
+		t1.GrandTotalIncludeDebt AS GrandTotalIncludeDebt,
+		t1.PaidTotal AS PaidTotal,
+		t1.RemainingTotal AS RemainingTotal,
+		t1.TaxAmount AS TaxAmount,
+		t1.IsEnterprise AS IsEnterprise,
+		t1.OutContractId AS OutContractId,
+		t1.CashierCollectingDate AS CashierCollectingDate,
+		t1.CashierReceivedDate AS CashierReceivedDate,
+		t1.CancellationReason AS CancellationReason,
+		t1.OffsetUpgradePackageAmount AS OffsetUpgradePackageAmount,
+		t1.IsFirstVoucherOfContract AS IsFirstVoucherOfContract,
+		t1.DiscountAmountSuspendTotal AS DiscountAmountSuspendTotal,
+		t1.BadDebtApprovalContent AS BadDebtApprovalContent,
+		t1.IsBadDebt AS IsBadDebt,
+		t1.NumberOfOpeningDebtHistories AS NumberOfOpeningDebtHistories,
+		t1.NumberOfDebtHistories AS NumberOfDebtHistories,
+		t1.InvalidIssuedDate AS InvalidIssuedDate,
+		t1.CashierDebtRemaningTotal AS CashierDebtRemaningTotal,
+		t1.TargetDebtRemaningTotal AS TargetDebtRemaningTotal,
+		t1.IsHasCollectionFee AS IsHasCollectionFee,
+		t1.CODCollectionFee AS CODCollectionFee,
+
+		t1.IsEnterprise AS IsEnterprise,
+		t1.Payment_Form  AS Form,
+		t1.Payment_Method  AS Method,
+		t1.Payment_Address AS Address,
+		t1.Payment_BankAccount AS BankAccount,
+		t1.Payment_BankName AS BankName,
+		t1.Payment_BankBranch AS BankBranch,		
+		t2.Id AS Id,
+		t2.CurrencyUnitId AS CurrencyUnitId,
+		t2.CurrencyUnitCode AS CurrencyUnitCode,
+		t2.ServiceId AS ServiceId,
+		t2.ServiceName AS ServiceName,
+		t2.ServicePackageId AS ServicePackageId,
+		t2.ServicePackageName AS ServicePackageName,
+		t2.StartBillingDate AS StartBillingDate,
+		t2.EndBillingDate AS EndBillingDate,
+		t2.TaxPercent AS TaxPercent,
+		t2.TaxAmount AS TaxAmount,
+		t2.SubTotalBeforeTax AS SubTotalBeforeTax,
+		t2.SubTotal AS SubTotal,
+		t2.EquipmentTotalAmount AS EquipmentTotalAmount,
+		t2.InstallationFee AS InstallationFee,
+		t2.PromotionAmount AS PromotionAmount,
+		t2.PackagePrice AS PackagePrice,
+		t2.OtherFeeTotal AS OtherFeeTotal,
+		t2.ReductionFee AS ReductionFee,
+		t2.GrandTotalBeforeTax AS GrandTotalBeforeTax,
+		t2.GrandTotal AS GrandTotal,
+		t2.UsingMonths AS UsingMonths,
+		t2.IsFirstDetailOfService AS IsFirstDetailOfService,
+		t2.CId AS CId,
+		t2.HasDistinguishBandwidth AS HasDistinguishBandwidth,
+		t2.HasStartAndEndPoint AS HasStartAndEndPoint,
+		t2.DomesticBandwidth AS DomesticBandwidth,
+		t2.InternationalBandwidth AS InternationalBandwidth,
+		t2.PricingType AS PricingType,
+		t2.OverloadUsageDataPrice AS OverloadUsageDataPrice,
+		t2.IOverloadUsageDataPrice AS IOverloadUsageDataPrice,
+		t2.ConsumptionBasedPrice AS ConsumptionBasedPrice,
+		t2.IConsumptionBasedPrice AS IConsumptionBasedPrice,
+		t2.DataUsage AS DataUsage,
+		t2.DataUsageUnit AS DataUsageUnit,
+		t2.IDataUsageUnit AS IDataUsageUnit,
+		t2.IDataUsage AS IDataUsage,
+		t2.UsageDataAmount AS UsageDataAmount,
+		t2.IUsageDataAmount AS IUsageDataAmount,
+		t2.IsMainPaymentChannel AS IsMainPaymentChannel,
+		t2.IsJoinedPayment AS IsJoinedPayment,		
+		t3.Id AS Id,
+		t3.TargetFullName AS TargetFullName,
+		t3.TargetPhone AS TargetPhone,
+		t3.TargetEmail AS TargetEmail,
+		t3.IsEnterprise AS IsEnterprise,
+		t3.IsPayer AS IsPayer,
+		t3.City AS City,
+		t3.CityId AS CityId,
+		t3.District AS District,
+		t3.DistrictId AS DistrictId,
+		t3.TargetAddress AS TargetAddress
+	FROM ReceiptVouchers AS t1
+	INNER JOIN ReceiptVoucherDetails AS t2 ON t1.Id = t2.ReceiptVoucherId
+	INNER JOIN VoucherTargets AS t3 ON t3.Id = t1.TargetId
+	INNER JOIN VCHR_IDS_TEMP tmp ON tmp.VAL = t1.Id
+	WHERE t1.IsDeleted = FALSE;
+
+END

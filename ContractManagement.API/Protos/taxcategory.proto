@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service TaxCategoryServiceGrpc {
+	rpc GetAll(google.protobuf.Empty) returns (TaxCategoryListGrpcDTO) {}
+	rpc GetTaxCategories(RequestFilterGrpc) returns (TaxCategoryPageListGrpcDTO) {}
+}
+
+message TaxCategoryListGrpcDTO
+{
+	repeated TaxCategoryGrpcDTO TaxCategoryDtos = 1;
+}
+
+
+message TaxCategoryPageListGrpcDTO
+{
+	repeated TaxCategoryGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message TaxCategoryGrpcDTO
+{
+	google.protobuf.StringValue	 TaxName = 1;
+	google.protobuf.StringValue  TaxCode = 2;
+	google.protobuf.Int32Value  id = 3;
+	google.protobuf.Int32Value  marketAreaId = 4;
+	google.protobuf.Int32Value  agentContractCodeId = 5;
+	google.protobuf.StringValue  numberOfUnits = 6;
+	google.protobuf.StringValue  description = 7;
+	google.protobuf.Int32Value  numberOfRooms = 8;
+	google.protobuf.FloatValue  taxValue = 9;
+}

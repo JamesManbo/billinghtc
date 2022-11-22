@@ -1,0 +1,48 @@
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Domain.deps.json
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Domain.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Domain.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Utility.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\EventBus.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\GenericRepository.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Configs.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Models.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TickForNet.Objects.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TikForNet.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Utility.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\EventBus.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\GenericRepository.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TickForNet.Objects.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Models.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TikForNet.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.csproj.CopyComplete
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Domain.deps.json
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Domain.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Domain.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Utility.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\EventBus.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\GenericRepository.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Configs.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Models.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TickForNet.Objects.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TikForNet.dll
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\ContractManagement.Utility.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\EventBus.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\GenericRepository.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TickForNet.Objects.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\Global.Models.pdb
+E:\Project\Billing\ContractManagement.Domain\bin\Debug\netcoreapp3.1\TikForNet.pdb
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.csproj.AssemblyReference.cache
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.AssemblyInfoInputs.cache
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.AssemblyInfo.cs
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.csproj.CoreCompileInputs.cache
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.csproj.CopyComplete
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.dll
+E:\Project\Billing\ContractManagement.Domain\obj\Debug\netcoreapp3.1\ContractManagement.Domain.pdb

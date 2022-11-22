@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package ContractManagementApi;
+
+service ContractorGrpc {
+	rpc FindById(google.protobuf.StringValue) returns (ContractorGrpcDTO) {}
+	rpc GetAllByIds(google.protobuf.StringValue) returns (ListContractorGrpcDTO) {}
+	rpc GetFromId(google.protobuf.Int32Value) returns (ListContractorGrpcDTO) {}
+	rpc GetContractors(RequestGetContractorsByProjectIdsGrpc) returns (ContractorPageListGrpcDTO) {}
+	rpc GetListByProjectIdsForApp(RequestGetContractorsByProjectIdsGrpc) returns (ContractorPageListGrpcDTO) {}
+	rpc GetByMarketAreaIdsProjectIds(RequestGetByMarketAreaIdsProjectIdsGrpc) returns (ContractorPageListGrpcDTO) {}
+}
+
+message RequestGetContractorsByProjectIdsGrpc{
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.StringValue	 projectIds = 8;
+	google.protobuf.StringValue	 serviceIds = 9;
+}
+
+message RequestGetByMarketAreaIdsProjectIdsGrpc{
+	google.protobuf.StringValue	 marketAreaIds = 1;
+	google.protobuf.StringValue	 projectIds = 2;
+}
+
+message ContractorPageListGrpcDTO{
+	repeated ContractorGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message ContractorGrpcDTO {
+	google.protobuf.StringValue identityGuid = 1;
+	google.protobuf.StringValue contractorFullName = 2;
+	google.protobuf.StringValue contractorCode = 3;
+	google.protobuf.StringValue contractorPhone = 4;
+	google.protobuf.StringValue contractorEmail = 5;
+	google.protobuf.StringValue contractorFax = 6;
+	google.protobuf.StringValue contractorAddress = 7;
+	google.protobuf.StringValue contractorIdNo = 8;
+	google.protobuf.StringValue contractorTaxIdNo = 9;
+	bool isEnterprise = 10;
+	bool isBuyer = 11;
+	int32 id = 12;
+	repeated google.protobuf.StringValue contractCodes = 13;
+	google.protobuf.StringValue contractorUserName = 14;
+	google.protobuf.StringValue applicationUserIdentityGuid = 15;
+	google.protobuf.StringValue accountingCustomerCode = 16;
+	google.protobuf.StringValue isPartner = 17;
+	google.protobuf.StringValue contractorShortName = 18;	
+    google.protobuf.StringValue contractorCity = 19;
+    google.protobuf.StringValue contractorCityId = 20;
+    google.protobuf.StringValue contractorDistrict = 21;
+    google.protobuf.StringValue contractorDistrictId = 22;
+}
+
+message ListContractorGrpcDTO {
+	repeated ContractorGrpcDTO contractors = 1;
+}

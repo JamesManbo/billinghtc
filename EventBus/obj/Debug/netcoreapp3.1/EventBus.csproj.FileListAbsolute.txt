@@ -1,0 +1,9 @@
+E:\Project\Billing\EventBus\bin\Debug\netcoreapp3.1\EventBus.deps.json
+E:\Project\Billing\EventBus\bin\Debug\netcoreapp3.1\EventBus.dll
+E:\Project\Billing\EventBus\bin\Debug\netcoreapp3.1\EventBus.pdb
+E:\Project\Billing\EventBus\obj\Debug\netcoreapp3.1\EventBus.csproj.AssemblyReference.cache
+E:\Project\Billing\EventBus\obj\Debug\netcoreapp3.1\EventBus.AssemblyInfoInputs.cache
+E:\Project\Billing\EventBus\obj\Debug\netcoreapp3.1\EventBus.AssemblyInfo.cs
+E:\Project\Billing\EventBus\obj\Debug\netcoreapp3.1\EventBus.csproj.CoreCompileInputs.cache
+E:\Project\Billing\EventBus\obj\Debug\netcoreapp3.1\EventBus.dll
+E:\Project\Billing\EventBus\obj\Debug\netcoreapp3.1\EventBus.pdb

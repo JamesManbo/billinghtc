@@ -1,0 +1,48 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@{
+    Layout = null;
+    var isSuccess = HttpContextAccessor.HttpContext.Request.Query["errorCode"] == "0" ? true : false;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var count = 5;
+        function countDown() {
+            var timer = document.getElementById("timer");
+            if (count > 0) {
+                count--;
+                timer.innerHTML = "Quay lại ứng dụng trong <b>" + count + "</b> giây.";
+                setTimeout("countDown()", 1000);
+            } else {
+                document.getElementById("backSuccess").click();
+            }
+        }
+    </script>
+    <div style="display:table;width: 100%;height: 100%;position: absolute;top: 0;left: 0;">
+        <div style="display:table-cell; vertical-align:middle; text-align: center">
+            <div>
+                @if (isSuccess)
+                {
+                    <span style="line-height:35px;padding:10px 20px;background-color:#ff6e06;border-radius:5px;text-align:center;text-transform:uppercase;font-weight:bold;font-size:11px"><a id="backSuccess" style="text-decoration:none;color:#fff" href="intent://http://192.168.1.245:5102#Intent;scheme=http;package=com.app.customer;end">Thanh toán thành công</a></span>
+                }
+                else
+                {
+                    <span style="line-height:35px;padding:10px 20px;background-color:#f5515f;color:#f5515f;border-radius:5px;text-align:center;text-transform:uppercase;font-weight:bold;font-size:11px"><a id="backSuccess" style="text-decoration:none;color:#fff" href="intent://http://192.168.1.245:5102#Intent;scheme=http;package=com.app.customer;end">Thanh toán không thành công</a></span>
+                }
+            </div>
+            <div style="text-align:center;margin-top:10px;">
+                <i id="timer">
+                    <script type="text/javascript">countDown();</script>
+                </i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

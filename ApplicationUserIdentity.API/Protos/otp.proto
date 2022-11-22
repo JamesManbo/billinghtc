@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "ApplicationUserIdentity.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package SystemUserIdentityApi;
+
+service OtpGrpc {
+	rpc FindByUserName(google.protobuf.StringValue) returns (OtpDtoGrpc) {}
+	rpc UpdateOtpUsed(google.protobuf.Int32Value) returns (UpdateOtpUsedResponseGrpc) {}
+}
+
+message OtpDtoGrpc{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.StringValue  phone = 2;
+	google.protobuf.StringValue  otp = 3;
+	google.protobuf.Timestamp  createdDate = 4;
+	google.protobuf.Timestamp  dateExpired = 5;
+	google.protobuf.StringValue  isUse = 6;
+}
+message UpdateOtpUsedResponseGrpc{
+	google.protobuf.BoolValue	 isSuccess = 1;
+}

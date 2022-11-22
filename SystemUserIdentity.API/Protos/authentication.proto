@@ -1,0 +1,173 @@
+syntax = "proto3";
+
+option csharp_namespace = "SystemUserIdentity.API.Proto";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package SystemUserIdentityApi;
+
+service AuthenticationGrpc {
+	rpc ChangePassword(ChangePasswordGrpcCommand) returns (ChangePasswordResultGrpcDTO) {}
+	rpc ChangePasswordWithoutPass(ChangePasswordGrpcCommand) returns (ChangePasswordResultGrpcDTO) {}
+	rpc ForgotPassword(google.protobuf.StringValue) returns (ForgotPasswordResultGrpc) {}
+	rpc Login(LoginGrpcCommand) returns (SignInResultGrpc){}
+	rpc FindUserById(google.protobuf.StringValue) returns (UserGrpcDTO){}
+	rpc RegisterFCMToken(RegisterFCMTokenCommandGrpc) returns (RegisterFCMTokenResponseGrpc){}
+	rpc UnRegisterFCMToken(google.protobuf.StringValue) returns (UnRegisterFCMTokenResponseGrpc){}
+	rpc GenerateJwtToken(google.protobuf.StringValue) returns (GenerateJwtTokenResponseGrpc){}
+	rpc LoginByAD(LoginByADRequestGrpc) returns (LoginByADResponseGrpc){}
+}
+
+message LoginByADRequestGrpc{
+	google.protobuf.StringValue	 userName = 1;
+	google.protobuf.StringValue	 password = 2;
+}
+message LoginByADResponseGrpc{
+	bool	 isSuccess = 1;
+}
+message GenerateJwtTokenResponseGrpc{
+	google.protobuf.StringValue	 token = 1;
+}
+message RegisterFCMTokenCommandGrpc{
+	google.protobuf.StringValue	 receiverId = 1;
+	google.protobuf.StringValue  token = 2;
+	google.protobuf.StringValue  platform = 3;
+}
+
+message RegisterFCMTokenResponseGrpc{
+	google.protobuf.BoolValue  successed = 1;
+}
+
+message UnRegisterFCMTokenResponseGrpc{
+
+}
+
+message LoginGrpcCommand {
+	google.protobuf.StringValue	 userName = 1;
+	google.protobuf.StringValue  password = 2;
+	google.protobuf.BoolValue  rememberMe = 3;
+}
+
+message ChangePasswordGrpcCommand{
+	google.protobuf.StringValue	 oldPassword = 1;
+	google.protobuf.StringValue  newPassword = 2;
+	google.protobuf.StringValue  confirmPassword = 3;
+	google.protobuf.StringValue  userName = 4;
+}
+
+message ChangePasswordResultGrpcDTO{
+	google.protobuf.BoolValue	 succeeded = 1;
+	repeated UserError  errors = 2;
+}
+
+message ForgotPasswordResultGrpc{
+	google.protobuf.BoolValue  succeeded = 1;
+	google.protobuf.StringValue  message = 2;
+	google.protobuf.Timestamp  dateExpired = 3;
+}
+
+message UserError{
+	google.protobuf.StringValue	 code = 1;
+	google.protobuf.StringValue  description = 2;
+}
+
+message SignInResultGrpc {
+	google.protobuf.BoolValue succeeded = 1;
+	google.protobuf.BoolValue isLockedOut = 2;
+	google.protobuf.BoolValue isNotExisted = 3;
+	google.protobuf.BoolValue isNotAllowed = 4;
+	google.protobuf.BoolValue requiresTwoFactor = 5;
+	google.protobuf.StringValue token = 6;
+}
+
+message PictureGrpcDto {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue name = 2;
+	google.protobuf.StringValue fileName = 3;
+	google.protobuf.StringValue filePath = 4;
+	google.protobuf.Int64Value  size = 5;
+	google.protobuf.Int32Value displayOrder = 6;
+	google.protobuf.Int32Value pictureType = 7;
+	google.protobuf.StringValue extension = 8;
+	google.protobuf.StringValue redirectLink = 9;
+	google.protobuf.StringValue temporaryUrl = 10;
+	google.protobuf.BoolValue   isUpdating = 11;
+	google.protobuf.StringValue optimizedUrl = 12;
+	google.protobuf.StringValue w160Url = 13;
+	google.protobuf.StringValue w1280Url = 14;
+	google.protobuf.StringValue w320Url = 15;
+	google.protobuf.StringValue w640Url = 16;
+	google.protobuf.StringValue thumbUrl = 17;
+}
+
+message UserGrpcDTO {
+	google.protobuf.Int32Value  id = 1;
+	google.protobuf.StringValue identityGuid = 2;
+	google.protobuf.StringValue accountingCustomerCode = 3;
+	google.protobuf.StringValue label = 4;
+	google.protobuf.StringValue code = 5;
+	google.protobuf.StringValue userName = 6;
+	google.protobuf.StringValue mobilePhoneNo = 7;
+	google.protobuf.Int32Value  avatarId = 8;
+	google.protobuf.StringValue firstName = 9;
+	google.protobuf.StringValue lastName = 10;
+	google.protobuf.StringValue fullName = 11;
+	google.protobuf.StringValue address = 12;
+	google.protobuf.Timestamp   dateOfBirth = 13;
+	google.protobuf.Int32Value  status = 14;
+	google.protobuf.Int32Value  gender = 15;
+	google.protobuf.StringValue email = 16;
+	google.protobuf.StringValue idNo = 17;
+	google.protobuf.Timestamp   dateOfIssueID = 18;
+	google.protobuf.StringValue placeOfIssueID = 19;
+	google.protobuf.StringValue taxIdNo = 20;
+	google.protobuf.StringValue permanentAddress = 21;
+	google.protobuf.StringValue temporaryAddress = 22;
+	google.protobuf.StringValue ethnic = 23;
+	google.protobuf.StringValue nationality = 24;
+	google.protobuf.Int32Value  regionId = 25;
+	google.protobuf.Int32Value  provinceId = 26;
+	google.protobuf.Int32Value  maritalStatus = 27;
+	google.protobuf.StringValue bankName = 28;
+	google.protobuf.StringValue bankAccountNumber = 29;
+	google.protobuf.StringValue bankBranch = 30;
+	google.protobuf.Timestamp   startDate = 31;
+	google.protobuf.StringValue culture = 32;
+	google.protobuf.Timestamp   createdDate = 33;
+	google.protobuf.Timestamp   updatedDate = 34;
+	google.protobuf.StringValue createdBy = 35;
+	google.protobuf.StringValue updatedBy = 36;
+	google.protobuf.Int32Value  displayOrder = 37;
+	PictureGrpcDto       avatar = 38;
+	google.protobuf.StringValue jobPosition = 39;
+	google.protobuf.StringValue jobTitle = 40;
+	google.protobuf.BoolValue   isLock = 41;
+	google.protobuf.BoolValue   isEnterprise = 42;
+	google.protobuf.BoolValue   isLeader = 43;
+	google.protobuf.BoolValue   isActive = 44;
+	google.protobuf.BoolValue   isPartner = 45;
+	repeated google.protobuf.Int32Value projectIds = 46;
+	ConfigurationUserDtoGrpc configurationAccount = 47;
+	repeated google.protobuf.StringValue permissions = 48;
+	repeated ProjectDtoGrpc projects = 49;
+	google.protobuf.StringValue organizationUnit = 50;
+	repeated int32 organizationUnitIds = 51;
+	repeated google.protobuf.StringValue roleCodes = 52;
+}
+
+message ConfigurationUserDtoGrpc {
+	bool allowSendEmail = 1;
+	bool allowSendNotification = 2;
+	bool allowSendSMS = 3;
+}
+
+message ProjectDtoGrpc{
+	google.protobuf.StringValue	 projectName = 1;
+	google.protobuf.StringValue  projectCode = 2;
+	int32  id = 3;
+	google.protobuf.Int32Value  marketAreaId = 4;
+	google.protobuf.Int32Value  agentContractCodeId = 5;
+	google.protobuf.StringValue  description = 6;
+
+}

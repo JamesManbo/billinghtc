@@ -1,0 +1,9 @@
+E:\Project\Billing\MongoClusterRepository\bin\Debug\netcoreapp3.1\MongoClusterRepository.deps.json
+E:\Project\Billing\MongoClusterRepository\bin\Debug\netcoreapp3.1\MongoClusterRepository.dll
+E:\Project\Billing\MongoClusterRepository\bin\Debug\netcoreapp3.1\MongoClusterRepository.pdb
+E:\Project\Billing\MongoClusterRepository\obj\Debug\netcoreapp3.1\MongoClusterRepository.csproj.AssemblyReference.cache
+E:\Project\Billing\MongoClusterRepository\obj\Debug\netcoreapp3.1\MongoClusterRepository.AssemblyInfoInputs.cache
+E:\Project\Billing\MongoClusterRepository\obj\Debug\netcoreapp3.1\MongoClusterRepository.AssemblyInfo.cs
+E:\Project\Billing\MongoClusterRepository\obj\Debug\netcoreapp3.1\MongoClusterRepository.csproj.CoreCompileInputs.cache
+E:\Project\Billing\MongoClusterRepository\obj\Debug\netcoreapp3.1\MongoClusterRepository.dll
+E:\Project\Billing\MongoClusterRepository\obj\Debug\netcoreapp3.1\MongoClusterRepository.pdb

@@ -1,0 +1,3 @@
+obj\Debug\netcoreapp3.1/Users.cs \
+obj\Debug\netcoreapp3.1/UsersGrpc.cs: C:/Users/Administrator/.nuget/packages/grpc.tools/2.29.0/build/native/include/google/protobuf/wrappers.proto\
+ Protos/users.proto

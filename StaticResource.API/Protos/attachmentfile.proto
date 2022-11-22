@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "AttchmentFile.StaticResource.API.Proto";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package AttachmentFileResourceApi;
+
+service AttachmentFileResourceGrpc {
+	rpc StoreAndSaveFiles(TemporaryFilePathGrpcRequest) returns (FileGrpcDtoResponse) {}
+}
+
+message TemporaryFilePathGrpcRequest {
+	repeated string temporaryFilePath = 1;
+}
+
+message FileGrpcDtoResponse {
+	repeated AttachmentFileGrpcDto fileDtos = 1;
+}
+
+message AttachmentFileGrpcDto
+{
+	google.protobuf.StringValue name = 1;
+	google.protobuf.StringValue fileName = 2;
+	google.protobuf.StringValue filePath = 3;
+	google.protobuf.Int64Value  size = 4;
+	google.protobuf.Int32Value  displayOrder = 5;
+	google.protobuf.Int32Value  fileType = 6;
+	google.protobuf.StringValue extension = 7;
+	google.protobuf.StringValue redirectLink = 8;
+	google.protobuf.StringValue temporaryUrl = 9;
+	int32 id = 10;
+	google.protobuf.StringValue resourceStorage = 11;
+}

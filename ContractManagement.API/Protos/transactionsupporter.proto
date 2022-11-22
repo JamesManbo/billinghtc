@@ -1,0 +1,33 @@
+syntax = "proto3";
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+package ContractManagementApi;
+
+service TransactionSupporterGrpc {	
+	rpc GetTransactionSupporterReport(TransactionSupporterFilterGrpc) returns (TransactionSupporterPageListGrpcDTO) {}
+}
+
+message TransactionSupporterFilterGrpc{
+	google.protobuf.StringValue	 userIdentity = 1;
+	google.protobuf.StringValue   projectIds = 2; 
+	google.protobuf.Timestamp  startDate = 3;
+	google.protobuf.Timestamp  endDate = 4;
+}
+
+message TransactionSupporterPageListGrpcDTO{
+	repeated TransactionSupporterDataDTOGrpc transactionSupporter = 1;
+}
+
+message TransactionSupporterDataDTOGrpc{
+	google.protobuf.Int32Value	 pendingTask = 1;
+	google.protobuf.Int32Value   doneTask = 2; 
+	google.protobuf.Int32Value   cancelTask = 3; 
+	google.protobuf.Int32Value   totalTask = 4; 
+	google.protobuf.Int32Value   transactionType = 5;
+	google.protobuf.StringValue	 transactionTypeName = 6;	
+}

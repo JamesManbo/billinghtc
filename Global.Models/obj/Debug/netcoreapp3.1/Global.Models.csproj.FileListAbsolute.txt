@@ -1,0 +1,15 @@
+E:\Workspace\GHD Software\ITC_BillingAndContractMngr\Production\Libraries\netcoreapp3.1\Global.Models.deps.json
+E:\Workspace\GHD Software\ITC_BillingAndContractMngr\Production\Libraries\netcoreapp3.1\Global.Models.dll
+E:\Workspace\GHD Software\ITC_BillingAndContractMngr\Production\Libraries\netcoreapp3.1\Global.Models.pdb
+E:\Project\Billing\Global.Models\bin\Debug\netcoreapp3.1\Global.Models.deps.json
+E:\Project\Billing\Global.Models\bin\Debug\netcoreapp3.1\Global.Models.dll
+E:\Project\Billing\Global.Models\bin\Debug\netcoreapp3.1\Global.Models.pdb
+E:\Project\Billing\Global.Models\bin\Debug\netcoreapp3.1\Global.Configs.dll
+E:\Project\Billing\Global.Models\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.csproj.AssemblyReference.cache
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.AssemblyInfoInputs.cache
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.AssemblyInfo.cs
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.csproj.CoreCompileInputs.cache
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.csproj.CopyComplete
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.dll
+E:\Project\Billing\Global.Models\obj\Debug\netcoreapp3.1\Global.Models.pdb

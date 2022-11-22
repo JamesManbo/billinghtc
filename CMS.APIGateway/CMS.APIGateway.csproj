@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <!--<UserSecretsId>5c942b6e-3eb9-4b6d-aadd-40a32a6e4671</UserSecretsId>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.12.3" />
+    <PackageReference Include="Grpc.Core" Version="2.29.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.29.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.29.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="MongoDB.Bson" Version="2.10.4" />
+    <PackageReference Include="Ocelot" Version="14.1.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.ElasticSearch" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Global.Configs\Global.Configs.csproj" />
+    <ProjectReference Include="..\Global.Models\Global.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\ContractManagement.API\Protos\contractors.proto" GrpcServices="Client" />
+    <Protobuf Include="..\ContractManagement.API\Protos\common.proto" GrpcServices="Client" />
+    <Protobuf Include="..\ContractManagement.API\Protos\outcontracts.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+    <Protobuf Include="..\ContractManagement.API\Protos\incontracts.proto" GrpcServices="Client" />
+    <Protobuf Include="..\Location.API\Protos\locations.proto" GrpcServices="Client" />
+    <Protobuf Include="..\Location.API\Protos\marketarea.proto" GrpcServices="Client" />
+    <Protobuf Include="..\FeedbackAndReports\Feedback.API\Protos\feedbackandrequest.proto" GrpcServices="Client" />
+    <Protobuf Include="..\ApplicationUserIdentity.API\Protos\customer.proto" GrpcServices="Client" />
+    <Protobuf Include="..\ContractManagement.API\Protos\taxcategory.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+  </ItemGroup>
+
+</Project>

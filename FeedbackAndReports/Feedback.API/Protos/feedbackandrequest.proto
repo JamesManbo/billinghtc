@@ -1,0 +1,147 @@
+syntax = "proto3";
+
+option csharp_namespace = "Feedback.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package FeedbackAPI;
+
+service FeedbackAndRequestGrpc {
+	rpc GetFeedbackAndRequests(FeedbackAndRequestFilterGrpc) returns (FeedbackAndRequestPageListGrpcDTO) {}
+	rpc CreateFeedbackAndRequest(CreateFeedbackAndRequestGrpc) returns (google.protobuf.BoolValue) {}
+	rpc CustomerRate(CreateFeedbackAndRequestGrpc) returns (google.protobuf.BoolValue) {}
+	rpc GetUnresolvedFeedbacksByCIds(google.protobuf.StringValue) returns (FeedbackAndRequestAllGrpc) {}
+	rpc MarkFeedbacksAsResolved(google.protobuf.StringValue) returns (google.protobuf.BoolValue) {}
+	rpc CountFeedbackByCIds(google.protobuf.StringValue) returns (CountFeedbackByCIdGrpcResponse) {}
+	rpc GetById(google.protobuf.StringValue) returns (FeedbackAndRequestDTOGrpc) {}
+	rpc UpdateReceiptLineId(UpdateReceiptLineRequestGrpc) returns (google.protobuf.BoolValue) {}
+	rpc UpdateFeedbackAndRequest(CreateFeedbackAndRequestGrpc) returns (google.protobuf.BoolValue) {}
+}
+
+message CountFeedbackItemGrpc{
+	google.protobuf.StringValue cId = 1;
+	google.protobuf.Int32Value count = 2;
+}
+
+message CountFeedbackByCIdGrpcResponse {
+	repeated CountFeedbackItemGrpc countingItems = 1;
+}
+
+message UpdateReceiptLineRequestGrpc {
+	google.protobuf.StringValue  ids = 1;
+	google.protobuf.Int32Value  receiptLineId = 2;
+}
+
+message FeedbackAndRequestFilterGrpc {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.StringValue  customerId = 8;
+	google.protobuf.StringValue  source = 9;
+	google.protobuf.StringValue  createdBy = 10;
+}
+
+message CreateFeedbackAndRequestGrpc {
+	google.protobuf.StringValue id = 1;
+	google.protobuf.Int32Value  status  = 2;
+	google.protobuf.StringValue customerId = 3;
+	google.protobuf.StringValue customerName = 4;
+	google.protobuf.StringValue customerPhone = 5;
+	google.protobuf.StringValue customerEmail = 6;
+	google.protobuf.StringValue cId = 7;
+	google.protobuf.StringValue contractId = 8;
+	google.protobuf.StringValue customerCode = 9;
+	google.protobuf.StringValue service = 10;
+	google.protobuf.StringValue servicePackage = 11;
+	google.protobuf.StringValue address = 12;
+	google.protobuf.StringValue iPAddress = 13;
+	google.protobuf.StringValue title = 14;
+	google.protobuf.StringValue content = 15;
+	google.protobuf.StringValue note = 16;
+	google.protobuf.Timestamp dateCreated = 17;
+	google.protobuf.Timestamp dateUpdated = 18;
+	google.protobuf.StringValue  source  = 19;
+	google.protobuf.Int32Value  outContractServicePackageId  = 20;
+	google.protobuf.StringValue  contractCode  = 21;
+	bool  handled  = 22;
+	google.protobuf.DoubleValue  customerRate  = 23;
+	google.protobuf.StringValue  customerComment  = 24;
+	google.protobuf.Timestamp dateRequested = 25;
+	google.protobuf.StringValue  description  = 26;
+	google.protobuf.Timestamp startTime = 27;
+	google.protobuf.Timestamp stopTime = 28;
+
+	google.protobuf.StringValue globalId = 29;
+	google.protobuf.StringValue requestCode = 30;
+	google.protobuf.StringValue city = 31;
+	google.protobuf.StringValue district = 32;
+	google.protobuf.Int64Value duration = 33;
+	google.protobuf.StringValue updateFrom = 34;
+	google.protobuf.StringValue createdBy = 35;
+	google.protobuf.StringValue customerIdentityGuid = 36;
+	google.protobuf.Int32Value contractorId = 37;
+	google.protobuf.StringValue channelText = 38;
+}
+
+message FeedbackAndRequestAllGrpc {
+	repeated FeedbackAndRequestDTOGrpc result = 1;
+}
+
+message FeedbackAndRequestPageListGrpcDTO {
+	repeated FeedbackAndRequestDTOGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message FeedbackAndRequestDTOGrpc {
+	google.protobuf.StringValue id =1;
+	google.protobuf.Int32Value  status  = 2;
+	google.protobuf.StringValue customerId = 3;
+	google.protobuf.StringValue customerName = 4;
+	google.protobuf.StringValue customerPhone = 5;
+	google.protobuf.StringValue customerEmail = 6;
+	google.protobuf.StringValue cId = 7;
+	google.protobuf.StringValue contractId = 8;
+	google.protobuf.StringValue customerCode = 9;
+	google.protobuf.StringValue service = 10;
+	google.protobuf.StringValue servicePackage = 11;
+	google.protobuf.StringValue address = 12;
+	google.protobuf.StringValue iPAddress = 13;
+	google.protobuf.StringValue title = 14;
+	google.protobuf.StringValue content = 15;
+	google.protobuf.StringValue note = 16;
+	google.protobuf.Timestamp dateCreated = 17;
+	google.protobuf.Timestamp dateUpdated = 18;
+	google.protobuf.Timestamp dateRequested = 19;
+	google.protobuf.StringValue  source  = 21;
+	google.protobuf.Int32Value  outContractServicePackageId  = 22;
+	google.protobuf.StringValue  contractCode  = 23;
+	bool  handled  = 24;
+	google.protobuf.DoubleValue  customerRate  = 25;
+	google.protobuf.StringValue  customerComment  = 26;
+	google.protobuf.StringValue  description  = 27;
+	google.protobuf.Timestamp  startTime  = 28;
+	google.protobuf.Timestamp  stopTime  = 29;
+	google.protobuf.StringValue globalId = 30;
+	google.protobuf.Int64Value duration = 31;
+	google.protobuf.StringValue requestCode = 32;
+	google.protobuf.StringValue city = 33;
+	google.protobuf.StringValue district = 34;
+	google.protobuf.StringValue updateFrom = 35;
+	google.protobuf.StringValue customerIdentityGuid = 36;
+	google.protobuf.Int32Value contractorId = 37;
+	google.protobuf.StringValue channelText = 38;
+}

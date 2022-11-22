@@ -1,0 +1,262 @@
+syntax = "proto3";
+
+option csharp_namespace = "DebtManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package DebtManagementAPI;
+
+service ReceiptVoucherGrpc {
+	rpc GetReceiptVouchers(ReceiptVoucherFilterGrpc) returns (ReceiptVoucherPageListGrpcDTO) {}
+	rpc GetReceiptVoucherDetail(google.protobuf.StringValue) returns (ReceiptVoucherDTOGrpc) {}
+	rpc Update(google.protobuf.StringValue) returns (ActionResponseGrpc){}
+	rpc GetReceiptStatus(google.protobuf.Empty) returns (google.protobuf.StringValue){}
+}
+
+message ErrorGrpc {
+	google.protobuf.StringValue memberName = 1;
+	google.protobuf.StringValue errorMessage = 2;
+}
+
+message ActionResponseGrpc {
+	google.protobuf.BoolValue isSuccess = 1;
+	google.protobuf.StringValue message = 2;
+	repeated ErrorGrpc errors = 3;
+}
+
+message ReceiptVoucherFilterGrpc {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.Timestamp  startingDate = 8;
+	google.protobuf.Timestamp  endingDate = 9;
+	google.protobuf.StringValue  projectIds = 10;
+	google.protobuf.BoolValue  isOutOfDate = 11;
+	google.protobuf.StringValue  statusIds = 12;
+	google.protobuf.StringValue cashierUserId = 13;
+	google.protobuf.Int32Value outContractId = 14;
+	google.protobuf.BoolValue onlyProject = 15;
+	google.protobuf.StringValue  serviceIds = 16;
+	google.protobuf.StringValue  outContractIds = 17;
+
+}
+
+message ReceiptVoucherPageListGrpcDTO {
+	repeated ReceiptVoucherGridDTOGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message ReceiptVoucherGridDTOGrpc {
+	google.protobuf.StringValue	 id = 1;
+	google.protobuf.StringValue  marketAreaName = 2;
+	google.protobuf.StringValue  projectName = 3;
+	google.protobuf.Int32Value  typeId = 4;
+	google.protobuf.Int32Value  statusId = 5;
+	google.protobuf.StringValue  voucherCode = 6;
+	google.protobuf.Int32Value  outContractId = 7;
+	google.protobuf.StringValue  contractCode = 8;
+	google.protobuf.Timestamp  issuedDate = 9;
+	google.protobuf.StringValue  statusName = 10;
+	google.protobuf.StringValue  invoiceCode = 11;
+	google.protobuf.Timestamp  invoiceDate = 12;
+	Money  reductionFreeTotal = 13;
+	Money  cashTotal = 14;
+	Money  subTotal = 15;
+	Money  grandTotal = 16;
+	Money  paidTotal = 17;
+	Money  remainingTotal = 18;
+	google.protobuf.StringValue  payerName = 19;
+	Money  discountAmount = 20;
+	google.protobuf.StringValue  targetFullName = 21;
+	bool  isEnterprise = 22;
+	PaymentMethodGrpc  payment = 23;
+	repeated ReceiptVoucherGridDetailDTOGrpc receiptLines = 24;
+	google.protobuf.Timestamp  createdDate = 25;
+	google.protobuf.StringValue  content = 26;
+	google.protobuf.StringValue  statusNameApp = 27;
+	google.protobuf.StringValue  targetPhone = 28;
+	google.protobuf.StringValue  targetCode = 29;
+	google.protobuf.StringValue  targetAddress = 30;
+	google.protobuf.StringValue  createdUserName = 31;
+	google.protobuf.StringValue  cashierUserFullName = 32;
+	Money  grandTotalIncludeDebt = 33;
+
+}
+
+message ReceiptVoucherGridDetailDTOGrpc {
+	google.protobuf.StringValue	 id = 1;
+	google.protobuf.Int32Value	 paymentVoucherId = 2;
+	google.protobuf.StringValue	 serviceName = 3;
+	google.protobuf.StringValue	 servicePackageName = 4;
+	google.protobuf.Timestamp	 startBillingDate = 5;
+	google.protobuf.Timestamp	 endBillingDate = 6;
+	Money	 subTotal = 7;
+	Money	 otherFeeTotal = 8;
+	Money	 grandTotal = 9;
+	Money	 packagePrice = 10;
+	Money	 grandTotalBeforeTax = 11;
+}
+
+message PaymentMethodGrpc {
+	google.protobuf.Int32Value  form = 1;
+	google.protobuf.Int32Value  method = 2;
+	google.protobuf.StringValue  address = 3;
+}
+
+message Money {
+    google.protobuf.StringValue value = 1;
+    google.protobuf.StringValue formatValue = 2;
+    google.protobuf.StringValue currencyCode = 3;
+}
+
+message ReceiptVoucherDTOGrpc {
+	google.protobuf.StringValue	 id = 1;
+	google.protobuf.Int32Value	 marketAreaId = 2;
+	google.protobuf.StringValue  marketAreaName = 3;
+	google.protobuf.StringValue  projectName = 4;
+	google.protobuf.Int32Value  projectId = 5;
+	google.protobuf.Int32Value  typeId = 6;
+	google.protobuf.StringValue  voucherCode = 7;
+	google.protobuf.Timestamp  issuedDate = 8;
+	google.protobuf.Int32Value  statusId = 9;
+	google.protobuf.StringValue  statusName = 10;
+	google.protobuf.Int32Value  outContractId = 11;
+	google.protobuf.StringValue  contractCode = 12;
+	google.protobuf.StringValue  invoiceCode = 13;
+	google.protobuf.Timestamp  invoiceDate = 14;
+	google.protobuf.StringValue  cashierUserId = 15;
+	Money  reductionFreeTotal = 16;
+	Money  cashTotal = 17;
+	Money  subTotal = 18;
+	Money  grandTotal = 19;
+	Money  paidTotal = 20;
+	Money  remainingTotal = 21;
+	google.protobuf.StringValue  payerName = 22;
+	Money  discountAmount = 23;
+	VoucherTargetDTOGrpc  voucherTarget = 24;
+	bool  isEnterprise = 25;
+	PaymentMethodGrpc  payment = 26;
+	repeated ReceiptVoucherDetailDTOGrpc receiptLines = 27;
+	google.protobuf.StringValue  createdUserName = 28;
+	google.protobuf.StringValue  cashierUserName = 29;
+	google.protobuf.Timestamp  createdDate = 30;
+	google.protobuf.Timestamp  paymentDate = 31;
+	google.protobuf.BoolValue  isFirstVoucherOfContract = 32;
+	Money installationFee = 33;
+	Money equipmentTotalAmount = 34;
+	Money grandTotalBeforeTax = 35;
+	google.protobuf.StringValue  content = 36;
+	Money  grandTotalIncludeDebt = 37;
+	repeated OpeningDebtByReceiptVoucherGrpc openingDebtPayments = 38;
+	google.protobuf.StringValue accountingCode = 39;
+	google.protobuf.StringValue cashierFullName = 40;
+	google.protobuf.Int32Value organizationUnitId = 41;
+	google.protobuf.Timestamp invoiceReceivedDate = 43;
+	Money otherFee = 44;
+	Money taxAmount = 45;
+	Money clearingTotal = 46;
+	google.protobuf.Int32Value feedbackCount = 47;
+	google.protobuf.BoolValue isBadDebt = 48;
+	Money openingDebtAmount = 49;
+	Money openingDebtPaidAmount = 50;
+	repeated OpeningDebtByReceiptVoucherGrpc incurredDebtPayments = 51;
+	repeated TaxCategoryDTOGrpc receiptVoucherTaxes = 52;
+
+	google.protobuf.StringValue issuedDateFormat  = 53;
+	google.protobuf.StringValue paymentDateFormat = 54;
+	google.protobuf.StringValue invoiceDateFormat = 55;
+	google.protobuf.StringValue createdDateFormat = 56;
+	google.protobuf.StringValue  createdUserId = 57;
+	google.protobuf.Int32Value  targetId = 58;
+}
+
+message ReceiptVoucherDetailDTOGrpc {
+	google.protobuf.StringValue	 id = 1;
+	google.protobuf.Int32Value	 paymentVoucherId = 2;
+	google.protobuf.Int32Value	 serviceId = 3;
+	google.protobuf.Int32Value	 servicePackageId = 4;
+	google.protobuf.Timestamp	 startBillingDate = 5;
+	google.protobuf.Timestamp	 endBillingDate = 6;
+	Money reductionFee = 7;
+	Money subTotal = 8;
+	Money otherFeeTotal = 9;
+	Money grandTotal = 10;
+	Money equipmentTotalAmount = 11;
+	Money installationFee = 12;
+	Money promotionAmount = 13;
+	Money packagePrice = 14;
+	google.protobuf.StringValue	 serviceName = 15;
+	google.protobuf.StringValue	 servicePackageName = 16;
+	google.protobuf.BoolValue	 isFirstDetailOfService = 17;
+	google.protobuf.Int32Value	 usingMonths = 18;
+	Money  grandTotalIncludeDebt = 19;
+	bool isHasPrice = 20;
+}
+
+message TaxCategoryDTOGrpc {
+	google.protobuf.StringValue id = 1;
+    google.protobuf.StringValue taxName = 2;
+    google.protobuf.StringValue taxCode = 3;
+    google.protobuf.FloatValue  taxValue = 4;
+}
+
+message  VoucherTargetDTOGrpc {
+	google.protobuf.StringValue  targetFullName = 1;
+	google.protobuf.StringValue  targetAddress = 2;
+	google.protobuf.StringValue  targetEmail = 3;
+	google.protobuf.StringValue  targetIdNo = 4;
+	google.protobuf.StringValue  targetPhone = 5;
+	google.protobuf.StringValue  targetFax = 6;
+	google.protobuf.BoolValue  isEnterprise = 7;
+	google.protobuf.StringValue  targetCode = 8;
+}
+
+message OpeningDebtByReceiptVoucherGrpc {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.Timestamp issuedDate = 2;
+	google.protobuf.Timestamp createdDate = 3;
+	google.protobuf.Int32Value issuedMonth = 4;
+	google.protobuf.Int32Value status = 5;
+	google.protobuf.Int32Value receiptVoucherId = 6;
+	google.protobuf.StringValue receiptVoucherCode = 7;
+	google.protobuf.StringValue receiptVoucherContent = 8;
+	google.protobuf.StringValue substituteVoucherId = 9;
+	google.protobuf.StringValue cashierUserId = 10;
+	google.protobuf.StringValue cashierUserName = 11;
+	google.protobuf.StringValue cashierFullName = 12;
+	Money openingTargetDebtTotal = 13;
+	Money openingCashierDebtTotal = 14;
+	google.protobuf.Int32Value numberOfPaymentDetails = 15;
+	repeated ReceiptVoucherPaymentDetailGrpc paymentDetails = 16;
+	google.protobuf.StringValue currencyUnitCode = 17;
+}
+
+message ReceiptVoucherPaymentDetailGrpc {
+	google.protobuf.StringValue receiptVoucherId = 1;
+	google.protobuf.StringValue cashierUserId = 2;
+	google.protobuf.StringValue debtHistoryId = 3;
+	google.protobuf.Timestamp issuedDate = 4;
+	google.protobuf.Int32Value paymentMethod = 5;
+	google.protobuf.StringValue paymentMethodName = 6;
+	Money paidAmount = 7;
+	bool isActive = 8;
+	google.protobuf.Int32Value status = 9;
+	google.protobuf.Timestamp paymentDate = 10;
+	google.protobuf.Int32Value issuedMonth = 11;
+	
+}
+

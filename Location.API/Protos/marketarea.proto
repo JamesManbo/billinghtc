@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option csharp_namespace = "Location.API.Proto";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package LocationApi;
+
+service MarketAreaGrpc {
+	rpc CreateDraftMarketArea(CreateMarketAreaGrpcCommand) returns (MarketAreaGrpcDTO) {}
+}
+
+message CreateMarketAreaGrpcCommand
+{
+	google.protobuf.StringValue _id = 1;
+	google.protobuf.StringValue  name = 2;
+	google.protobuf.StringValue  code = 3;
+	google.protobuf.Int32Value  level = 4;
+	google.protobuf.StringValue  regionId = 5;
+	google.protobuf.StringValue  cityId = 6;
+	google.protobuf.StringValue  districtId = 7;
+	google.protobuf.StringValue  commune = 8;
+
+}
+
+message MarketAreaGrpcDTO
+{
+	google.protobuf.StringValue _id = 1;
+	google.protobuf.StringValue  name = 2;
+	google.protobuf.StringValue  code = 3;
+	google.protobuf.StringValue  parentId = 4;
+	google.protobuf.StringValue  regionId = 5;
+	google.protobuf.StringValue  cityId = 6;
+	google.protobuf.StringValue  districtId = 7;
+	google.protobuf.StringValue  commune = 8;
+}

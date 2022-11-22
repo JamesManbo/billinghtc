@@ -1,0 +1,186 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "Protos/common.proto";
+import "Protos/contractors.proto";
+
+package ContractManagementApi;
+
+service AcceptanceGrpc {
+	rpc GetAcceptances(RequestGetAcceptancesGrpc) returns (AcceptancesPageListGrpcDTO) {}
+	rpc GetDetail(google.protobuf.Int32Value) returns (AcceptanceDTOGrpc) {}
+}
+
+message RequestGetAcceptancesGrpc{
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.StringValue	 projectIds = 8;
+	google.protobuf.StringValue	 fromDate = 9;
+	google.protobuf.StringValue	 toDate = 10;
+	google.protobuf.StringValue	 acceptanceTypes = 11;
+	google.protobuf.StringValue	 statusIds = 12;
+	google.protobuf.StringValue	 supporterId = 13;
+}
+
+message AcceptancesPageListGrpcDTO{
+	repeated AcceptanceDTOGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message AcceptanceDTOGrpc{
+	google.protobuf.StringValue	 code = 1;
+	google.protobuf.Int32Value	 type = 2;
+	google.protobuf.StringValue	 typeName = 3;
+	google.protobuf.Timestamp	 transactionDate = 4;
+	google.protobuf.Timestamp	 effectiveDate = 5;
+	google.protobuf.Int32Value	 statusId = 6;
+	google.protobuf.StringValue	 statusName = 7;
+	google.protobuf.StringValue	 handleUserId = 8;
+	google.protobuf.StringValue	 acceptanceStaff = 9;
+	google.protobuf.StringValue	 organizationUnitId = 10;
+	google.protobuf.Int32Value	 reasonType = 11;
+	google.protobuf.StringValue	 reason = 12;
+	google.protobuf.StringValue	 note = 13;
+	Money	 suspendHandleFee = 14;
+	Money	 restoreHandleFee = 15;
+	Money	 chaningLocationFee = 16;
+	Money	 changeEquipmentFee = 17;
+	Money	 upgradeFee = 18;
+	repeated TransactionServicePackageDTOGrpc transactionServicePackages = 19;
+	repeated TransactionAttachmentFileDTOGrpc attachmentFiles = 20; 
+	repeated TransactionEquipmentDTOGrpc transactionEquipments = 21;
+	repeated google.protobuf.Int32Value outContractIds = 22;
+	repeated google.protobuf.StringValue outContractCodes = 23;
+	google.protobuf.Int32Value	 id = 24;
+
+	ContractorGrpcDTO contractor = 25;
+	google.protobuf.StringValue contractCode = 26;
+	google.protobuf.Timestamp createdDate = 27;
+	google.protobuf.StringValue acceptanceNotes = 28;
+	google.protobuf.StringValue reasonCancelAcceptance = 29;
+	google.protobuf.Int32Value projectId = 30;
+	google.protobuf.StringValue projectName = 31;
+}
+
+message TransactionServicePackageDTOGrpc{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.Int32Value	 outContractServicePackageId = 2;
+	google.protobuf.Int32Value	 transactionId = 3;
+	google.protobuf.Int32Value	 outContractId = 4;
+	google.protobuf.Int32Value	 serviceId = 5;
+	google.protobuf.Int32Value	 servicePackageId = 6;
+	google.protobuf.StringValue	 serviceName = 7;
+	google.protobuf.StringValue	 packageName = 8;
+	google.protobuf.BoolValue	 isFreeStaticIp = 9;
+	google.protobuf.StringValue	 bandwidthLabel = 10;
+	google.protobuf.FloatValue	 internationalBandwidth = 11;
+	google.protobuf.FloatValue	 domesticBandwidth = 12;
+	google.protobuf.StringValue	 internationalBandwidthUom = 13;
+	google.protobuf.StringValue	 domesticBandwidthUom = 14;
+	BillingTimeLineGrpc	 timeLine = 15;
+
+	google.protobuf.StringValue	 customerCode = 20;
+	google.protobuf.StringValue	 cId = 21;
+	google.protobuf.Int32Value	 outletChannelId = 22;
+	google.protobuf.BoolValue	 hasToCollectMoney = 23;
+	google.protobuf.BoolValue	 hasStartAndEndPoint = 24;
+	Money	 taxAmount = 25;
+	Money	 installationFee = 27;
+	Money	 otherFee = 28;
+	Money	 packagePrice = 29;
+	Money	 subTotal = 30;
+	Money	 grandTotal = 31;
+	Money	 examinedEquipmentAmount = 32;
+	Money	 equipmentAmount = 33;
+	Money	 grandTotalIncludeEquipment = 34;
+	Money	 grandTotalIncludeExaminedEquipment = 35;
+	google.protobuf.Int32Value	 statusId = 36;
+
+	google.protobuf.BoolValue	 isOld = 45;
+	repeated TransactionEquipmentDTOGrpc transactionEquipments = 46;
+	google.protobuf.StringValue	 radiusAccount = 47;
+	google.protobuf.StringValue	 radiusPassword = 48;
+	google.protobuf.BoolValue	 isAcceptanced = 49;
+	TransactionChannelPointDTOGrpc	 startPoint = 50;
+	TransactionChannelPointDTOGrpc	 endPoint = 51;
+}
+
+message TransactionEquipmentDTOGrpc{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.Int32Value	 transactionId = 2;
+	google.protobuf.Int32Value	 transactionServicePackageId = 3;
+	google.protobuf.Int32Value	 contractEquipmentId = 4;
+	google.protobuf.Int32Value	 equipmentId = 5;
+	google.protobuf.Int32Value	 oldEquipmentId = 6;
+	google.protobuf.StringValue	 equipmentName = 7;
+	google.protobuf.StringValue	 deviceCode = 8;
+	google.protobuf.StringValue	 manufacturer = 9;
+	google.protobuf.StringValue	 specifications = 10;
+	google.protobuf.BoolValue	 isFree = 11;
+	google.protobuf.FloatValue	 examinedUnit = 12;
+	google.protobuf.FloatValue	 realUnit = 13;
+	google.protobuf.FloatValue	 reclaimedUnit = 14;
+	google.protobuf.StringValue	 serialCode = 15;
+	google.protobuf.Int32Value	 statusId = 16;
+	google.protobuf.BoolValue	 hasToReclaim = 17;
+	google.protobuf.BoolValue	 isOld = 18;
+	google.protobuf.StringValue	 serviceName = 19;
+	google.protobuf.StringValue	 packageName = 20;
+	Money	 subTotal = 21;
+	Money	 grandTotal = 22;
+	Money	 examinedSubTotal = 23;
+	Money	 examinedGrandTotal = 24;
+	InstallationAddressGrpc	 installAddress = 25;
+	google.protobuf.StringValue	 installationFullAddress = 26;
+		Money	 unitPrice = 27;
+	google.protobuf.Int32Value	 outputChannelPointId = 28;
+	google.protobuf.FloatValue	 activatedUnit = 29;
+	google.protobuf.FloatValue	 supporterHoldedUnit = 30;
+	google.protobuf.FloatValue	 willBeHoldUnit = 31;
+	google.protobuf.FloatValue	 willBeReclaimUnit = 32;
+	google.protobuf.StringValue	 equipmentUom = 33;
+}
+
+message TransactionAttachmentFileDTOGrpc{
+		google.protobuf.Int32Value	 id = 1;
+		google.protobuf.Int32Value	 transactionId = 2;
+		google.protobuf.Int32Value	 inContractId = 3;
+		google.protobuf.Int32Value	 outContractId = 4;
+		google.protobuf.StringValue	 resourceStorage = 5;
+		google.protobuf.StringValue	 name = 6;
+		google.protobuf.StringValue	 fileName = 7;
+		google.protobuf.StringValue	 filePath = 8;
+		google.protobuf.Int64Value	 size = 9;
+		google.protobuf.Int32Value	 fileType = 10;
+		google.protobuf.StringValue	 extension = 11;
+		google.protobuf.StringValue	 redirectLink = 12;
+}
+message TransactionChannelPointDTOGrpc{
+		google.protobuf.Int32Value	 id = 1;
+		google.protobuf.Int32Value	 CurrencyUnitId = 2;
+		google.protobuf.StringValue	 LocationId = 3;
+		google.protobuf.Int32Value	 PointType = 4;
+		google.protobuf.StringValue	 CurrencyUnitCode = 5;
+		InstallationAddressGrpc	 InstallationAddress = 6;
+		Money	 InstallationFee = 7;
+		Money	 OtherFee = 8;
+		Money	 MonthlyCost = 9;
+		Money	 EquipmentAmount = 10;
+		repeated TransactionEquipmentDTOGrpc	 Equipments = 11;
+}

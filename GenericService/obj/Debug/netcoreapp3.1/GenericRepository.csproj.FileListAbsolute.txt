@@ -1,0 +1,14 @@
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\GenericRepository.deps.json
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\GenericRepository.dll
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\GenericRepository.pdb
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\Global.Configs.dll
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\Global.Models.dll
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+E:\Project\Billing\GenericService\bin\Debug\netcoreapp3.1\Global.Models.pdb
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.csproj.AssemblyReference.cache
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.AssemblyInfoInputs.cache
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.AssemblyInfo.cs
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.csproj.CoreCompileInputs.cache
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.csproj.CopyComplete
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.dll
+E:\Project\Billing\GenericService\obj\Debug\netcoreapp3.1\GenericRepository.pdb

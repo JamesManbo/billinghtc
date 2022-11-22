@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup Label="Globals">
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>6fb18874-27d8-4212-bba7-76d86b88ba87</UserSecretsId>
+		<DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Infrastructure\Helpers\**" />
+		<Content Remove="Infrastructure\Helpers\**" />
+		<EmbeddedResource Remove="Infrastructure\Helpers\**" />
+		<None Remove="Infrastructure\Helpers\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Models\JobPositionDTO.cs" />
+		<Compile Remove="Models\JobTitleDTO.cs" />
+		<Compile Remove="Models\OrganizationUnitDTO.cs" />
+		<Compile Remove="Models\PermissionDTO.cs" />
+		<Compile Remove="Models\PictureDTO.cs" />
+		<Compile Remove="Models\RoleDTO.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="Infrastructure\Helpers\Base32.cs" />
+		<Compile Include="Infrastructure\Helpers\ExtensionMethods.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\IdentityErrorDescriber.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\PasswordHasher.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\PasswordHasherOptions.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\PasswordOptions.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\PasswordValidator.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\PasswordVerificationErrorResources.Designer.cs" />
+		<Compile Include="Infrastructure\Helpers\PasswordVerification\PasswordVerificationResult.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Infrastructure\Helpers\PasswordVerification\PasswordVerificationErrorResources.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="AutoMapper" Version="10.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.0" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+		<PackageReference Include="Google.Protobuf" Version="3.12.3" />
+		<PackageReference Include="Google.Protobuf.Tools" Version="3.12.3" />
+		<PackageReference Include="Grpc.AspNetCore.Server" Version="2.29.0" />
+		<PackageReference Include="Grpc.Core" Version="2.29.0" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.29.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.29.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="MediatR" Version="8.0.1" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+		<PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.4.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.4.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.4.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CachingLayer\CachingLayer.csproj" />
+		<ProjectReference Include="..\EventBusRabbitMQ\EventBusRabbitMQ.csproj" />
+		<ProjectReference Include="..\OrganizationUnit.Infrastructure\OrganizationUnit.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Application\DomainEventHandlers\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\users.proto" GrpcServices="Server" />
+		<Protobuf Include="Protos\organizationunits.proto" GrpcServices="Server" />
+		<Protobuf Include="Protos\configurationsystemparameter.proto" GrpcServices="Server" />
+		<Protobuf Include="..\StaticResource.API\Protos\picture.proto" GrpcServices="Client" />
+	</ItemGroup>
+</Project>

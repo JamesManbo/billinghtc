@@ -1,0 +1,9 @@
+Id,Culture,CreatedDate,UpdatedDate,CreatedBy,UpdatedBy,IsActive,IsDeleted,DisplayOrder,ProjectName,ProjectCode,MarketAreaId,AgentContractCodeId,NumberOfUnits,NumberOfRooms,ActualContractNumber,Description,OrganizationPath
+1,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"HC Golden City","goldencity",1,0,"500 phòng",500,500,"",
+2,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"Comatce Tower","comatce",2,0,"1000 phòng",1000,1000,"",
+3,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"HC Golden City","goldencity",1,0,"200 phòng",200,200,"",
+4,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"Phương Đông Green Park","greenpark",3,0,"350 phòng",350,350,"",
+5,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"The Matrix One","matrixone",1,0,"500 phòng",500,500,"",
+6,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"Dự án BID Residence","bidresidence",1,0,"850 phòng",850,850,"",
+7,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"Dự án Kiến Hưng Luxury","kienhungluxury",3,0,"560 phòng",560,560,"",
+8,"vn","2020-04-25 00:00:00.000000",,"system",,1,0,0,"Chung cư Spring Square","springsquare",2,0,"520 phòng",520,520,"",

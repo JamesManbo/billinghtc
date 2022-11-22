@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package ContractManagementApi;
+
+service ExchangeRateGrpc {
+	rpc ExchangeRate(RequestExchangeRateGrpc) returns (ExchangeRateGrpcResult) {}
+	rpc GetExchangeRates(google.protobuf.Empty) returns (ListExchangeRateGrpcDTO) {}
+	rpc Synchronize(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+}
+
+message RequestExchangeRateGrpc {
+	google.protobuf.StringValue	 fromCode = 1;
+	google.protobuf.StringValue  toCode = 2;
+	google.protobuf.Timestamp createdDate = 3; 
+}
+
+message ExchangeRateGrpcResult {
+	bool  isSuccess = 1;
+	double  value = 2;
+}
+message ListExchangeRateGrpcDTO {
+	repeated ExchangeRateDTOGrpc subset = 1;
+}
+message ExchangeRateDTOGrpc {
+	google.protobuf.StringValue  currencyCode = 1;
+	google.protobuf.StringValue  currencyName = 2;
+	google.protobuf.StringValue  buy = 3;
+	google.protobuf.StringValue  transfer = 4;
+	google.protobuf.StringValue  sell = 5;
+	double  buyValue = 6;
+	double  transferValue = 7;
+	double  sellValue = 8;
+	google.protobuf.Timestamp createdDate = 9; 
+}

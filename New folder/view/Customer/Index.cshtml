@@ -1,0 +1,268 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<BaseCore.Entities.Customer>
+
+
+<div class="col-lg-12">
+    <div class="pageheader">
+        <div class="searchbar">
+            @using (Html.BeginForm("Index", "Customer", FormMethod.Get, new { @class = "searchbar" }))
+            {
+                <input name="tu_khoa" type="text" id="tu_khoa" value="@ViewBag.txtSearch" placeholder="Gõ từ khóa và nhấn enter..." />
+                <input type="submit" name="" value="" onclick="" id="BtnSearch" hidden="hidden" />}
+        </div>
+
+        <div class="pagetitle">
+            <h5>Danh sách</h5>
+            <h1>Danh sách khách hàng</h1>
+        </div>
+    </div>
+    <div class="maincontent dat">
+        <div class="maincontentinner">
+            <!-- Table with stripped rows -->
+            <p class="stdformbutton" style="margin-bottom: 10px;">
+                <input type="button" value="Thêm" onclick="window.location.href = '/Customer/Create';" class="btn btn-primary" style="width:100px;" />
+                <input type="button" value="Xóa" onclick="DeleteMultiple()" class="btn btn-primary" style="width:100px;" />
+                <input type="button" value="Xuất Excel" onclick="exportExcel()" class="btn btn-primary" style="width:100px;" />
+                <input type="file" id="files" name="files" style="display: none">               
+                <button type="button" onclick="$('#files').click();" class="btn btn-primary" style="width:100px;">Nhập files Excel</button>    
+                <label id="name" class="name"></label>
+                <input hidden id="lstCode" />
+            </p>
+            <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+                <div class="dataTables_length">
+                    <label>
+                        Hiển thị
+                        <select class="dataTable-selector" id="lstPageSize" onchange="changePageSize(this);">
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="75">75</option>
+                            <option value="100" selected>100</option>
+                        </select> bản ghi
+                    </label>
+                </div>
+                <div id="dataTable">
+                    <div class="dataTable-container">
+                        <table class="table table-bordered responsive">
+                            <thead class="widgettitle">
+                                <tr>
+                                    <th class="head0 nosort" scope="col" data-sortable="" style="width: 2%;">
+                                        <input type="checkbox" name="" id="selectAll" />
+                                    </th>
+                                    <th class="head0" scope="col" data-sortable="" style="width: 3%;">STT</th>
+                                    <th class="head1" scope="col" data-sortable="" style="width: 10%;">Tên khách hàng</th>
+                                    <th class="head1" scope="col" data-sortable="" style="width: 10%;">Số điện thoại</th>
+                                    <th class="head1" scope="col" data-sortable="" style="width: 10%;">Email</th>
+                                    <th class="head0" scope="col" data-sortable="" style="width: 5%;">#</th>
+                                    <th class="head1" scope="col" data-sortable="" style="width: 5%;">#</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    var stt = 1;
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td><input type="checkbox" class="ads_Checkbox" value="@item.CustomerId" /></td>
+                                            <td scope="row">
+                                                @stt
+                                                <input type="hidden" name="" id="" value="@item.CustomerId" />
+                                            </td>
+                                            <td><a href="/Customer/Edit?customerID=@item.CustomerId">@item.Name</a></td>
+
+                                            <td>@item.PhoneNumber</td>
+                                            <td>@item.Email</td>
+                                            <td>
+                                                <a id="" title="" data-placement="top" data-toggle="tooltip" data-original-title="Sửa" href="/Customer/Edit?customerID=@item.CustomerId">
+                                                    <span class="glyphicon glyphicon-edit">Sửa</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a onclick="confirm.BeforDeletePost('/Customer/Delete?customerID=@item.CustomerId')"
+                                                   title=""
+                                                   data-placement="top"
+                                                   data-toggle="tooltip"
+                                                   data-original-title="Xóa"
+                                                   href="#">
+                                                    <span class="glyphicon glyphicon-trash">Xóa</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        stt++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="dataTables_info" id="dyntable_info">Hiển thị @ViewBag.RecoredFrom đến  @ViewBag.RecoredTo của @ViewBag.TotalRecored bản ghi</div>
+                    <div class="dataTables_paginate paging_full_numbers" id="dyntable_paginate">
+                        @{ var TotalPage = (int)ViewBag.TotalPage;
+                            var CurrentPage = (int)ViewBag.CurrentPage;
+                            if (TotalPage > 5)
+                            {
+                                if (CurrentPage > CurrentPage + 2)
+                                {
+                                    <span><a class="first paginate_button paginate_button_disabled" onclick="GetListByCurrentPage(1)">Đầu</a></span>
+                                    <span><a class="first paginate_button paginate_button_disabled" onclick="GetListByCurrentPage(@CurrentPage - 1)">Trước</a></span> };
+                                if (CurrentPage > 3)
+                                {
+                                    for (int i = CurrentPage - 2; i < CurrentPage + 2; i++)
+                                    {
+                                        if (i == CurrentPage)
+                                        {
+                                            <span><a tabindex="0" class="active paginate_active" onclick="GetListByCurrentPage(@i)">@i</a></span> }
+                                        else
+                                        {
+                                            <span><a tabindex="0" class=" paginate_active" onclick="GetListByCurrentPage(@i)">@i</a></span> }
+                                    }
+                                }
+                                else
+                                {
+                                    for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i == CurrentPage)
+                                        {
+                                            <span><a tabindex="0" class="active paginate_active" onclick="GetListByCurrentPage(@i)">@i</a></span> }
+                                        else
+                                        {
+                                            <span><a tabindex="0" class=" paginate_active" onclick="GetListByCurrentPage(@i)">@i</a></span> }
+                                    }
+
+                                }
+
+                                if (CurrentPage < CurrentPage + 2)
+                                {
+                                    <span> <a class="first paginate_button paginate_button_disabled" onclick="GetListByCurrentPage(@CurrentPage + 1)">Trước</a></span>
+                                    <span><a class="first paginate_button paginate_button_disabled" onclick="GetListByCurrentPage(@TotalPage)">Cuối</a></span> };
+                            }
+                            else
+                            {
+                                for (int i = 1; i <= TotalPage; i++)
+                                {
+                                    if (i == CurrentPage)
+                                    {
+                                        <span><a tabindex="0" class="active paginate_active" onclick="GetListByCurrentPage(@i)">@i</a></span> }
+                                    else
+                                    {
+                                        <span><a tabindex="0" class=" paginate_active" onclick="GetListByCurrentPage(@i)">@i</a></span> }
+                                }
+                            } }
+                    </div>
+                </div>
+                <!-- End Table with stripped rows -->
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <script>
+    function GetListByCurrentPage(id) {
+        var pageSize = $("#lstPageSize").val();
+        $.ajax({
+            type: "GET",
+            url: "../Customer/CustomerPaging?currentPage=" + id + "&pageSize=" + pageSize + "&tu_khoa=",
+            data: "",
+            contentType: 'application/json; charset=utf-8',
+            success: function (data) {
+                //  console.log(data);
+                $("#dataTable").html(data);
+            }
+        });
+    }
+
+    function changePageSize(data) {
+        $("#lstPageSize").val(data.value);
+        $.ajax({
+            type: "GET",
+            url: "../Customer/CustomerPaging?currentPage=" + 1 + "&pageSize=" + data.value + "&tu_khoa=",
+            data: "",
+            contentType: 'application/json; charset=utf-8',
+            success: function (data) {
+                //console.log(data);
+                $("#dataTable").html(data);
+            }
+        });
+    }
+    function DeleteMultiple() {
+        var listData = $("#lstCode").val();
+        confirm.BeforDeletePost('/Customer/Delete?customerID=' + listData)
+    }
+    function exportExcel() {
+
+        window.location = '@Url.Action("ExportOrder")/';
+    }    
+    $(function () {
+        $('#selectAll').click(function () {
+            var val = [];
+            if ($(this).is(':checked')) {
+                $(".ads_Checkbox").prop("checked", true);
+                $('.ads_Checkbox:checked').each(function (i) {
+                    val[i] = $(this).val();
+                });
+            }
+            else {
+                $(".ads_Checkbox").prop("checked", false);
+                val = [];
+            }
+            $("#lstCode").val(val);
+        });
+
+
+        $('.ads_Checkbox').click(function () {
+            var val = [];
+            $('.ads_Checkbox:checked').each(function (i) {
+                val[i] = $(this).val();
+            });
+            $("#lstCode").val(val);
+        });
+
+
+        $("#files").on('change', function () {
+            // Checking whether FormData is available in browser
+            if (window.FormData !== undefined) {
+                var fileUpload = $(this).get(0);
+                var files = fileUpload.files;
+                // Create FormData object
+                var fileData = new FormData();
+                // Looping over all files and add it to FormData object
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+                // Adding one more key to FormData object
+                fileData.append('username', 'Manas');
+                $.ajax({
+                    url: '/Upload/UploadFiles?folder=Customer',
+                    type: "POST",
+                    contentType: false, // Not to set any content header
+                    processData: false, // Not to process data
+                    data: fileData,
+                    success: function (result) {
+                        console.log(result);                        
+                        for (var i = 0; i < result.files.length; i++) {
+                            /*$('#files').val("" + result.files[i] + "");*/
+                            /* $('#name').val()*/
+                            
+                        }
+                        alert("Upload thành công!");
+                        location.reload();
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("FormData is not supported.");
+            }
+        });
+    });</script>
+
+

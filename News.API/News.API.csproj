@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>03ef4b57-96e5-46fd-9d61-ba547f88368c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200629113609_InitialMigration.cs" />
+    <Compile Remove="Migrations\20200629113609_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200702043450_Update_Table_Articles_Column_Content.cs" />
+    <Compile Remove="Migrations\20200702043450_Update_Table_Articles_Column_Content.Designer.cs" />
+    <Compile Remove="Migrations\20200703021519_Update_Table_Articles.cs" />
+    <Compile Remove="Migrations\20200703021519_Update_Table_Articles.Designer.cs" />
+    <Compile Remove="Migrations\20200703022911_Update_Table_Articles.cs" />
+    <Compile Remove="Migrations\20200703022911_Update_Table_Articles.Designer.cs" />
+    <Compile Remove="Migrations\20200703023807_Update_Table_Articles.cs" />
+    <Compile Remove="Migrations\20200703023807_Update_Table_Articles.Designer.cs" />
+    <Compile Remove="Migrations\20200703024008_Update_Table_Articles.cs" />
+    <Compile Remove="Migrations\20200703024008_Update_Table_Articles.Designer.cs" />
+    <Compile Remove="Migrations\20200703084016_Update_table_Article_V1.cs" />
+    <Compile Remove="Migrations\20200703084016_Update_table_Article_V1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Commands\" />
+    <Folder Include="Infrastructure\IntegrationEventMigrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.12.3" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.12.3" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.30.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.29.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.30.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OpenApi" Version="1.2.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\GenericService\GenericRepository.csproj" />
+    <ProjectReference Include="..\Global.Models\Global.Models.csproj" />
+    <ProjectReference Include="..\IntegrationEventLogEF\IntegrationEventLogEF.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\articles.proto" GrpcServices="Server" />
+    <Protobuf Include="..\StaticResource.API\Protos\picture.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

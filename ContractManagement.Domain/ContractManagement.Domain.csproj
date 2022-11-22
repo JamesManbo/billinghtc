@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AggregatesModel\Commons\Discount.cs" />
+    <Compile Remove="AggregatesModel\InContractAggregate\ContractSharingRevenue.cs" />
+    <Compile Remove="AggregatesModel\InContractAggregate\InContractService.cs" />
+    <Compile Remove="Commands\InContractCommand\CUContractSharingRevenueCommand.cs" />
+    <Compile Remove="Commands\InContractCommand\CUInContractServiceCommand.cs" />
+    <Compile Remove="Models\ContractSharingRevenueDTO.cs" />
+    <Compile Remove="Models\SharingRevenueModels\InContractServiceDTO.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.10.4" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContractManagement.Utility\ContractManagement.Utility.csproj" />
+    <ProjectReference Include="..\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\GenericService\GenericRepository.csproj" />
+    <ProjectReference Include="..\TickForNet.Objects\TickForNet.Objects.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Events\RadiusBrasEvents\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+option csharp_namespace = "News.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package NewsAPI;
+
+service NewsGrpc {
+	rpc GetArticleTypes(google.protobuf.Empty) returns (ArticleTypeListGrpcDTO) {}
+	rpc GetArticles(ArticleRequestFilterGrpc) returns (ArticlePageListGrpcDTO) {}
+
+}
+
+message ArticleRequestFilterGrpc{
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.StringValue  fromDate = 8;
+	google.protobuf.StringValue  toDate = 9;
+	google.protobuf.StringValue  articleType = 10;
+	google.protobuf.BoolValue isHot = 11;
+	google.protobuf.StringValue articleTypeCode = 12;
+}
+
+message ArticlePageListGrpcDTO{
+	repeated ArticleDTOGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message ArticleDTOGrpc{
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue  identityGuid = 2;
+	google.protobuf.StringValue  title = 3;
+	google.protobuf.StringValue  name = 4;
+	google.protobuf.Int32Value  avatarId = 5;
+	PictureDTOGrpc  avatar = 6;
+	google.protobuf.StringValue  content = 7;
+	google.protobuf.StringValue  description = 8;
+	google.protobuf.StringValue  link = 9;
+	google.protobuf.StringValue  rawDescription = 10;
+}
+
+message PictureDTOGrpc{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.StringValue  name = 2;
+	google.protobuf.StringValue  fileName = 3;
+	google.protobuf.StringValue  filePath = 4;
+	google.protobuf.Int64Value  size = 5;
+	google.protobuf.Int32Value  displayOrder = 6;
+	google.protobuf.Int32Value  pictureType = 7;
+	google.protobuf.StringValue  extension = 8;
+	google.protobuf.StringValue  redirectLink = 9;
+	google.protobuf.StringValue  temporaryUrl = 10;
+	bool  isUpdating = 11;
+	google.protobuf.StringValue  optimizedUrl = 12;
+	google.protobuf.StringValue  w160Url = 13;
+	google.protobuf.StringValue  w1280Url = 14;
+	google.protobuf.StringValue  w320Url = 15;
+	google.protobuf.StringValue  w640Url = 16;
+	google.protobuf.StringValue  thumbUrl = 17;
+}
+
+message ArticleTypeDTOGrpc{
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue  aSCII = 2;
+	google.protobuf.StringValue  name = 3;
+	google.protobuf.StringValue  nameAscii = 4;
+	google.protobuf.StringValue  Description = 5;
+}
+
+message ArticleTypeListGrpcDTO{
+	repeated ArticleTypeDTOGrpc subset = 1;
+}

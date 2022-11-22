@@ -1,0 +1,232 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200805083745_Update_Table_Payment_And_Receipt_FK.cs" />
+    <Compile Remove="Migrations\20200805083745_Update_Table_Payment_And_Receipt_FK.Designer.cs" />
+    <Compile Remove="Migrations\20200806062605_Add_SP_CanceledClearingIdInVoucher.cs" />
+    <Compile Remove="Migrations\20200806062605_Add_SP_CanceledClearingIdInVoucher.Designer.cs" />
+    <Compile Remove="Migrations\20201203081855_Add_SP_UpdateOverdueAndBadDebtByReceiptVoucherId.cs" />
+    <Compile Remove="Migrations\20201203081855_Add_SP_UpdateOverdueAndBadDebtByReceiptVoucherId.Designer.cs" />
+    <Compile Remove="Migrations\20201207035101_Add_SP_PaymentVouchersUpdateOverdue.cs" />
+    <Compile Remove="Migrations\20201207035101_Add_SP_PaymentVouchersUpdateOverdue.Designer.cs" />
+    <Compile Remove="Migrations\20201229034013_Add_OrganizationPath_To_Entity.cs" />
+    <Compile Remove="Migrations\20201229034013_Add_OrganizationPath_To_Entity.Designer.cs" />
+    <Compile Remove="Migrations\20210622105851_ALTER_STOREDPRO_sp_GetReportCustomer.cs" />
+    <Compile Remove="Migrations\20210622105851_ALTER_STOREDPRO_sp_GetReportCustomer.Designer.cs" />
+    <Compile Remove="Migrations\20210801083004_Create_Table_ChannelPriceBusTables.cs" />
+    <Compile Remove="Migrations\20210801083004_Create_Table_ChannelPriceBusTables.Designer.cs" />
+    <Compile Remove="Migrations\20210808105420_Add_Flag_Column_Determine_Main_Payment_Channel.cs" />
+    <Compile Remove="Migrations\20210808105420_Add_Flag_Column_Determine_Main_Payment_Channel.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Seed\Data\clearings.csv" />
+    <None Remove="Seed\Data\paymentVouchers.csv" />
+    <None Remove="Seed\Data\receiptVouchers.csv" />
+    <None Remove="SqlScripts\GetAllVoucherTargetIds.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ApprovedClearingIdInVoucher.sql" />
+    <None Remove="SqlScripts\StoredProcedures\CancelledClearingIdInVoucher.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ClearingSuccessVoucher.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetAllVoucherTargetIds.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetOpeningDebts.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetReceiptVoucherNumberByIssuedDate.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetReceiptVoucherPrintData.sql" />
+    <None Remove="SqlScripts\StoredProcedures\GetRevenueAndTaxAmountInYear.sql" />
+    <None Remove="SqlScripts\StoredProcedures\JoinGeneratedVoucherCategories.sql" />
+    <None Remove="SqlScripts\StoredProcedures\JoinGeneratedVoucherCategories_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\LockVoucher.sql" />
+    <None Remove="SqlScripts\StoredProcedures\PaymentVouchersUpdateOverdue.sql" />
+    <None Remove="SqlScripts\StoredProcedures\ReceiptVouchersUpdateOverdueAndBadDebt.sql" />
+    <None Remove="SqlScripts\StoredProcedures\SplitReturnTemp.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetCollectedAndUnCollectedVoucherByMonth.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetDailyRevenueByService.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetDailyRevenueByServiceGroup.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportCustomer.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportCustomer_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportOutContract.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportOutContract_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v7.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v8.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v4.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v5.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v6.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v7.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetTotalSharingRevenusByReceiptVoucher.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetTotalSharingRevenusByReceiptVoucher_v2.sql" />
+    <None Remove="SqlScripts\StoredProcedures\sp_GetTotalSharingRevenusByReceiptVoucher_v3.sql" />
+    <None Remove="SqlScripts\StoredProcedures\SP_UpdateApplicationUserClass.sql" />
+    <None Remove="SqlScripts\StoredProcedures\SynchronizeVoucherTargetProperties.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateAccountingCodes.sql" />
+    <None Remove="SqlScripts\StoredProcedures\UpdateCurrentDebtOfTarget.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateAccountingCodes.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ApprovedClearingIdInVoucher.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\CancelledClearingIdInVoucher.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ClearingSuccessVoucher.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetAllVoucherTargetIds.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetOpeningDebts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetReceiptVoucherNumberByIssuedDate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetReceiptVoucherPrintData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\GetRevenueAndTaxAmountInYear.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\JoinGeneratedVoucherCategories.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\JoinGeneratedVoucherCategories_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\LockVoucher.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\PaymentVouchersUpdateOverdue.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\ReceiptVouchersUpdateOverdueAndBadDebt.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\SplitReturnTemp.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetCollectedAndUnCollectedVoucherByMonth.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetDailyRevenueByService.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetDailyRevenueByServiceGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportCustomer_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportIncreasementOutContract.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportOutContract_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v7.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceDebtData_v8.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v4.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v5.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v6.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetReportServiceOutDebtData_v7.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetTotalSharingRevenusByReceiptVoucher.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetTotalSharingRevenusByReceiptVoucher_v2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\sp_GetTotalSharingRevenusByReceiptVoucher_v3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\SP_UpdateApplicationUserClass.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\SynchronizeVoucherTargetProperties.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScripts\StoredProcedures\UpdateCurrentDebtOfTarget.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Seed\Data\clearings.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\paymentVouchers.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed\Data\receiptVouchers.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DebtManagement.Domain\DebtManagement.Domain.csproj" />
+    <ProjectReference Include="..\GenericService\GenericRepository.csproj" />
+    <ProjectReference Include="..\IntegrationEventLogEF\IntegrationEventLogEF.csproj" />
+  </ItemGroup>
+
+</Project>

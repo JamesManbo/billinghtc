@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service ContractFormServiceGrpc {
+	rpc GetLists(RequestFilterGrpc) returns (ContractFormPageListGrpcDTO) {}
+	rpc GetById(google.protobuf.Int32Value) returns (ContractFormGrpcDTO) {}
+	rpc Autocomplete(RequestFilterGrpc) returns (LstSelectionItemDTOGrpc) {}
+}
+
+message ContractFormPageListGrpcDTO{
+	repeated ContractFormGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message ContractFormGrpcDTO{
+	google.protobuf.StringValue	 name = 1;
+	int32  id = 2;
+	google.protobuf.StringValue  content = 3;
+	PictureDTOGrpc digitalSignature = 4;
+	google.protobuf.Int32Value  digitalSignatureId = 5;
+	google.protobuf.Int32Value  serviceId = 6;
+}

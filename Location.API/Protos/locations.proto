@@ -1,0 +1,48 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Location.API.Proto";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package LocationApi;
+
+service LocationGrpc {
+	rpc CreateDraftLocation(CreateLocationGrpcCommand) returns (LocationGrpcDTO) {}
+	rpc GetListByLevel(google.protobuf.Int32Value) returns (ListLocationGrpcDTO) {}
+	rpc GetByLocationId(google.protobuf.StringValue) returns (LocationGrpcDTO) {}
+	rpc GetByLocationCode(google.protobuf.StringValue) returns (LocationGrpcDTO) {}
+}
+
+message CreateLocationGrpcCommand
+{
+	google.protobuf.StringValue _id = 1;
+	google.protobuf.StringValue  name = 2;
+	google.protobuf.StringValue  code = 3;
+	google.protobuf.StringValue  parentId = 4;
+}
+
+message RequestFilterLocationGrpc
+{
+	google.protobuf.StringValue  locationId = 1;
+	google.protobuf.StringValue  name = 2;
+	google.protobuf.StringValue  code = 3;
+	google.protobuf.Int32Value level = 6;
+}
+
+message LocationGrpcDTO
+{
+	google.protobuf.StringValue  _id = 1;
+	google.protobuf.StringValue  locationId = 2;
+	google.protobuf.StringValue  name = 3;
+	google.protobuf.StringValue  code = 4;
+	google.protobuf.StringValue  parentId = 5;
+	google.protobuf.StringValue  parentName = 6;
+	google.protobuf.Int32Value level = 7;
+	google.protobuf.StringValue countryCode = 8;
+}
+
+message ListLocationGrpcDTO
+{
+	repeated LocationGrpcDTO LocationGrpcDTOs = 1;
+}

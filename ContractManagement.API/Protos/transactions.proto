@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+package ContractManagementApi;
+
+service TransactionsGrpc {
+	rpc AddNewTransaction(RequestTransactionGRPC) returns (IsSuccessGRPC) {}
+	rpc AcceptanceTransactionApp(AcceptanceTransactionCommandAppGrpc) returns (IsSuccessGRPC) {}
+	rpc GetDetail(google.protobuf.Int32Value) returns (IsSuccessGRPC) {}
+}
+
+message RequestTransactionGRPC{
+	google.protobuf.StringValue TransactionJSON = 1;
+	google.protobuf.Int32Value TypeId = 2;
+}
+
+message IsSuccessGRPC{
+	bool IsSuccess = 1;
+	repeated ErrorModelGRPC errors = 2;
+	google.protobuf.StringValue dataJson = 3;
+
+}
+message ErrorModelGRPC{
+	google.protobuf.StringValue errorMessage = 1;
+	google.protobuf.StringValue memberName = 2;
+}
+
+message AcceptanceTransactionCommandAppGrpc{
+	int32 transactionId = 1;
+	google.protobuf.StringValue note = 2;
+	google.protobuf.StringValue acceptanceStaff = 3;
+	google.protobuf.StringValue acceptanceStaffUid = 4;
+	repeated FileCommandGrpc attachmentFiles = 5;
+	repeated TransactionEquipmentCommandGrpc equipments = 6;
+}
+
+message FileCommandGrpc{
+	google.protobuf.Int32Value InContractId = 1;
+	google.protobuf.Int32Value OutContractId = 2;
+	google.protobuf.Int32Value TransactionId = 3;
+	google.protobuf.StringValue ResourceStorage = 4;
+	google.protobuf.StringValue Name = 5;
+	google.protobuf.StringValue FileName = 6;
+	google.protobuf.StringValue FilePath = 7;
+	int64 Size = 8;
+	int32 FileType = 9;
+	google.protobuf.StringValue Extension = 10;
+	google.protobuf.StringValue RedirectLink = 11;
+	google.protobuf.StringValue TemporaryUrl = 12;
+	google.protobuf.StringValue CreatedBy = 13;
+	google.protobuf.StringValue UpdatedBy = 14;
+}
+
+message TransactionEquipmentCommandGrpc{
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue serialCode = 2;
+}

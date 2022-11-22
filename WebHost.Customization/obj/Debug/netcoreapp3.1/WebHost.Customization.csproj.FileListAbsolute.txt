@@ -1,0 +1,9 @@
+E:\Project\Billing\WebHost.Customization\bin\Debug\netcoreapp3.1\WebHost.Customization.deps.json
+E:\Project\Billing\WebHost.Customization\bin\Debug\netcoreapp3.1\WebHost.Customization.dll
+E:\Project\Billing\WebHost.Customization\bin\Debug\netcoreapp3.1\WebHost.Customization.pdb
+E:\Project\Billing\WebHost.Customization\obj\Debug\netcoreapp3.1\WebHost.Customization.csproj.AssemblyReference.cache
+E:\Project\Billing\WebHost.Customization\obj\Debug\netcoreapp3.1\WebHost.Customization.AssemblyInfoInputs.cache
+E:\Project\Billing\WebHost.Customization\obj\Debug\netcoreapp3.1\WebHost.Customization.AssemblyInfo.cs
+E:\Project\Billing\WebHost.Customization\obj\Debug\netcoreapp3.1\WebHost.Customization.csproj.CoreCompileInputs.cache
+E:\Project\Billing\WebHost.Customization\obj\Debug\netcoreapp3.1\WebHost.Customization.dll
+E:\Project\Billing\WebHost.Customization\obj\Debug\netcoreapp3.1\WebHost.Customization.pdb

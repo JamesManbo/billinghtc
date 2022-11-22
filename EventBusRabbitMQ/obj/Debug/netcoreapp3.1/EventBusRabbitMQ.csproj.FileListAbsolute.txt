@@ -1,0 +1,12 @@
+E:\Project\Billing\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.deps.json
+E:\Project\Billing\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+E:\Project\Billing\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb
+E:\Project\Billing\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBus.dll
+E:\Project\Billing\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBus.pdb
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csproj.AssemblyReference.cache
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.AssemblyInfoInputs.cache
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.AssemblyInfo.cs
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csproj.CoreCompileInputs.cache
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csproj.CopyComplete
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+E:\Project\Billing\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb

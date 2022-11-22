@@ -1,0 +1,12 @@
+E:\Project\Billing\TickForNet.Objects\bin\Debug\netcoreapp3.1\TickForNet.Objects.deps.json
+E:\Project\Billing\TickForNet.Objects\bin\Debug\netcoreapp3.1\TickForNet.Objects.dll
+E:\Project\Billing\TickForNet.Objects\bin\Debug\netcoreapp3.1\TickForNet.Objects.pdb
+E:\Project\Billing\TickForNet.Objects\bin\Debug\netcoreapp3.1\TikForNet.dll
+E:\Project\Billing\TickForNet.Objects\bin\Debug\netcoreapp3.1\TikForNet.pdb
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.csproj.AssemblyReference.cache
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.AssemblyInfoInputs.cache
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.AssemblyInfo.cs
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.csproj.CoreCompileInputs.cache
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.csproj.CopyComplete
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.dll
+E:\Project\Billing\TickForNet.Objects\obj\Debug\netcoreapp3.1\TickForNet.Objects.pdb

@@ -1,0 +1,7 @@
+Id,Culture,CreatedDate,UpdatedDate,CreatedBy,UpdatedBy,IsActive,IsDeleted,DisplayOrder,IdentityGuid,Name,ParentId,Code,ShortName,Address,NumberPhone,TypeId,Email,ProvinceId,TreePath,OrganizationPath
+1,,"2020-08-31 12:24:07",,,,1,0,0,f6991c36-c049-42ac-b131-80b62be1478f,"Phòng hành chính",,PHONGHANHCHINH,"Phòng hành chính","Hà Nội",0972998778,,phonghanhchinh@gmail.com,,,
+2,,"2020-08-31 12:25:20",,,,1,0,0,f1e4c55c-3cb6-4b9c-b07c-d88a5cc2ade5,"Phòng kinh doanh",,PHONGKINHDOANH,"Phòng kinh doanh","Hà Nội",0972776556,,phongkinhdoanh@gmail.com,,,
+3,,"2020-08-31 12:26:14",,,,1,0,0,c2258a65-f43a-450e-aedf-b652bc6c43fe,"Phòng marketing",,PHONGMARKETING,"Phòng marketing","Hà Nội",0972998006,,phongmarketing@gmail.com,,,
+4,,"2020-08-31 12:27:13",,,,1,0,0,b5ea1027-7a58-4d17-9f01-1d9aba20e3ec,"Phòng giám đốc",,PHONGGIAMDOC,"Phòng giám đốc","Hà Nội",0988776990,,phonggiamdoc@gmail.com,,,
+5,,"2020-08-31 12:31:43",,,,1,0,0,1193980f-1ab1-4fff-b625-b6bc87f4975b,"Phòng kĩ thuật",,PHONGKITHUAT,"Phòng kĩ thuật","Hà Nội",0972776889,,phongkithuat@gmail.com,,,
+6,,"2020-08-31 12:32:54",,,,1,0,0,4ce20cda-c705-4b35-a3be-eb800ac01f68,"Phòng chăm sóc khách hàng",,PHONGCHAMSOCKHACHHANG,"Phòng chăm sóc khách hàng","Hà Nội",0972666889,,chamsockhachhang@gmail.com,,,

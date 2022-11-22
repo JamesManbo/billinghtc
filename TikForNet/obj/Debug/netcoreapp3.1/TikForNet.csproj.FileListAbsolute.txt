@@ -1,0 +1,9 @@
+E:\Project\Billing\TikForNet\bin\Debug\netcoreapp3.1\TikForNet.deps.json
+E:\Project\Billing\TikForNet\bin\Debug\netcoreapp3.1\TikForNet.dll
+E:\Project\Billing\TikForNet\bin\Debug\netcoreapp3.1\TikForNet.pdb
+E:\Project\Billing\TikForNet\obj\Debug\netcoreapp3.1\TikForNet.csproj.AssemblyReference.cache
+E:\Project\Billing\TikForNet\obj\Debug\netcoreapp3.1\TikForNet.AssemblyInfoInputs.cache
+E:\Project\Billing\TikForNet\obj\Debug\netcoreapp3.1\TikForNet.AssemblyInfo.cs
+E:\Project\Billing\TikForNet\obj\Debug\netcoreapp3.1\TikForNet.csproj.CoreCompileInputs.cache
+E:\Project\Billing\TikForNet\obj\Debug\netcoreapp3.1\TikForNet.dll
+E:\Project\Billing\TikForNet\obj\Debug\netcoreapp3.1\TikForNet.pdb

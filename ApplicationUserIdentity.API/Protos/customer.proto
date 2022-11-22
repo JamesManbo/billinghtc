@@ -1,0 +1,230 @@
+syntax = "proto3";
+
+option csharp_namespace = "ApplicationUserIdentity.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package ApplicationUserIdentityApi;
+
+service CustomerGrpc {
+	rpc GetListCustomer(RequestFilterGrpcModel) returns (CustomerPageListGrpc){}
+	rpc CreateCustomer(CreateCustomerCommandGrpc) returns (CreateCustomerResponseGrpc){}
+	rpc GetCustomerClass(google.protobuf.Empty) returns (CustomerClassPageListGrpc){}
+	rpc GetCustomerGroup(google.protobuf.Empty) returns (CustomerGroupPageListGrpc){}
+	rpc GetCustomerStruct(google.protobuf.Empty) returns (CustomerStructPageListGrpc){}
+	rpc GetCustomerType(google.protobuf.Empty) returns (CustomerTypePageListGrpc){}
+	rpc GetCustomerCategory(google.protobuf.Empty) returns (CustomerCategoryPageListGrpc){}
+	rpc GetIndustries(google.protobuf.Empty) returns (IndustryPageListGrpc){}
+}
+
+
+message RequestFilterGrpcModel {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+}
+
+message CreateCustomerCommandGrpc {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue customerCode = 2;
+	google.protobuf.StringValue fullName = 3;
+	google.protobuf.StringValue mobilePhoneNo = 4;
+	google.protobuf.StringValue address = 5;
+	google.protobuf.StringValue email = 6;
+	google.protobuf.StringValue idNo = 7;
+	google.protobuf.Timestamp idDateOfIssue = 8;
+	google.protobuf.StringValue	idIssuedBy = 11;
+	google.protobuf.Int32Value gender = 12;
+	google.protobuf.Timestamp dateOfBirth = 13;
+	google.protobuf.StringValue bankName = 14;
+	google.protobuf.StringValue bankAccountNumber = 15;
+	google.protobuf.StringValue bankBranch = 16;
+
+	google.protobuf.Int32Value classId = 17;
+	google.protobuf.StringValue groupIdsStr = 18;
+	google.protobuf.Int32Value customerTypeId = 19;
+	google.protobuf.Int32Value customerCategoryId = 9;
+	google.protobuf.Int32Value customerStructureId = 10;
+	google.protobuf.StringValue userName = 20;
+	google.protobuf.StringValue password = 21;
+	google.protobuf.StringValue createdBy = 22;
+	google.protobuf.StringValue shortName = 23;
+	google.protobuf.StringValue provinceIdentityGuid = 24;
+	google.protobuf.StringValue districtIdentityGuid = 25;
+	repeated google.protobuf.Int32Value industryIds = 26;
+	google.protobuf.StringValue countryIdentityGuid = 27;
+	google.protobuf.StringValue country = 28;
+	google.protobuf.StringValue district = 29;
+	google.protobuf.StringValue customerCategoryCode = 30;
+}
+
+message CreateCustomerResponseGrpc{
+	google.protobuf.BoolValue isSuccess = 1;
+	google.protobuf.StringValue message = 2;
+	CustomerModelGrpc customerModel = 3;
+}
+
+message CustomerModelGrpc {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue customerCode = 2;
+	google.protobuf.StringValue fullName = 3;
+	google.protobuf.StringValue mobilePhoneNo = 4;
+	google.protobuf.StringValue address = 5;
+	google.protobuf.Int32Value customerCategoryId = 6;
+	google.protobuf.Int32Value customerStructureId = 7;
+	google.protobuf.StringValue email = 8;
+	google.protobuf.StringValue idNo = 9;
+	google.protobuf.Timestamp idDateOfIssue = 10;
+	google.protobuf.StringValue	idIssuedBy = 11;
+	google.protobuf.Int32Value gender = 12;
+	google.protobuf.Timestamp dateOfBirth = 13;
+	google.protobuf.StringValue bankName = 14;
+	google.protobuf.StringValue bankAccountNumber = 15;
+	google.protobuf.StringValue bankBranch = 16;
+
+	google.protobuf.Int32Value classId = 17;
+	google.protobuf.StringValue groupIds = 18;
+	google.protobuf.Int32Value customerTypeId = 19;
+	google.protobuf.StringValue identityGuid = 20;
+	google.protobuf.StringValue userName = 21;
+	google.protobuf.StringValue shortName = 22;
+}
+
+
+message CustomerClassPageListGrpc{
+	repeated  CustomerClassModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+message CustomerClassModelGrpc{
+	google.protobuf.Int32Value Id = 1;
+	google.protobuf.StringValue ClassName = 2;
+	google.protobuf.StringValue ClassCode = 3;
+	google.protobuf.Int32Value ConditionStartPoint = 4;
+	google.protobuf.Int32Value ConditionEndPoint  = 5;
+}
+	
+
+message CustomerGroupPageListGrpc{
+	repeated  CustomerGroupModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+message CustomerGroupModelGrpc{
+	google.protobuf.Int32Value Id = 1;
+	google.protobuf.StringValue GroupName = 2;
+	google.protobuf.StringValue GroupCode = 3;
+	google.protobuf.StringValue Description = 4;
+}
+
+
+message CustomerStructPageListGrpc{
+	repeated  CustomerStructModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+message CustomerStructModelGrpc{
+	google.protobuf.Int32Value Id = 1;
+	google.protobuf.StringValue Name = 2;
+	google.protobuf.StringValue Code = 3;
+	google.protobuf.StringValue Description = 4;
+}
+
+message CustomerTypePageListGrpc{
+	repeated  CustomerTypeModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+message CustomerTypeModelGrpc{
+	google.protobuf.Int32Value Id = 1;
+	google.protobuf.StringValue Name = 2;
+	google.protobuf.StringValue Code = 3;
+	google.protobuf.StringValue Description = 4;
+}
+
+message CustomerCategoryPageListGrpc{
+	repeated  CustomerCategoryModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message CustomerCategoryModelGrpc{
+	google.protobuf.Int32Value Id = 1;
+	google.protobuf.StringValue Name = 2;
+	google.protobuf.StringValue Code = 3;
+	google.protobuf.StringValue Description = 4;
+}
+
+message IndustryPageListGrpc{
+	repeated  IndustryModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message IndustryModelGrpc{
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue name = 2;
+	google.protobuf.StringValue code = 3;
+	google.protobuf.StringValue description = 4;
+}
+
+message CustomerPageListGrpc{
+	repeated  CustomerModelGrpc subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}

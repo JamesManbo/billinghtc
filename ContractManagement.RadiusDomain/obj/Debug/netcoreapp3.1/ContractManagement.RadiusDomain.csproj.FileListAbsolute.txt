@@ -1,0 +1,28 @@
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.deps.json
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Configs.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Models.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Models.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.csproj.CopyComplete
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.dll
+C:\Users\Administrator\Downloads\7. Bộ mã nguồn\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.pdb
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.deps.json
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.dll
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.pdb
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Configs.dll
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Models.dll
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Models.pdb
+E:\Project\Billing\ContractManagement.RadiusDomain\bin\Debug\netcoreapp3.1\Global.Configs.pdb
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.csproj.AssemblyReference.cache
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.AssemblyInfoInputs.cache
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.AssemblyInfo.cs
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.csproj.CoreCompileInputs.cache
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.csproj.CopyComplete
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.dll
+E:\Project\Billing\ContractManagement.RadiusDomain\obj\Debug\netcoreapp3.1\ContractManagement.RadiusDomain.pdb

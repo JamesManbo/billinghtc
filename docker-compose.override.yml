@@ -1,0 +1,156 @@
+version: '3.4'
+
+services:
+
+  cms.apigateway:
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5100:80"
+
+  staffapp.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5102:80"
+
+  customerapp.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5103:80"
+
+  contractmanagementapi.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - UseCustomizationData=True
+      - DepartmentCode__BusinessDepartmentCode=${DepartmentCode_BusinessDepartmentCode}
+      - DepartmentCode__CustomerCareDepartmentCode=${DepartmentCode_CustomerCareDepartmentCode}
+      - DepartmentCode__BoardOfDirectorsCode=${DepartmentCode_BoardOfDirectorsCode}
+      - DepartmentCode__ServiceProviderDepartmentCode=${DepartmentCode_ServiceProviderDepartmentCode}
+      - DepartmentCode__SupporterDepartmentCode=${DepartmentCode_SupporterDepartmentCode}
+      - ServiceConfigs__FTTHService=${FTTHServiceIds}
+      - ServiceConfigs__TVService=${TVServiceIds}
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5105:80"
+      - "9105:81"
+
+  applicationuseridentity.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5106:80"
+      - "9106:81"
+
+  organizationunit.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DepartmentCode__BusinessDepartmentCode=${DepartmentCode_BusinessDepartmentCode}
+      - DepartmentCode__CustomerCareDepartmentCode=${DepartmentCode_CustomerCareDepartmentCode}
+      - DepartmentCode__BoardOfDirectorsCode=${DepartmentCode_BoardOfDirectorsCode}
+      - DepartmentCode__ServiceProviderDepartmentCode=${DepartmentCode_ServiceProviderDepartmentCode}
+      - DepartmentCode__SupporterDepartmentCode=${DepartmentCode_SupporterDepartmentCode}
+    ports:
+      - "5109:80"
+      - "9109:81" 
+
+  systemuseridentity.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5107:80"
+      - "9107:81"
+
+  #kibana:
+  #  environment:
+  #    - ASPNETCORE_ENVIRONMENT=Development
+  #  ports:
+  #    - "5601:5601"
+
+  rabbitmq:
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=123@123a
+    ports:
+      - "15672:15672"
+      
+  staticresource.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5111:80"
+      - "9111:81"
+    volumes:
+      - ${TEMPORARY_UPLOAD_FOLDER}:/resource/materials:rw      
+   
+  debtmanagement.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development      
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5112:80"
+      - "9112:81"
+
+  notification.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5113:80"
+      - "9113:81"
+
+  location.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5108:80"
+      - "9108:81"
+
+  feedback.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5114:80"
+      - "9114:81"
+
+  #news.api:
+  #  environment:
+  #    - ASPNETCORE_ENVIRONMENT=Development
+  #    - ASPNETCORE_URLS=http://+:80
+  #  ports:
+  #    - "5115:80"
+  #    - "9115:81"
+  #  volumes:
+  #    - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  #    - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  #customerwebportal:
+  #  environment:
+  #    - ASPNETCORE_ENVIRONMENT=Development
+  #  ports:
+  #    - "5116:80"
+  
+  #contractmanagement.backgroundtasks:
+  #  environment:
+  #    - ASPNETCORE_ENVIRONMENT=Development
+  #    - DepartmentCode__BusinessDepartmentCode=${DepartmentCode_BusinessDepartmentCode}
+  #    - DepartmentCode__CustomerCareDepartmentCode=${DepartmentCode_CustomerCareDepartmentCode}
+  #    - DepartmentCode__BoardOfDirectorsCode=${DepartmentCode_BoardOfDirectorsCode}
+  #    - DepartmentCode__ServiceProviderDepartmentCode=${DepartmentCode_ServiceProviderDepartmentCode}
+  #    - DepartmentCode__SupporterDepartmentCode=${DepartmentCode_SupporterDepartmentCode}
+  
+  #debtmanagement.backgroundtasks:
+  #  environment:
+  #    - ASPNETCORE_ENVIRONMENT=Development
+  #  volumes:
+  #    - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro

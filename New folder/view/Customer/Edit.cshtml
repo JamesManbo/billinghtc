@@ -1,0 +1,308 @@
+﻿@*@model Domain.Shared.DTO.CustomerDTO*@
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listNations = ViewBag.ListNations as List<BaseCore.Entities.DM_Nation>;
+}
+@model BaseCore.Entities.Customer
+<div class="col-lg-12">
+    <div class="pageheader">
+
+        <div class="pagetitle">
+            <h5>Thông tin</h5>
+            <h1>Trang</h1>
+        </div>
+    </div>
+    @if (ViewBag.error > 0)
+    {
+        <div>@ViewBag.msg</div>
+    }
+    <div class="maincontent">
+        <div class="maincontentinner">
+            <h4 class="widgettitle">Cập nhật thông tin trang</h4>
+            <div class="widgetcontent">
+                <div class="form-horizontal">
+                    <!-- Horizontal Form -->
+                    <form id="form_pb" action="/Customer/Edit" method="post" enctype="multipart/form-data" id="filterForm">
+                        <input id="customer_id" name="CustomerId" value="@Model.CustomerId" hidden />
+                        <div class="row mb-3">
+                            <label for="name" class="col-sm-2 control-label">Tên khách hàng <span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Tên khách hàng" name="Name" value="@Model.Name">
+
+                            </div>
+                        </div>
+                        @*<div class="row mb-3">
+            <label for="password" class="col-sm-2 control-label">Mật khẩu<span style="color:red">(*)</span></label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control input-default" placeholder="Mật khẩu" name="Password" value="@Model.Password">
+
+            </div>
+        </div>*@
+                        <div class="row mb-3">
+                            <label for="date_of_birth" class="col-sm-2 control-label">Ngày sinh </label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control input-default" asp-for="DateOfBirth" name="DateOfBirth" asp-items="@ViewBag.DateOfBirth">
+
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <label for="gender_lookup" class="col-sm-2 control-label">Giới tính </label>
+                            <div class="col-sm-8">
+                                <select class="form-control input-default" asp-for="GenderLookup" name="GenderLookup" asp-items="@ViewBag.GenderLookup">
+                                    <option>---Chọn giới tính---</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <label for="email" class="col-sm-2 control-label">Email <span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Địa chỉ Email" name="Email" value="@Model.Email">
+
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <label for="phone_number" class="col-sm-2 control-label">Số điện thoại <span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Số điện thoại" name="PhoneNumber" value="@Model.PhoneNumber">
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <label for="city_name" class="col-sm-2 control-label">Tên công ty </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Tên công ty" name="CityName" value="@Model.CityName">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="address1" class="col-sm-2 control-label">Địa chỉ liên hệ <span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Địa chỉ liên hệ" name="Address1" value="@Model.Address1">
+                            </div>
+                        </div>
+
+                        @*<div class="row mb-3">
+                            <label for="postal_code" class="col-sm-2 control-label">Mã vùng</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Mã vùng" name="PostalCode" value="@Model.PostalCode">
+                            </div>
+                        </div>*@
+
+                        <div class="row mb-3">
+                            <label for="website" class="col-sm-2 control-label">Địa chỉ website</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="Website" value="@Model.Website">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="region_id" class="col-sm-2 control-label">Vùng<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <select class="form-control input-default" asp-for="RegionId" name="RegionId" asp-items="@ViewBag.RegionId">
+                                    <option>---Chọn khu vực---</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="nation_id" class="col-sm-2 control-label">Quốc gia<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <select class="form-control input-default" asp-for="NationId" name="NationId" asp-items="@ViewBag.NationId">
+                                    <option>---Chọn quốc gia---</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="group_customer" class="col-sm-2 control-label">Nhóm khách hàng<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="GroupCustomer" value="@Model.GroupCustomer">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="setting_customer" class="col-sm-2 control-label">Loại hình cơ cấu KH<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="SettingCustomer" value="@Model.SettingCustomer">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="type_customer" class="col-sm-2 control-label">Kiểu khách hành<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="TypeCustomer" value="@Model.TypeCustomer">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="cate_customer" class="col-sm-2 control-label">Hạng khách hàng<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="CateCustomer" value="@Model.CateCustomer">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="number_contract" class="col-sm-2 control-label">Số hợp đồng<span style="color:red">(*)</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="NumberContract" value="@Model.NumberContract">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="date_contract" class="col-sm-2 control-label">Ngày ký hợp đồng</label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control input-default" asp-for="DateContract" name="DateContract" asp-items="@ViewBag.DateContract">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="date_network_charges" class="col-sm-2 control-label">Ngày nghiệm thu tính cước</label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control input-default" asp-for="DateNetworkCharges" name="DateNetworkCharges" asp-items="@ViewBag.DateNetworkCharges">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="year_of_dept" class="col-sm-2 control-label">Năm bắt đầu công nợ</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control input-default" placeholder="" name="YearOfDept" value="@Model.YearOfDept">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="month_of_dept" class="col-sm-2 control-label">Tháng bắt đầu công nợ</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control input-default" placeholder="" name="MounthOfDept" value="@Model.MounthOfDept">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="curcle_payment" class="col-sm-2 control-label">Chu kì thanh toán (tháng)</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control input-default" placeholder="" name="CurclePayment" value="@Model.CurclePayment">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="due_date_payment" class="col-sm-2 control-label">Thời hạn thanh toán (ngày)</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control input-default" id="due_date_payment" name="DueDatePayment" value="@Model.DueDatePayment">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="clue_payment" class="col-sm-2 control-label">Đầu mối thanh toán</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="CluePayment" value="@Model.CluePayment">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="cate_revenue" class="col-sm-2 control-label">Loại doanh thu</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="CateRevenue" value="@Model.CateRevenue">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="cate_service" class="col-sm-2 control-label">Loại dịch vụ</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="CateService" value="@Model.CateService">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="cate_bandwidth" class="col-sm-2 control-label">Băng thông</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="CateBandwidth" value="@Model.CateBandwidth">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="cid" class="col-sm-2 control-label">CID</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="CID" value="@Model.CID">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="start_point" class="col-sm-2 control-label">Điểm đầu</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="StartPoint" value="@Model.StartPoint">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="end_point" class="col-sm-2 control-label">Điểm cuối</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="EndPoint" value="@Model.EndPoint">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="address2" class="col-sm-2 control-label">Thông tin thiết bị</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="Thông tin thiết bị" name="Address2" value="@Model.Address2">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="number_contract" class="col-sm-2 control-label">Đầu mối liên hệ KT NOC </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-default" placeholder="" name="Address3" value="@Model.Address3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="stt" class="col-sm-2 control-label">Thứ tự</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control input-default" placeholder="Số thứ tự" name="stt" id="stt" min="1" value="@Model.Stt">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="ngay_sua" class="col-sm-2 control-label">Ngày sửa</label>
+                            <div class="col-sm-8">
+                                <input disabled type="text" class="form-control input-default" id="UpdatedDateUtc" name="UpdatedDateUtc" value="@Model.UpdatedDateUtc">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="ngay_tao" class="col-sm-2 control-label" hidden>Ngày tạo</label>
+                            <div class="col-sm-8">
+                                <input hidden type="text" class="form-control input-default" id="CreatedDateUtc" name="CreatedDateUtc" value="@Model.CreatedDateUtc">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary" name="type" onclick="window.location.href='/Customer/Create';">Thêm</button>
+                            <button type="submit" class="btn btn-primary" name="type" onclick="window.location.href = '/Customer/Edit?customerID=@Model.CustomerId';">Lưu</button>
+                            @*<button type="submit" class="btn btn-primary" onclick="confirm.BeforDeletePost('/Customer/Delete?customerID=@Model.CustomerId')">Xóa</button>*@
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='/Customer/Index';">Đóng</button>
+                        </div>                        
+                    </form><!-- End Horizontal Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $('#form_pb').validate({
+            rules: {
+                NationId: "required",
+                RegionId: "required",
+                SettingCustomer: "required",
+                PhoneNumber: "required",
+                Email: "required",
+                TypeCustomer: "required",               
+                GroupCustomer: "required",
+                UserName: "required",
+                CustomerId: "required",
+                Address1: "required",
+                CateCustomer: "required"
+
+            },
+            messages: {
+                NationId: "Bạn cần chọn quốc gia",
+                RegionId: "Bạn cần chọn vùng",
+                GroupCustomer: "Bạn cần nhập nhóm khách hàng",
+                PhoneNumber: "Bạn cần nhập số điện thoại",
+                Email: "Bạn cần nhập email",
+                TypeCustomer: "Bạn cần nhập kiểu khách hàng",               
+                SettingCustomer: "Bạn cần nhập loại hình cơ cấu KH",
+                UserName: "Bạn cần nhập tên đăng nhập",
+                CustomerId: "Bạn cần nhập mã khách hàng",
+                Address1: "Bạn cần nhập nguyên quán",
+                CateCustomer: "Bạn cần nhập hạng khách hàng"
+            }
+        });
+
+    });</script>

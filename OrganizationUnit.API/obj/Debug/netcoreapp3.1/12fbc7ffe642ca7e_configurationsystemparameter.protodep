@@ -1,0 +1,4 @@
+obj\Debug\netcoreapp3.1/Configurationsystemparameter.cs \
+obj\Debug\netcoreapp3.1/ConfigurationsystemparameterGrpc.cs: C:/Users/Administrator/.nuget/packages/grpc.tools/2.29.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/Administrator/.nuget/packages/grpc.tools/2.29.0/build/native/include/google/protobuf/empty.proto\
+ Protos/configurationsystemparameter.proto

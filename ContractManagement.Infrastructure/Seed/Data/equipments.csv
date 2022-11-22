@@ -1,0 +1,7 @@
+Id,Culture,CreatedDate,UpdatedDate,CreatedBy,UpdatedBy,IsActive,IsDeleted,DisplayOrder,Code,Name,UnitOfMeasurementId,Manufacturer,Description,Specifications,Price,OrganizationPath
+1,"vn","2020-04-12 00:00:00.000000",,"system",,1,0,0,"modem","Modem TPlink",1,"LG","","",200000,
+2,"vn","2020-04-12 00:00:00.000000",,"system",,1,0,0,"camera-i-2000","Camera Indoor",2,"VIN","","",100000,
+3,"vn","2020-04-12 00:00:00.000000",,"system",,1,0,0,"modem","FPT Play Box+ (S400)",3,"Apple","","",50000,
+4,"vn","2020-04-12 00:00:00.000000",,"system",,1,0,0,"00659088","Thiết bị mở rộng sóng Wifi TP-Link TL-WA850RE",4,"VIN","","",60000,
+5,"vn","2020-04-12 00:00:00.000000",,"system",,1,0,0,"00629669","Bộ chuyển đổi USB-C sang HDMI/VGA/Ethernet/USB Dell DA200",5,"VN","","",80000,
+6,"vn","2020-04-12 00:00:00.000000",,"system",,1,0,0,"00590811","Mic karaoke không dây có đèn Led i.value W-18",6,"LG","","",120000,

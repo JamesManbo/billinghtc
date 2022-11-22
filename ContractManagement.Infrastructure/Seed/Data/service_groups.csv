@@ -1,0 +1,12 @@
+Id,Culture,CreatedDate,UpdatedDate,CreatedBy,UpdatedBy,IsActive,IsDeleted,DisplayOrder,GroupCode,GroupName,OrganizationPath
+1,,"2020-09-09 02:11:35.964627",,,,1,0,0,NTD,"Nhóm truyền dẫn",
+2,,"1900-01-20 02:11:48.891647",,,,1,0,0,DVT,"Nhóm dịch vụ thoại IP",
+3,,"1900-01-20 02:12:00.105217",,,,1,0,0,GTGT,"Nhóm dịch vụ GTGT",
+4,,"2020-09-09 02:12:15.264000","1900-01-20 08:42:11.620318",,,1,0,0,CNTTGPTH,"Nhóm các dịch vụ CNTT/ Giải pháp tích hợp",
+5,,"1900-01-20 08:42:44.138196","1900-01-20 08:42:51.149459",,,1,1,0,DVTT01,"Nhóm dịch vụ TT truyền thông",
+8,,"2020-10-19 08:28:34.323036",,,,1,0,0,DVTD,"Nhóm các dịch vụ truyền dẫn",
+10,,"2020-10-19 08:28:58.726000","2020-10-19 08:32:29.706128",,,1,0,0,NDVT,"Nhóm dịch vụ thoại IP",
+12,,"2020-10-19 07:43:30.728101",,,,1,1,0,CNTTGPTH,"Nhóm các dịch vụ CNTT/ Giải pháp tích hợp",
+14,,"2020-10-19 07:43:47.721478",,,,1,1,0,GTGT,"Nhóm dịch vụ GTGT",
+16,,"2020-10-19 07:44:00.123435",,,,1,1,0,DVT,"Nhóm dịch vụ thoại IP",
+18,,"2020-10-19 08:30:09.026623",,,,1,0,0,CNTT,"Nhóm dịch vụ CNTT",

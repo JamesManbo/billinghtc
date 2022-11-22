@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/common.proto";
+
+package ContractManagementApi;
+
+service TelcoServicePackageGrpcService {
+	rpc GetPackages(PackageRequestGrpc) returns (PackagePageListGrpcDTO) {}
+	rpc GetAll(google.protobuf.Empty) returns (ListServicePackageGrpcResponse) {}
+}
+
+message PackageRequestGrpc
+{
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.Int32Value serviceId = 8;
+	bool onlyRoot = 9;
+}
+
+message ListServicePackageGrpcResponse
+{
+	repeated PackageGrpcDTO packageDtos = 1;
+}
+
+message PackagePageListGrpcDTO
+{
+	repeated PackageGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message PackageGrpcDTO
+{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.StringValue  serviceId = 2;
+	google.protobuf.StringValue  serviceName = 3;
+	google.protobuf.StringValue  packageCode = 4;
+	google.protobuf.StringValue  packageName = 5;
+	google.protobuf.StringValue  bandwidthLabel = 6;
+	google.protobuf.FloatValue  internationalBandwidth = 7;
+	google.protobuf.StringValue  internationalBandwidthUom = 8;
+	google.protobuf.FloatValue  domesticBandwidth = 9;
+	google.protobuf.StringValue  domesticBandwidthUom = 10;
+	Money  price = 11;
+	bool  hasToCollectMoney = 12;
+	PictureDTOGrpc  packageImage = 13;
+	bool  hasStartAndEndPoint = 14;
+	bool isHasPrice = 15;
+}

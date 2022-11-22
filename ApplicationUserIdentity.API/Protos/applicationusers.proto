@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option csharp_namespace = "ApplicationUserIdentity.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+
+package ApplicationUserIdentityApi;
+
+
+service ApplicationUsersGrpc {
+	rpc GetList(UsersInGroupRequestFilterModelGrpc) returns (ResultGrpc) {}
+	rpc GetApplicationUserByUid(google.protobuf.StringValue) returns (ResultGrpc) {}
+	rpc GenerateUserCode(GenerateUserCodeRequestGrpc) returns (google.protobuf.StringValue) {}
+	rpc GetFCMTokensByUids(google.protobuf.StringValue) returns (ListTokenResponseGrpc) {}
+}
+
+message GenerateUserCodeRequestGrpc{
+	google.protobuf.StringValue	 groupCodes = 1;
+	google.protobuf.StringValue	 categoryCode = 2;
+	google.protobuf.StringValue	 typeCode = 3;
+}
+
+message UsersInGroupRequestFilterModelGrpc {
+
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	RequestType Type = 8;
+	google.protobuf.Int32Value  groupId = 9;
+}
+
+enum RequestType{
+    UNKNOWN = 0;
+    Grid = 1;
+    Selection = 2;
+    Hierarchical = 3;
+    SimpleAll = 4;
+    Autocomplete = 5;
+    AutocompleteSimple = 6;
+}
+
+message ResultGrpc{
+	google.protobuf.StringValue	 Result = 1;	
+}
+
+message ListTokenResponseGrpc{
+	repeated FcmTokenGrpc tokens = 1;	
+}
+
+message FcmTokenGrpc{
+	google.protobuf.StringValue token = 1;	
+	google.protobuf.StringValue receiverId = 2;	
+	google.protobuf.StringValue receiver = 3;	
+	google.protobuf.StringValue platform = 4;	
+}

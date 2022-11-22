@@ -1,0 +1,433 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Protos/contractors.proto";
+import "Protos/common.proto";
+import "Protos/taxcategory.proto";
+
+package ContractManagementApi;
+
+service ContractManagementGrpc {
+	rpc FindByContractorId(google.protobuf.StringValue) returns (ContractGrpcDTO) {}
+	rpc FindByContractCode(google.protobuf.StringValue) returns (ContractGrpcDTO) {}
+	rpc GetContracts(RequestGetContractsGrpc) returns (ContractPageListGrpcDTO) {}
+	rpc GetByIds(google.protobuf.StringValue) returns (GetOutContractByIdsResponse) {}
+	rpc GetDetail(google.protobuf.Int32Value) returns (ContractGrpcDTO) {}
+	rpc GenerateContractCode(GenerateContractCodeRequestGrpc) returns (google.protobuf.StringValue) {}
+	rpc GetContractByChannelId(google.protobuf.Int32Value) returns (ContractGrpcDTO) {}
+	rpc GetContractByChannelCId(google.protobuf.StringValue) returns (ContractGrpcDTO) {}
+
+	rpc CreatedOutContract(google.protobuf.StringValue) returns (OutContractIsSuccessGRPC) {}
+
+	rpc GetOutContractStatuses(google.protobuf.Empty) returns (google.protobuf.StringValue) {}
+
+	rpc GetOutContractServicePackageByIds(google.protobuf.StringValue) returns (OutContractServicePackageListGrpcResponse) {}
+	rpc GetOutContractEquipments(RequestFilterGrpc) returns (OutContractEquipmentListGrpc) {}
+	rpc AutoCompleteOutputChannelPoint(OutputChannelPointRequestGrpc) returns (OutputChannelPointListGrpc) {}
+	rpc GetReportContractStatus(ContractStatusReportFilterGrpc) returns (ContractStatusReportResponseGrpc) {}
+
+	rpc GetChannelAddressesByCid(google.protobuf.StringValue) returns (ChannelAddressesResponseGrpc){}
+
+	rpc GetAvailablePromotions(google.protobuf.Empty) returns (AvailabelPromotionResponse){}
+}
+
+message ChannelAddressesResponseGrpc {
+	repeated ChannelAddressModelGrpc result = 1;
+}
+
+message ChannelAddressModelGrpc {
+	google.protobuf.StringValue cid = 1;
+	InstallationAddressGrpc startPointAddress = 2;
+	InstallationAddressGrpc endPointAddress = 3;
+}
+
+message GenerateContractCodeRequestGrpc{
+	bool isEnterprise = 1;
+	google.protobuf.StringValue  customerFullName = 2;
+	google.protobuf.Int32Value  marketAreaId = 3;
+	google.protobuf.Int32Value  projectId = 4;
+	google.protobuf.StringValue  srvPackageIds = 5;
+}
+
+message OutContractIsSuccessGRPC{
+	bool IsSuccess = 1;
+	google.protobuf.StringValue  message = 2;
+}
+
+message GetOutContractByIdsResponse {
+	repeated OutContractSimpleGrpcDTO outContracts = 1;
+}
+
+message OutContractListGrpcResponse{
+	repeated ContractGrpcDTO contractDtos = 1;
+}
+
+message OutContractServicePackageListGrpcResponse{
+	repeated OutContractServicePackageGrpcDTO outContractServicePackages = 1;
+}
+
+message RequestGetContractsGrpc{
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.StringValue	 projectIds = 8;
+	google.protobuf.Int32Value	 contractorId = 9;
+	google.protobuf.Int32Value	 contractStatusId = 10;
+	google.protobuf.StringValue	 serviceIds = 11;
+}
+
+message ContractPageListGrpcDTO
+{
+	repeated ContractGrpcDTO subset = 1;
+	google.protobuf.Int32Value  count = 2;
+	google.protobuf.Int32Value  pageCount = 3;
+	google.protobuf.Int32Value  totalItemCount = 4;
+	google.protobuf.Int32Value  skip = 5;
+	google.protobuf.Int32Value  take = 6;
+	bool  hasPreviousPage = 7;
+	bool  hasNextPage = 8;
+	bool  isFirstPage = 9;
+	bool  isLastPage = 10;
+}
+
+message PaymentMethodGrpc {
+	google.protobuf.Int32Value form = 1;
+	google.protobuf.Int32Value method = 2;
+	google.protobuf.StringValue address = 3;
+}
+
+message ContractTimeLineGrpc {
+	google.protobuf.Int32Value renewPeriod= 1; 
+	google.protobuf.Int32Value paymentPeriod= 2; 
+	google.protobuf.Timestamp expiration= 3; 
+	google.protobuf.Timestamp liquidation= 4; 
+	google.protobuf.Timestamp effective= 5; 
+	google.protobuf.Timestamp signed= 6; 
+}
+
+message AddressGrpc {
+	google.protobuf.StringValue street = 1;
+	google.protobuf.StringValue district = 2;
+	google.protobuf.StringValue districtId = 3;
+	google.protobuf.StringValue city = 4;
+	google.protobuf.StringValue cityId = 5;
+}
+
+message AttachmentFileGrpcDTO {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.Int32Value	outContractId = 2;
+	google.protobuf.StringValue resourceStorage = 3;
+	google.protobuf.StringValue name = 4;
+	google.protobuf.StringValue fileName = 5;
+	google.protobuf.StringValue filePath = 6;
+	google.protobuf.Int64Value size = 7;
+	google.protobuf.Int32Value fileType = 8;
+	google.protobuf.StringValue extension = 9;
+	google.protobuf.StringValue redirectLink = 10;
+	google.protobuf.StringValue temporaryUrl = 11;
+}
+
+message ContractOfTaxGrpcDTO {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.Int32Value valueTax = 2;
+	google.protobuf.StringValue taxName = 3;
+}
+
+message OutContractServicePackageGrpcDTO {
+	google.protobuf.Int32Value currencyUnitId = 1;
+	google.protobuf.StringValue currencyUnitCode = 2;
+	google.protobuf.Int32Value outContractId = 3;
+	google.protobuf.Int32Value servicePackageId = 4;
+	google.protobuf.Int32Value serviceId = 5;
+	google.protobuf.StringValue serviceName = 6;
+	google.protobuf.StringValue packageName = 7;
+	bool isFreeStaticIp = 8;
+	google.protobuf.StringValue bandwidthLabel = 9;
+	google.protobuf.FloatValue internationalBandwidth = 10;
+	google.protobuf.FloatValue domesticBandwidth = 11;
+	google.protobuf.StringValue internationalBandwidthUom = 12;
+	google.protobuf.StringValue domesticBandwidthUom = 13;
+	BillingTimeLineGrpc timeLine = 14;
+	google.protobuf.StringValue customerCode = 15;
+	google.protobuf.StringValue cId = 16;
+	google.protobuf.StringValue radiusAccount = 17;
+	google.protobuf.StringValue radiusPassword = 18;
+	Money installationFee = 19;
+	Money otherFee = 20;
+	Money orgPackagePrice = 21;
+	Money packagePrice = 22;
+	google.protobuf.Int32Value packagePriceType = 23;
+	google.protobuf.Int32Value startPointChannelId = 24;
+	google.protobuf.Int32Value endPointChannelId = 25;
+	bool hasStartAndEndPoint = 26;
+	Money promotionAmount = 27;
+	Money equipmentAmount = 28;
+	google.protobuf.Int32Value statusId = 29;
+	Money subTotalBeforeTax = 30;
+	Money grandTotalBeforeTax = 31;
+	google.protobuf.FloatValue taxPercent = 32;
+	Money taxAmount = 33;
+	Money subTotal = 34;
+	Money grandTotal = 35;
+	google.protobuf.Int32Value transactionServicePackageId = 36;
+	bool isRadiusAccountCreated = 37;
+	google.protobuf.Int32Value oldId = 38;
+	bool isInFirstBilling = 39;
+	google.protobuf.Int32Value radiusServerId = 40;
+	bool isTechnicalConfirmation = 41;
+	google.protobuf.Int32Value channelGroupId = 42;
+	bool isHasPrice = 43;
+	bool isDefaultSLAByServiceId = 44;
+	google.protobuf.Int32Value paymentTargetId = 45;
+	int32 id = 46;
+	google.protobuf.StringValue organizationPath = 47;
+	OutputChannelPointGrpcDTO startPoint = 48;
+	OutputChannelPointGrpcDTO endPoint = 49;
+	repeated OutContractServicePackageTaxGrpcDTO outContractServicePackageTaxes = 50;
+	google.protobuf.StringValue contractCode = 51;
+	google.protobuf.StringValue text = 52;
+}
+
+message OutContractServicePackageTaxGrpcDTO {
+	google.protobuf.Int32Value outContractServicePackageId = 1;
+	google.protobuf.Int32Value taxCategoryId = 2;
+	google.protobuf.StringValue taxCategoryName = 3;
+	google.protobuf.StringValue taxCategoryCode = 4;
+	google.protobuf.Int32Value taxValue = 5;
+}
+
+message OutContractEquipmentGrpcDTO {
+	google.protobuf.Int32Value  id = 1;
+	google.protobuf.Int32Value  outContractId = 2;
+	google.protobuf.Int32Value  outContractPackageId = 3;
+	google.protobuf.Int32Value  serviceId = 4;
+	google.protobuf.StringValue serviceName = 5;
+	google.protobuf.Int32Value  servicePackageId = 6;
+	google.protobuf.StringValue servicePackageName = 7;
+	google.protobuf.StringValue equipmentName = 8;
+	google.protobuf.StringValue equipmentPictureUrl = 9;
+	google.protobuf.StringValue equipmentUom = 10;
+	Money unitPrice = 11;
+	google.protobuf.Int32Value examinedUnit = 12;
+	google.protobuf.Int32Value realUnit = 13;
+	google.protobuf.Int32Value reclaimedUnit = 14;
+	bool isInSurveyPlan = 16;
+	bool isFree = 17;
+	bool hasToReclaim = 18;
+	google.protobuf.StringValue serialCode = 19;
+	google.protobuf.StringValue deviceCode = 20; 
+	google.protobuf.StringValue manufacturer = 21; 
+	google.protobuf.StringValue specifications = 22; 
+	google.protobuf.Int32Value  statusId = 23;
+	google.protobuf.Int32Value  equipmentId = 24;
+	Money grandTotal = 25;
+	Money unitPriceBeforeTax = 26;
+	google.protobuf.Int32Value  transactionEquipmentId = 27;
+	google.protobuf.Int32Value  currencyUnitId = 28;
+	google.protobuf.StringValue  currencyUnitCode = 29;
+	google.protobuf.StringValue  installationFullAddress = 30;
+	google.protobuf.Int32Value activatedUnit = 31;
+}
+
+message ContractGrpcDTO {
+	google.protobuf.Int32Value  id = 1;
+    google.protobuf.StringValue contractCode= 2;
+    google.protobuf.StringValue agentCode= 3;
+    google.protobuf.Int32Value  contractTypeId= 4;
+    google.protobuf.Int32Value  marketAreaId = 5;
+    google.protobuf.StringValue marketAreaName = 6;
+    google.protobuf.Int32Value  projectId = 7;
+    google.protobuf.StringValue projectName = 8;
+    google.protobuf.StringValue organizationUnitId= 9;
+    google.protobuf.Int32Value  contractStatusId= 10;
+    google.protobuf.StringValue contractorIdentityGuid= 11;
+    google.protobuf.Int32Value  contractorId= 12;
+    google.protobuf.StringValue salesmanIdentityGuid= 13;
+    google.protobuf.Int32Value  paymentMethodId= 14;
+    google.protobuf.StringValue description= 15;
+    google.protobuf.StringValue  signedUserId = 16;
+    google.protobuf.Int32Value  salesmanId = 17;
+    google.protobuf.StringValue contractNote= 18;
+
+    google.protobuf.FloatValue totalTaxPercent = 19;
+    google.protobuf.Int32Value  contractStatus= 20;
+    Money totalTaxAmount = 21;
+    Money installationFee= 22;
+    Money otherFee= 23;
+    Money subTotal= 24;
+    //Money subTotalBeforeTax= 25;
+    Money grandTotalBeforeTax= 26;
+    Money grandTotal= 27;
+    PaymentMethodGrpc    payment= 29;
+    ContractTimeLineGrpc  timeLine= 30;
+	ContractorGrpcDTO contractor= 31;
+	google.protobuf.StringValue fiberNodeInfo = 32;
+	google.protobuf.StringValue agentContractCode = 33; 
+	google.protobuf.StringValue cashierUserId = 34;
+	Money equipmentAmount = 35;
+	//Money equipmentAmountBeforeTax = 36;
+	Money servicePackageAmount = 37;
+	//Money servicePackageAmountBeforeTax = 38;
+	repeated OutContractServicePackageGrpcDTO servicePackages = 39;
+	//repeated OutContractEquipmentGrpcDTO equipments = 40;
+
+    repeated AttachmentFileGrpcDTO attachmentFiles= 41;
+    repeated ContractOfTaxGrpcDTO contractOfTaxes= 42;
+	google.protobuf.StringValue  contractStatusName= 43;
+	google.protobuf.StringValue  signedUserName= 44;
+	google.protobuf.StringValue  organizationUnitName= 45;
+	google.protobuf.StringValue  cashierUserName= 46;
+	google.protobuf.StringValue  agentId= 47;
+	google.protobuf.StringValue  fiberNoteInfo= 48;
+	repeated TaxCategoryGrpcDTO  taxCategories= 49;
+	google.protobuf.Int32Value  numberBillingLimitDays = 50;
+	google.protobuf.StringValue  cashierFullName= 51;
+	ContractContentDTOGrpc  contractContent= 52;
+	ContractorGrpcDTO contractorHTC= 53;
+}
+
+message OutContractSimpleGrpcDTO {
+	int32  id = 1;
+	google.protobuf.StringValue contractCode= 2;
+	google.protobuf.StringValue agentCode= 3;
+	google.protobuf.Int32Value  contractTypeId= 4;
+	google.protobuf.Int32Value  marketAreaId = 5;
+	google.protobuf.StringValue marketAreaName = 6;
+	google.protobuf.Int32Value  projectId = 7;
+	google.protobuf.StringValue projectName = 8;
+	google.protobuf.StringValue organizationUnitId= 9;
+	google.protobuf.Int32Value  contractStatusId= 10;
+	google.protobuf.StringValue contractorIdentityGuid= 11;
+	google.protobuf.Int32Value  contractorId= 12;
+	google.protobuf.StringValue description= 15;
+	google.protobuf.StringValue  signedUserId = 16;
+	google.protobuf.Int32Value  salesmanId = 17;
+	google.protobuf.StringValue contractNote= 18;
+	Money grandTotal= 19;
+	google.protobuf.StringValue  contractorFullName = 20;
+	google.protobuf.StringValue  contractStatusName = 21;
+}
+
+message  OutputChannelPointGrpcDTO {
+	int32  id = 1;
+	int32  currencyUnitId = 2;
+	google.protobuf.StringValue locationId= 3;
+	int32 pointType= 4;
+	google.protobuf.StringValue  currencyUnitCode= 5;
+	InstallationAddressGrpc  installationAddress = 6;
+	Money installationFee = 7;
+	Money otherFee = 8;
+	Money monthlyCost = 9;
+	Money equipmentAmount = 10;
+	google.protobuf.StringValue  installationPointSpliter = 11;
+	repeated OutContractEquipmentGrpcDTO equipments = 12;
+	
+}
+
+message OutContractEquipmentListGrpc {
+	repeated OutContractEquipmentGrpcDTO data = 1;
+}
+
+message OutputChannelPointRequestGrpc {
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+	google.protobuf.Int32Value  pointType = 8;
+}
+
+message OutputChannelPointListGrpc {
+	repeated OutputChannelPointGrpcDTO data = 1;
+}
+
+message ContractContentDTOGrpc {
+	google.protobuf.StringValue	 content = 1;
+	google.protobuf.Int32Value	 digitalSignatureId = 2;
+	google.protobuf.Int32Value	 contractFormSignatureId = 3;
+	PictureDTOGrpc	 digitalSignature = 4;
+	PictureDTOGrpc	 contractFormSignature = 5;
+	google.protobuf.Int32Value	 outContractId = 6;
+}
+
+message ContractStatusReportFilterGrpc {
+	google.protobuf.Timestamp fromDate = 1; 
+	google.protobuf.Timestamp toDate = 2; 
+}
+
+message ContractStatusReportResponseGrpc {
+	repeated ContractStatusReportModelGrpc data = 1;
+}
+message ContractStatusReportModelGrpc {
+	google.protobuf.StringValue contractStatusName = 1; 
+	int32 contractStatusId = 2; 
+	int32 amount = 3; 
+}
+
+message PromotionDetailGrpcModel {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.Int32Value promotionId = 2;
+	google.protobuf.StringValue promotionCode = 3;
+	google.protobuf.Int32Value promotionValueType = 4;
+	google.protobuf.StringValue promotionValueTypeString = 5;
+	google.protobuf.StringValue promotionValue = 6;
+	google.protobuf.Int32Value quantity = 7;
+	google.protobuf.Int32Value currencyUnitId = 8;
+	google.protobuf.StringValue currencyUnitCode = 9;
+	google.protobuf.StringValue city = 10;
+	google.protobuf.StringValue cityId = 11;
+	google.protobuf.StringValue district = 12;
+	google.protobuf.StringValue districtId = 13;
+	google.protobuf.StringValue country = 14;
+	google.protobuf.StringValue countryId = 15;
+	google.protobuf.Int32Value serviceId = 16;
+	google.protobuf.StringValue serviceName = 17;
+	google.protobuf.Int32Value servicePackageId = 18;
+	google.protobuf.StringValue servicePackageName = 19;
+	google.protobuf.Int32Value projectId = 20;
+	google.protobuf.StringValue projectName = 21;
+	google.protobuf.StringValue updatePerson = 22;
+	google.protobuf.Int32Value numberOfMonthApplied = 23;
+	google.protobuf.StringValue subjectId = 24;
+	bool isChange = 25;
+	bool isActive = 26;
+	google.protobuf.Int32Value minPaymentPeriod = 27;
+}
+
+message PromotionGrpcModel {
+	google.protobuf.Int32Value id = 1;
+	google.protobuf.StringValue promotionCode = 2;
+	google.protobuf.StringValue promotionName = 3;
+	google.protobuf.StringValue promotionDetailId = 4;
+	google.protobuf.Int32Value promotionType = 5;
+	google.protobuf.StringValue promotionTypeString = 6;
+	google.protobuf.Timestamp startDate = 7;
+	google.protobuf.Timestamp endDate = 8;
+	google.protobuf.StringValue description = 9;
+	google.protobuf.Int32Value contractId = 10;
+	google.protobuf.Int32Value promotionValueType = 11;
+	google.protobuf.Int32Value quantity = 12;
+	google.protobuf.Int32Value numberOfMonthApplied = 13;
+	google.protobuf.Int32Value outContractServicePackageId = 14;
+	google.protobuf.Int32Value promotionForContractId = 15;
+	google.protobuf.Int32Value serviceId = 16;
+	google.protobuf.Int32Value servicePackageId = 17;
+	google.protobuf.Int32Value projectId = 18;
+	google.protobuf.Int32Value cityId = 19;
+	google.protobuf.Int32Value districtId = 20;
+	repeated PromotionDetailGrpcModel promotionDetails = 21;
+}
+
+message AvailabelPromotionResponse {
+	repeated PromotionGrpcModel promotionGrpcModels = 1;
+}

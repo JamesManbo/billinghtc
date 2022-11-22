@@ -1,0 +1,6 @@
+obj\Debug\netcoreapp3.1/Services.cs \
+obj\Debug\netcoreapp3.1/ServicesGrpc.cs: C:/Users/Administrator/.nuget/packages/grpc.tools/2.30.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/Administrator/.nuget/packages/grpc.tools/2.30.0/build/native/include/google/protobuf/timestamp.proto\
+ C:/Users/Administrator/.nuget/packages/grpc.tools/2.30.0/build/native/include/google/protobuf/empty.proto\
+ ../ContractManagement.API/Protos/common.proto\
+ ../ContractManagement.API/Protos/services.proto

@@ -1,0 +1,9 @@
+E:\Project\Billing\ContractManagement.Utility\bin\Debug\netcoreapp3.1\ContractManagement.Utility.deps.json
+E:\Project\Billing\ContractManagement.Utility\bin\Debug\netcoreapp3.1\ContractManagement.Utility.dll
+E:\Project\Billing\ContractManagement.Utility\bin\Debug\netcoreapp3.1\ContractManagement.Utility.pdb
+E:\Project\Billing\ContractManagement.Utility\obj\Debug\netcoreapp3.1\ContractManagement.Utility.csproj.AssemblyReference.cache
+E:\Project\Billing\ContractManagement.Utility\obj\Debug\netcoreapp3.1\ContractManagement.Utility.AssemblyInfoInputs.cache
+E:\Project\Billing\ContractManagement.Utility\obj\Debug\netcoreapp3.1\ContractManagement.Utility.AssemblyInfo.cs
+E:\Project\Billing\ContractManagement.Utility\obj\Debug\netcoreapp3.1\ContractManagement.Utility.csproj.CoreCompileInputs.cache
+E:\Project\Billing\ContractManagement.Utility\obj\Debug\netcoreapp3.1\ContractManagement.Utility.dll
+E:\Project\Billing\ContractManagement.Utility\obj\Debug\netcoreapp3.1\ContractManagement.Utility.pdb

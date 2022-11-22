@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+option csharp_namespace = "ContractManagement.API.Protos";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package ContractManagementApi;
+
+message RequestFilterGrpc{
+	google.protobuf.StringValue	 orderBy = 1;
+	google.protobuf.StringValue  dir = 2;
+	google.protobuf.Int32Value  skip = 3;
+	google.protobuf.Int32Value  take = 4;
+	google.protobuf.StringValue  filters = 5;
+	bool  paging = 6;
+	google.protobuf.StringValue  keywords = 7;
+}
+
+message PictureDTOGrpc{
+	google.protobuf.Int32Value	 id = 1;
+	google.protobuf.StringValue  name = 2;
+	google.protobuf.StringValue  fileName = 3;
+	google.protobuf.StringValue  filePath = 4;
+	google.protobuf.Int64Value  size = 5;
+	google.protobuf.Int32Value  displayOrder = 6;
+	google.protobuf.Int32Value  pictureType = 7;
+	google.protobuf.StringValue  extension = 8;
+	google.protobuf.StringValue  redirectLink = 9;
+	google.protobuf.StringValue  temporaryUrl = 10;
+	bool  isUpdating = 11;
+	google.protobuf.StringValue  optimizedUrl = 12;
+	google.protobuf.StringValue  w160Url = 13;
+	google.protobuf.StringValue  w1280Url = 14;
+	google.protobuf.StringValue  w320Url = 15;
+	google.protobuf.StringValue  w640Url = 16;
+	google.protobuf.StringValue  thumbUrl = 17;
+}
+
+message Money {
+    google.protobuf.StringValue value = 1;
+    google.protobuf.StringValue formatValue = 2;
+    google.protobuf.StringValue currencyCode = 3;
+}
+
+message InstallationAddressGrpc {
+	google.protobuf.StringValue street = 1;
+	google.protobuf.StringValue district = 2;
+	google.protobuf.StringValue districtId = 3;
+	google.protobuf.StringValue city = 4;
+	google.protobuf.StringValue cityId = 5;
+	google.protobuf.StringValue fullAddress = 6;
+	google.protobuf.StringValue building = 7;
+	google.protobuf.StringValue floor = 8;
+	google.protobuf.StringValue roomNumber = 9;
+	google.protobuf.StringValue country = 10;
+	google.protobuf.StringValue countryId = 11;
+}
+
+message BillingTimeLineGrpc {
+	int32 paymentPeriod = 1;
+	google.protobuf.Timestamp effective = 2;
+	google.protobuf.Timestamp signed = 3;
+	google.protobuf.Timestamp latestBilling = 4;
+	google.protobuf.Timestamp nextBilling = 5;
+	google.protobuf.Timestamp suspensionStartDate = 6;
+	google.protobuf.Timestamp suspensionEndDate = 7;
+	int32 daysSuspended = 8;
+	int32 prepayPeriod = 9;
+}
+
+message SelectionItemDTOGrpc{
+	google.protobuf.StringValue	 text = 1;
+	google.protobuf.StringValue  code = 2;
+	google.protobuf.Int32Value  value = 3;
+	google.protobuf.Int32Value  parentId = 4;
+	google.protobuf.Int32Value  displayOrder = 5;
+}
+
+message LstSelectionItemDTOGrpc{
+	repeated SelectionItemDTOGrpc lstSelectionItemDTOGrpc = 1;
+}

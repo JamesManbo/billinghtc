@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "DebtManagement.API.Protos";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package DebtManagementAPI;
+
+service CollectedVoucherGrpc {
+	rpc GetCollectedAndUnCollectedVoucherByMonth(CollectedVoucherFilterGrpc) returns (CollectedVoucherPageListGrpcDTO) {}	
+}
+
+message CollectedVoucherFilterGrpc{
+	google.protobuf.StringValue	 cashierUserId = 1;
+	google.protobuf.Int32Value  month = 2;
+	google.protobuf.Int32Value  year = 3;
+}
+
+message CollectedVoucherPageListGrpcDTO{
+	repeated CollectedVoucherDataDTOGrpc collectedVoucher = 1;
+}
+
+message CollectedVoucherDataDTOGrpc{
+	google.protobuf.StringValue	 month = 1;
+	google.protobuf.Int32Value  collectedVouchers = 2;
+	google.protobuf.Int32Value  unCollectedVouchers = 3;
+}
+

@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup Label="Globals">
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>dotnet-DebtManagement.BackgroundTasks-734FEC95-6D39-4692-9B23-CDDD50D9CEB9</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Tasks\UpdateOverdueAndBadDebtTask.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Autofac" Version="5.2.0" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Dapper" Version="2.0.35" />
+		<PackageReference Include="Google.Protobuf" Version="3.12.3" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.30.0" />
+		<PackageReference Include="Grpc.Core" Version="2.30.0" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.30.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.30.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.30.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.10" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="3.1.0" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+		<PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DebtManagement.Infrastructure\DebtManagement.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\Notification.API\Protos\notification.proto" GrpcServices="Client" />
+		<Protobuf Include="..\ContractManagement.API\Protos\taxcategory.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+		<Protobuf Include="..\ContractManagement.API\Protos\outcontracts.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+		<Protobuf Include="..\ContractManagement.API\Protos\projects.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+		<Protobuf Include="..\ContractManagement.API\Protos\marketareas.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+    <Protobuf Include="..\ContractManagement.API\Protos\services.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+    <Protobuf Include="..\ContractManagement.API\Protos\packages.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+		<Protobuf Include="..\ContractManagement.API\Protos\taxcategory.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\" />
+		<Protobuf Include="..\ContractManagement.API\Protos\common.proto" GrpcServices="Client" />
+		<Protobuf Include="..\ContractManagement.API\Protos\contractors.proto" GrpcServices="Client" AdditionalImportDirs="..\ContractManagement.API\"/>
+		<Protobuf Include="..\OrganizationUnit.API\Protos\configurationsystemparameter.proto" GrpcServices="Client" />
+		<Protobuf Include="..\OrganizationUnit.API\Protos\organizationunits.proto" GrpcServices="Client" />
+		<Protobuf Include="..\ContractManagement.API\Protos\exchangerates.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Resources\VoucherContentResources.Designer.cs">
+			<DependentUpon>VoucherContentResources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Resources\VoucherContentResources.resx">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<LastGenOutput>VoucherContentResources.Designer.cs</LastGenOutput>
+			<Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+	</ItemGroup>
+</Project>

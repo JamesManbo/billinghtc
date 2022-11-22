@@ -1,0 +1,41 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
+RUN sed -i 's/MinProtocol = TLSv1.2/MinProtocol = TLSv1/g' /etc/ssl/openssl.cnf
+RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /usr/lib/ssl/openssl.cnf
+RUN sed -i 's/MinProtocol = TLSv1.2/MinProtocol = TLSv1/g' /usr/lib/ssl/openssl.cnf
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+COPY ./NuGet.Config /root/.nuget/NuGet/
+COPY ["FeedbackAndReports/Feedback.API/Feedback.API.csproj", "FeedbackAndReports/Feedback.API/"]
+COPY ["ContractManagement.API/ContractManagement.API.csproj", "ContractManagement.API/"]
+COPY ["ContractManagement.Caching/ContractManagement.Caching.csproj", "ContractManagement.Caching/"]
+COPY ["WebHost.Customization/WebHost.Customization.csproj", "WebHost.Customization/"]
+COPY ["GenericService/GenericRepository.csproj", "GenericService/"]
+COPY ["Global.Models/Global.Models.csproj", "Global.Models/"]
+COPY ["Global.Configs/Global.Configs.csproj", "Global.Configs/"]
+COPY ["EventBusRabbitMQ/EventBusRabbitMQ.csproj", "EventBusRabbitMQ/"]
+COPY ["EventBus/EventBus.csproj", "EventBus/"]
+COPY ["ContractManagement.Domain/ContractManagement.Domain.csproj", "ContractManagement.Domain/"]
+COPY ["IntegrationEventLogEF/IntegrationEventLogEF.csproj", "IntegrationEventLogEF/"]
+COPY ["ContractManagement.Infrastructure/ContractManagement.Infrastructure.csproj", "ContractManagement.Infrastructure/"]
+COPY ["ContractManagement.Utility/ContractManagement.Utility.csproj", "ContractManagement.Utility/"]
+RUN dotnet restore "FeedbackAndReports/Feedback.API/Feedback.API.csproj"
+COPY . .
+WORKDIR "/src/FeedbackAndReports/Feedback.API"
+RUN dotnet build "Feedback.API.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Feedback.API.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+RUN sed -i "s|DEFAULT@SECLEVEL=2|DEFAULT@SECLEVEL=1|g" /etc/ssl/openssl.cnf
+
+ENTRYPOINT ["dotnet", "Feedback.API.dll"]
