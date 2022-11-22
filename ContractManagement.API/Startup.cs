@@ -159,7 +159,7 @@ namespace ContractManagement.API
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseSwagger();
 

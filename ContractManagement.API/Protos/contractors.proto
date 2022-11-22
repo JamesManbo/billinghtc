@@ -5,6 +5,7 @@ option csharp_namespace = "ContractManagement.API.Protos";
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
+import "Protos/common.proto";
 
 package ContractManagementApi;
 
@@ -13,6 +14,7 @@ service ContractorGrpc {
 	rpc GetAllByIds(google.protobuf.StringValue) returns (ListContractorGrpcDTO) {}
 	rpc GetFromId(google.protobuf.Int32Value) returns (ListContractorGrpcDTO) {}
 	rpc GetContractors(RequestGetContractorsByProjectIdsGrpc) returns (ContractorPageListGrpcDTO) {}
+	rpc GetOnlyContractors(RequestFilterGrpc) returns (ContractorPageListGrpcDTO) {}
 	rpc GetListByProjectIdsForApp(RequestGetContractorsByProjectIdsGrpc) returns (ContractorPageListGrpcDTO) {}
 	rpc GetByMarketAreaIdsProjectIds(RequestGetByMarketAreaIdsProjectIdsGrpc) returns (ContractorPageListGrpcDTO) {}
 }

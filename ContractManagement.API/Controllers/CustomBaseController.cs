@@ -16,7 +16,7 @@ using ValidationResult = System.ComponentModel.DataAnnotations.ValidationResult;
 namespace ContractManagement.API.Controllers
 {
     [ApiController]
-    [Authorize(AuthenticationSchemes = AuthenticationSchemes.CmsApiIdentityKey)]
+    //[Authorize(AuthenticationSchemes = AuthenticationSchemes.CmsApiIdentityKey)]
     public abstract class CustomBaseController : ControllerBase
     {
         public UserIdentity UserIdentity => new UserIdentity(HttpContext);

@@ -25,7 +25,7 @@ namespace ContractManagement.API
         {
             var configuration = GetConfiguration();
 
-            Log.Logger = CreateSerilogLogger(configuration);
+            //Log.Logger = CreateSerilogLogger(configuration);
 
             try
             {
@@ -44,17 +44,17 @@ namespace ContractManagement.API
 
                     var environment = services.GetRequiredService<IWebHostEnvironment>();
 
-                    var logDbContext = services.GetRequiredService<IntegrationEventLogDbContext>();
-                    logDbContext.Database.Migrate();
+                    //var logDbContext = services.GetRequiredService<IntegrationEventLogDbContext>();
+                    //logDbContext.Database.Migrate();
 
-                    var contractDbContext = services.GetRequiredService<ContractDbContext>();
-                    contractDbContext.Database.Migrate();
+                    //var contractDbContext = services.GetRequiredService<ContractDbContext>();
+                    //contractDbContext.Database.Migrate();
 
-                    contractDbContext.Database.ExecuteSqlRaw("SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));");
-                    contractDbContext.Database.ExecuteSqlRaw("SET GLOBAL local_infile=1;");
+                    //contractDbContext.Database.ExecuteSqlRaw("SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));");
+                    //contractDbContext.Database.ExecuteSqlRaw("SET GLOBAL local_infile=1;");
 
-                    var radiusDbContext = services.GetRequiredService<RadiusContext>();
-                    radiusDbContext.Database.Migrate();
+                    //var radiusDbContext = services.GetRequiredService<RadiusContext>();
+                    //radiusDbContext.Database.Migrate();
                 }
 
                 host.Run();
@@ -78,19 +78,19 @@ namespace ContractManagement.API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseConfiguration(configuration);
-                    webBuilder.ConfigureKestrel(options =>
-                    {
-                        var ports = GetDefinedPorts(configuration);
-                        options.Listen(IPAddress.Any, ports.httpPort,
-                            listenOptions => { listenOptions.Protocols = HttpProtocols.Http1AndHttp2; });
+                    //webBuilder.ConfigureKestrel(options =>
+                    //{
+                    //    var ports = GetDefinedPorts(configuration);
+                    //    options.Listen(IPAddress.Any, ports.httpPort,
+                    //        listenOptions => { listenOptions.Protocols = HttpProtocols.Http1AndHttp2; });
 
-                        options.Listen(IPAddress.Any, ports.grpcPort, listenOptions =>
-                        {
-                            listenOptions.Protocols = HttpProtocols.Http2;
-                        });
+                    //    options.Listen(IPAddress.Any, ports.grpcPort, listenOptions =>
+                    //    {
+                    //        listenOptions.Protocols = HttpProtocols.Http2;
+                    //    });
 
-                    });
-                    webBuilder.UseSerilog();
+                    //});
+                    //webBuilder.UseSerilog();
                     webBuilder.UseStartup<Startup>();
                 })
                 .UseServiceProviderFactory(new AutofacServiceProviderFactory())
