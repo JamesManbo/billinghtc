@@ -1,0 +1,97 @@
+﻿{
+  "Routes": [
+    //contract
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 58068
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "CmsApiIdentityKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54994
+        }
+      ],
+      "UpstreamPathTemplate": "/debt/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "CmsApiIdentityKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    //end dept
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 57682
+        }
+      ],
+      "UpstreamPathTemplate": "/notify/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54540
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "CmsApiIdentityKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 57899
+        }
+      ],
+      "UpstreamPathTemplate": "/ou/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 52110
+        }
+      ],
+      "UpstreamPathTemplate": "/cus/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ]
+    }
+    //end dept
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:56789"
+  }
+
+}  
